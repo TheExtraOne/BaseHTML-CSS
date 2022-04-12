@@ -1,0 +1,19 @@
+#Brodsky{
+	text-align: center;
+	font-family: Cormorant Infant, serif;
+	font-size: 2em;
+}
+#Martinovich{
+	text-align: center;
+	font-family: Bad Script, cursive;
+	font-size: 2em;
+}
+table{
+	width: 100%;
+}
+.date{
+	opacity: 0.5;
+}
+img{
+	border-radius: 50px;
+}

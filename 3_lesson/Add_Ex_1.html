@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Тег &lt;FONT&gt;, или забавная кодировка</title>
+		<style type="text/css">
+			span{
+				font-weight: bold;
+			}
+			h1{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Тег &lt;FONT&gt;, или забавная кодировка</h1>
+		<p>
+			Для того, чтобы разобраться с забавными значениями тега &lt;font&gt;, предлагаю сначала перечислить цифры и буквы, которые используются в шестнадцатиричной системе исчисления для кодировки цвета (RGB). Вот они:
+			<br>
+			<br>
+			<span>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F</span>
+			<br>
+			<br>
+			Т.е., красный, зелёный и синий цвета (составляющие) могут принимать значения от 00 до FF. Букв всего 6, так что же будет, если в кодировке цвета RGB использовать те, которых нет? Пропускаемые цифры и некорректные символы распознаются как 0. Так что, например, значения #F0F0F0, F0F0F0, F0F0F, #FxFxFx и FxFxFx &mdash; одно и то же.
+			Приведу пример с сайта <a href="https://habr.com/ru/all/" target=_blank>habr.com</a>. Есть забавная запись:
+			<br>
+			<br>
+			<code>
+				&lt;font color=&quot;#chucknorris&quot;&gt;<font color="#chucknorris">Цвет</font>&lt;/font&gt;
+			</code>
+			<br>
+			<br>
+			Следите за руками: в <span>&quot;#chucknorris&quot;</span> я меняю все буквы, которых нет в шестнадцатиричной системе на 0.
+			<br>
+			<br>
+			<span>C00C0000000</span>
+			<br>
+			<br>
+			Количество знаков должно делиться на 3, а у нас их 11, поэтому добавляю еще один 0.
+			<br>
+			<br>
+			<span>C00C 0000 0000 или RGB (C00C, 0000, 0000)</span>
+			<br>
+			<br>
+			Автор статьи на <a href="https://habr.com/ru/all/" target=_blank>habr.com</a> предлагает обрезать каждый из аргументов справа, оставляя 2 символа, после чего можно получить вот такой результат:
+			<br>
+			<br>
+			<span>RGB (C0, 00, 00) = #C00000</span>
+		</p>
+		<p>
+			А теперь тоже самое я попытаюсь проделать с вашими примерами <span> &lt;font color=&quot;#BruceWillis&quot;&gt;...&lt;/font&gt; и &lt;font color=&quot;#CANDY&quot;&gt;...&lt;/font&gt;</span>
+			<br>
+			<br>
+			<span>&quot;#BruceWillis&quot; = B00CE000000 (11 знаков)</span>
+			<br>
+			<br>
+			<span>B00C E000 0000 (12 знаков)</span>
+			<br>
+			<br>
+			<span>RGB (B0, E0, 00) = #B0E000</span>
+			<br>
+			<br>
+			Проверяем: &lt;font color=&quot;#BruceWillis&quot;&gt;<font color="#BruceWillis">Цвет</font>&lt;/font&gt; и &lt;Тег атрибут style=&quot;color: #B0E000&quot;&gt;<span style="color: #B0E000">Цвет</span>&lt;/Тег&gt;
+			<br>
+			<br>
+			<span>&quot;#CANDY&quot; = CA0D0 (5 знаков)</span>
+			<br>
+			<br>
+			<span>CA0D 0000 0000 (12 знаков)</span>
+			<br>
+			<br>
+			<span>RGB (CA, 00, 00) = #CA0000</span>
+			<br>
+			<br>
+			Проверяем: &lt;font color=&quot;#CANDY&quot;&gt;<font color="#CANDY">Цвет</font>&lt;/font&gt; и &lt;Тег атрибут style=&quot;color: #CA0000&quot;&gt;<span style="color: #CA0000">Цвет</span>&lt;/Тег&gt;
+		</p>
+	</body>
+</html>

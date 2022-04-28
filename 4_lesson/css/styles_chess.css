@@ -1,0 +1,18 @@
+p,a{
+	font: 18px serif;
+}
+.Name{
+	font: bold 2em serif;
+}
+/*font: [font-style] [font-variant] [font-weight] font-size [/line-height] font-family*/
+.Birthday{
+	color: #379e3b;
+}
+.Champion{
+	color: #f10;
+	font-weight: bold;
+}
+.Info{
+	color: #0b38db;
+	font-style: italic;
+}

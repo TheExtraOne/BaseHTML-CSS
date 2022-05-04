@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Stars</title>
+		<style type="text/css">
+			.wrapper{
+				direction: rtl;  /*У direction: rtl прочитала про недостаток: если содержиым контейнера был ты текст или несимметричные каринки, то было бы заметно "отзеркаливание". Поэтому нашла еще оин вариант реализации: display:flex; flex-direction: row-reverse;*/
+				float: left;
+			}
+			.clearfix:after{  /*Пришлось добавить, на случай добавления контента после звезд*/
+				content: ".";
+				visibility: hidden;
+				display: block;
+ 				height: 0;
+ 				clear: both
+ 			}
+			.wrapper > div{
+				width: 76px;
+				height: 78px;
+				display: inline-block;
+				background: url("img/star0.png") top right no-repeat;
+			}
+			.wrapper > div > img.star{
+				opacity: 0; /* Можно и visability, display none, но с последним осторожно*/
+			}
+			.wrapper > div img.star:hover, .wrapper > div:hover ~ div > img.star{
+			 	opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper clearfix">
+			<div>
+				<img class="star" src="img/star1.png">
+			</div>
+			<div>
+				<img class="star" src="img/star1.png">
+			</div>
+			<div>
+				<img class="star" src="img/star1.png">
+			</div>
+			<div>
+				<img class="star" src="img/star1.png">
+			</div>
+			<div>
+				<img class="star" src="img/star1.png">
+			</div>
+		</div>
+	</body>
+</html>

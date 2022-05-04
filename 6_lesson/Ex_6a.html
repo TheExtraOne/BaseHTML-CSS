@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Футбол</title>
+		<style type="text/css">
+		.option_1 table{
+			border-collapse: collapse;
+		}
+		.option_1 td{
+			height: 20px;
+			padding: 10px;
+			border-right: solid red 5px;
+		}
+		.option_1 td:last-of-type{
+			border-right: none;
+		}
+		.option_2 table{
+			border-collapse: collapse;
+		}
+		.option_2 td{
+			height: 20px;
+			padding: 10px;
+			border-right: solid red 5px;
+		}
+		.option_2 td:last-child{
+			border-right: none;
+		}
+		.option_3 a{
+			height: 20px;
+			padding: 10px;
+			display: inline-block;
+		}
+		.option_3 a:not(:last-of-type)::after{
+			content: url(img/border_small_var2.png);
+		}
+		.option_4 a{
+			height: 20px;
+			padding: 10px;
+			display: inline-block;
+		}
+		.option_4 a:nth-child(-n+4)::after{
+			content: url(img/border_small_var2.png);
+		}
+		.option_5 a{
+			height: 20px;
+			padding: 10px;
+			display: inline-block;
+			border-right: solid red 5px;
+		}
+		.option_5 a:last-of-type{
+			border-right: none;
+		}
+		.option_6 a{
+			float: left;
+			height: 20px;
+			padding: 10px;
+			border-right: solid red 5px;
+		}
+		.option_6 a:last-of-type{
+			border-right: none;
+		}
+		.clearfix::after{
+			content: ""; display: block; clear: both
+		}
+		.option_7 a{
+			float: left;
+			height: 20px;
+			padding: 10px;
+		}
+		.option_7 a:not(:last-of-type){
+			background: url("img/border_small_var2.png") right no-repeat;
+		}
+		a{
+			color: #00a354;
+		}
+		a:hover{
+			color: red;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="option_1">
+			<table>
+				<tr>
+					<td><a href="https://csscolor.ru/hex/00a354">первая ссылка</a></td>
+					<td><a href="https://csscolor.ru/hex/00a354">вторая ссылка</a></td>
+					<td><a href="https://csscolor.ru/hex/00a354">третья ссылка</a></td>
+					<td><a href="https://csscolor.ru/hex/00a354">четвертая ссылка</a></td>
+					<td><a href="https://csscolor.ru/hex/00a354">пятая ссылка</a></td>
+				</tr>
+			</table>
+		</div>
+		<!--Сверстано таблицей, красные разделители выполнены с помощью border-right, а крайний убран псевдоклассом :last-of-type (border-right: none). Точно так же разделители можно было сделать при помощи border-left, крайний убрать :first-of-type (border-left: none)-->
+		<br>
+		<div class="option_2">
+			<table>
+				<tr>
+					<td><a href="https://csscolor.ru/hex/00a354">первая ссылка</a></td>
+					<td><a href="https://csscolor.ru/hex/00a354">вторая ссылка</a></td>
+					<td><a href="https://csscolor.ru/hex/00a354">третья ссылка</a></td>
+					<td><a href="https://csscolor.ru/hex/00a354">четвертая ссылка</a></td>
+					<td><a href="https://csscolor.ru/hex/00a354">пятая ссылка</a></td>
+				</tr>
+			</table>
+		</div>
+		<!--Сверстано таблицей, красные разделители выполнены с помощью border-right, а крайний убран псевдоклассом :last-child (border-right: none). Точно так же разделители можно было сделать при помощи border-left, крайний убрать :first-child (border-left: none)-->
+		<br>
+		<div class="option_3">
+			<a href="https://csscolor.ru/hex/00a354">первая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">вторая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">третья ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">четвертая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">пятая ссылка</a>
+		</div>
+		<!--Сверстано при помощи inline-block, красные разделители выполнены с помощью вставки картинки ::after, а крайний разделитель не ставится, т.к. a:not(:last-of-type). Точно так же можно было сделать при помощи вставки картинки ::before и a:not(:first-of-type)-->
+		<br>
+		<div class="option_4">
+			<a href="https://csscolor.ru/hex/00a354">первая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">вторая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">третья ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">четвертая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">пятая ссылка</a>
+		</div>
+		<!--Сверстано при помощи inline-block, красные разделители выполнены с помощью вставки картинки ::after, а крайний разделитель не ставится, т.к. a:nth-child(-n+4)::after. Если увеличить кол-во ссылок, то и формулу придется менять: приращивать +1 за каждую добавленную ссылку-->
+		<br>
+		<div class="option_5">
+			<a href="https://csscolor.ru/hex/00a354">первая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">вторая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">третья ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">четвертая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">пятая ссылка</a>
+		</div>
+		<!--Сверстано при помощи inline-block, красные разделители выполнены с помощью border-right, а крайний разделитель убран псевдоклассом :last-of-type (border-right: none). Точно так же разделители можно было сделать при помощи border-left, крайний убрать :first-of-type (border-left: none)-->
+		<br>
+		<div class="option_6 clearfix">
+			<a href="https://csscolor.ru/hex/00a354">первая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">вторая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">третья ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">четвертая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">пятая ссылка</a>
+		</div>
+		<!--Сверстано при помощи float: left (можно и float:right), красные разделители выполнены с помощью border-right, а крайний разделитель убран псевдоклассом :last-of-type (border-right: none). Точно так же разделители можно было сделать при помощи border-left, крайний убрать :first-of-type (border-left: none). Т.к. было использзовано свойство float, пришлось добавить clearfix, чтобы нижние зафлоченные ссылки не перескакивали -->
+		<br>
+		<div class="option_7 clearfix">
+			<a href="https://csscolor.ru/hex/00a354">первая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">вторая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">третья ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">четвертая ссылка</a>
+			<a href="https://csscolor.ru/hex/00a354">пятая ссылка</a>
+		</div>
+		<!--Сверстано при помощи float: left (можно и float:right), красные разделители выполнены с помощью background: url("") right no-repeat, а крайний разделитель не ставился, т.к a:not(:last-of-type). Точно так же разделители можно было сделать при помощи background: url("") left no-repeat, крайний убрать a:not(:first-of-type). Т.к. было использзовано свойство float, пришлось добавить clearfix, чтобы нижние зафлоченные ссылки не перескакивали -->
+		<!--Могу предположить, что можно еще использовать flexbox -->
+	</body>
+</html>

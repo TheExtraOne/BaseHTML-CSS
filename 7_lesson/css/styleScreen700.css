@@ -1,0 +1,13 @@
+.Content > img{
+	float: none;
+	width: 90%;
+}
+.Wrapper_int{
+background: none;
+}
+.Special_bar li{
+	font-size: 20px;
+}
+.Special_bar > span{
+	font-size: 2em;
+}

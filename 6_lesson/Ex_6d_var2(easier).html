@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Stars</title>
+		<style type="text/css">
+			.wrapper > div{
+				width: 76px;
+				height: 78px;
+				display: inline-block;
+				background: url("img/star1.png") top right no-repeat;
+			}
+			.wrapper > div > img.star{
+				opacity: 0; /* Можно и visability, display none, но с последним осторожно*/
+			}
+			.wrapper > div:hover ~ div > img.star:not(.wrapper > div img.star:hover) {
+			 	opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div>
+				<img class="star" src="img/star0.png">
+			</div>
+			<div>
+				<img class="star" src="img/star0.png">
+			</div>
+			<div>
+				<img class="star" src="img/star0.png">
+			</div>
+			<div>
+				<img class="star" src="img/star0.png">
+			</div>
+			<div>
+				<img class="star" src="img/star0.png">
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+header, footer, h2, p {
+    margin: 0;
+    padding: 0;
+   }
+header, footer{
+	font: small-caps 3em serif;
+	color: #0000FD;
+	text-align: center;
+	background-color: #ADD8E6;
+}
+h2{
+	font: small-caps bold 2em serif;
+	text-align: center;
+}
+.HiddenBar{
+	display: none;
+}
+.Wrapper_ext{
+	background: url("../img/slice_of_side_bar.jpeg") left top repeat-y;
+}
+.Wrapper_int{
+	background: url("../img/ball.png") right top repeat-y;
+}
+.Special_bar{
+	float: left;
+	width: 150px;
+	padding: 10px;
+}
+.Special_bar > span{
+	font: bold 1em serif;
+}
+.Content{
+	margin-left: 200px;
+}
+.Content > img{
+	float: left;
+	width: 199px;
+	margin: 10px;
+}
+.Spacer{
+	clear: both;
+}
+@media only screen and (max-width: 400px){
+	header, footer, .Special_bar{
+		display: none;
+	}
+	.Content > img{
+		width: 100%;
+		margin: 0px;
+	}
+	.Content{
+		margin: 0px;
+		padding-bottom: 5px; 
+		border-bottom: double 5px grey;
+	}
+	.Wrapper_ext{
+		background: none;
+	}
+	.HiddenBar{
+		display: block;
+		margin-top: 10px;	
+	}
+	.HiddenBar a{
+		display: inline-block;
+		height: 20px;
+		padding: 10px;
+		margin: 5px;
+		border-right: solid red 5px;
+		background-color: #F0E78C;
+	}
+	.HiddenBar span{
+		font: small-caps bold 2em serif;
+		text-align: center;
+	}
+}

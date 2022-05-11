@@ -1,0 +1,43 @@
+	p,a{
+		font: 18px serif;
+	}
+	p{
+		margin: 0px;
+	}
+	a{
+		text-decoration: none;
+		font-weight: bold;
+	}
+	p.Name{
+		font: bold 2em serif;
+		margin-top: 15px;
+	}
+	p.Birthday{
+		color: #379e3b;
+	}
+	p.Champion{
+		color: #f10;
+		font-weight: bold;
+	}
+	p.Info{
+		color: #0b38db;
+		font-style: italic;
+	}
+	a[href*='//']::before{
+		content: url(img/extref.png);
+	}
+	@media print{
+		*{
+			color: black !important;
+		}
+		a[href^="#"]{
+			display: none;
+		}
+		a[href*='//']{
+			visibility: hidden;
+		}
+		a[href*='//']::before{
+			content: "(ссылка на " attr(href) ")";
+			visibility: visible;
+		}
+	}

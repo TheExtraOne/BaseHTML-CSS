@@ -1,0 +1,107 @@
+.wrapperNav{
+	height: 6em;
+	background-color: black;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.wrapperNav, .wrapperNav a, .part a{	
+	color: white;
+}
+.leftNav, .part a{
+	font: bold 22px 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	width: 167px;
+}
+.leftNav img, .part img{
+	float: left;
+	width: 70px;
+}
+.rightNav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.rightNav > ul{
+	list-style: none;
+}
+.rightNav > ul > li, .rightNav a{
+	display: inline-block;
+	margin-right: 30px;
+	font-size: 20px;
+}
+.rightNav img{
+	height: 25px;
+	margin-right: 10px;
+	float: left;
+}
+.rightNav a:hover,.part a:hover:not(.logo), body .active, footer a:hover{
+	color: #E84300;
+}
+.preFooter{
+	background-color: #707070;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.part{
+	display: flex;
+	justify-content:space-between;
+	margin: 10px 0px;
+	align-self:flex-start;
+}
+.part:first-child, .part:last-child{
+	flex-basis:17%;
+}
+.notImportantText{
+	color: white;
+	font-size: 12px;
+}
+.preFooterTitle{
+	text-transform: uppercase;
+	color: white;
+	font: 400 20px sans-serif;
+	margin: 20px 0px;
+}
+.part ul{
+	list-style: none;
+}
+.part  ul > li{
+	margin-right: 30px;
+}
+.part  ul a{
+	font-size: 14px;	
+}
+.phone img{
+	width: 20px;
+	float: left;
+	margin-right: 5px;
+}
+.mail img{
+	width: 15px;
+	float: left;
+	margin-right: 5px;
+}
+.notImportantText a{
+	font-size: 12px;
+	text-decoration: underline;
+}
+footer{
+	background-color: black/*#212121*/;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+footer .notImportantText{
+	flex-grow:1;
+	text-align: center;
+	margin: 20px 0px;
+}
+footer span{
+	text-transform: uppercase;
+}
+footer a{
+	font-size: 14px;
+	color: white;
+	margin: 20px 20px 20px 0px;
+}

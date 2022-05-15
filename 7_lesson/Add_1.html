@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Элемент &lt;picture&gt;</title>
+		<meta name="viewport" content="width=device-width, height=device-height, target-densitydpi=device-dpi, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/stylesForAdd1.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Использование элемента &lt;picture&gt;</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="nav">
+						<H2>Содержание</H2>
+						<ul  class="menu">
+							<li><a href="#t1">Описание элемента &lt;picture&gt;</a></li>
+							<li><a href="#t2">Атрибуты элемента &lt;picture&gt;</a></li>
+							<li>
+								<a href="#t3_1">Возможности тега</a>
+								<ul>
+									<li><a href="#t3_1">Смена разрешения при помощи атрибутов srcset и sizes</a></li>
+									<li><a href="#t3_2">Ориентация графики</a></li>
+									<li><a href="#t3_3">Использование с частично поддерживаемыми типами изображений</a></li>
+								</ul>
+							</li>
+							<li><a href="#t4">Заключение</a></li>
+							<li><a href="#t5">Примеры</a></li>
+							<li><a href="#t6">Использованные ресурсы</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="content">
+						<h2><a id="t1">Описание элемента &lt;picture&gt;</a></h2>
+						<p>Использование изображений и анимаций в интерфейсах пользователя стало распространённой практикой в современных веб-приложениях. Хотя эти примеры современного дизайна делают упор на повышение удобства работы с приложениями, если изображения не адаптируются ко всем устройствам, то могут возникать проблемы.</p>
+						<p>HTML-элемент <span class="attention">&lt;picture&gt;</span> служит контейнером для одного или более элементов <span class="attention">&lt;source&gt;</span> и одного элемента <span class="attention">&lt;img&gt;</span> для обеспечения оптимальной версии изображения для различных размеров экрана. Браузер рассмотрит каждый из дочерних элементов  <span class="attention">&lt;source&gt;</span> и выберет один, соответствующий лучшему совпадению; если совпадений среди элементов <span class="attention">&lt;source&gt;</span> найдено не будет, то будет выбран файл, указанный  атрибутом  src элемента <span class="attention">&lt;img&gt;</span> . Затем выбранное изображение отображается в пространстве, занятом элементом <span class="attention">&lt;img&gt;</span>. 
+
+						<p>Чтобы выбрать оптимальное изображение, user agent  анализирует атрибуты <span class="attention">srcset</span>, <span class="attention">media</span>, и <span class="attention">type</span> элемента <span class="attention">&lt;source&gt;</span> и выбирает совместимое изображение, которое наилучшим образом соответствует текущему макету страницы, характеристикам устройства отображения и т. д.</p>
+
+						<p>Элемент <span class="attention">&lt;picture&gt;</span> часто используют для того, чтобы обеспечить HiDPI (Retina)-версию изображений для дисплеев с высоким разрешением, а также для добавления других форматов изображений, не поддерживаемых всеми браузерами.</p>
+					</div>
+					<hr>
+					<div class="content">
+						<h2><a id="t2">Атрибуты элемента &lt;picture&gt;</a></h2>
+						<p>Этот элемент содержит только <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" target="_blank" title="Ссылка на developer.mozilla.org">универсальные атрибуты</a>. Некоторые из них будут рассмотрены ниже:</p>
+						<h3>Атрибут <span class="attention">media</span></h3>
+						<p>Атрибут <span class="attention">media</span> позволяет определить медиавыражение, которое веб-браузер будет анализировать для выбора элемента <span class="attention">&lt;source&gt;</span>. Если медиавыражение определяется как ложное (false), то элемент <span class="attention">&lt;source&gt;</span> пропускается.</p>
+						<div class="code_container">
+							<code>
+								&lt;picture&gt;<br>
+			 					&emsp;&emsp;&emsp;&emsp;&lt;source srcset=&quot;mdn-logo-wide.png&quot; media=&quot;(min-width: 600px)&quot;&gt;<br>
+			 					&emsp;&emsp;&emsp;&emsp;&lt;img src=&quot;mdn-logo-narrow.png&quot; alt=&quot;MDN&quot;&gt;<br>
+								&lt;/picture&gt;
+							</code>
+						</div>
+						<h3>Атрибут <span class="attention">type</span></h3>
+						<p>Атрибут <span class="attention">type</span> позволяет вам обозначить MIME-тип данных, указанных в атрибуте <span class="attention">srcset элемента <span class="attention">&lt;source&gt;</span>. Если браузер не поддерживает данный тип, то элемент  <span class="attention">&lt;source&gt;</span> опускается.</p>
+						<div class="code_container">
+							<code>
+								&lt;picture&gt;<br>
+			 					&emsp;&emsp;&emsp;&emsp;&lt;source srcset=&quot;mdn-logo-wide.png&quot; type=&quot;image/svg+xml&quot;<br>
+			 					&emsp;&emsp;&emsp;&emsp;&lt;img src=&quot;mdn-logo-narrow.png&quot; alt=&quot;MDN&quot;&gt;<br>
+								&lt;/picture&gt;
+							</code>
+						</div>
+					</div>
+					<hr>
+					<div class="content">
+						<h2><a id="t3_1">Смена разрешения при помощи атрибутов srcset и sizes</a></h2>
+						<p>Допустим, вы используете простой тег Img для изображений высокого разрешения. В таком случае при запуске приложения одно и то же изображение будет использоваться на каждом устройстве, что приведёт к проблемам с производительностью в устройствах с низким разрешением экрана, например, в мобильных телефонах. Это может привести к более долгой загрузке изображений и частичной загрузке изображений сверху вниз.</p>
+						<p>Эту проблему можно легко решить тегом <span class="attention">picture</span> при помощи атрибутов <span class="attention">srcset</span> и <span class="attention">sizes</span>.</p>
+						<div class="code_container">
+							<code>
+								&lt;picture&gt;<br>
+			 					&emsp;&emsp;&emsp;&emsp;&lt;source<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;srcset=&quot;small-car-image.jpg 400w,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;medium-car-image.jpg 800w,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;large-car-image.jpg 1200w&quot;<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;sizes=&quot;(min-width: 1280px) 1200px,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(min-width: 768px) 400px,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;100vw&quot;&gt;<br>
+								&emsp;&emsp;&emsp;&emsp;&lt;img src=&quot;medium-car-image.jpg&quot; alt=&quot;Car&quot;&gt;<br>
+								&lt;/picture&gt;
+							</code>
+						</div>
+						<p>Атрибут <span class="attention">srcset</span> может принимать несколько изображений с соответствующей шириной в пикселях, а браузер использует эти значения для выбора между указанными изображениями. В показанном выше примере есть три версии одного и того же изображения в трёх разных размерах. Атрибут <span class="attention">sizes</span> задаёт пространство, которое изображение будет занимать на экране. В показанном выше примере изображение займёт до 1200px, если минимальная ширина экрана равна 1280px.</p>
+						<p>Тем не менее, рекомендуется не использовать тег <span class="attention">Picture</span> только для смены разрешения, потому что ту же задачу можно решить с помощью новой версии тега <span class="attention">Img</span> (имеющей поддержку большего количества браузеров).</p>
+						<div class="code_container">
+							<code>
+								&lt;img srcset=&quot;small-car-image.jpg 400w,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;medium-car-image.jpg 800w,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;large-car-image.jpg 1200w&quot;<br>
+								&emsp;&emsp;&emsp;&emsp;sizes=&quot;(min-width: 1280px) 1200px,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(min-width: 768px) 400px,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;100vw&quot;<br>
+								&emsp;&emsp;&emsp;&emsp;src=&quot;medium-car-image.jpg&quot; alt=&quot;Car&quot;&gt;
+							</code>
+						</div>
+						<p>Однако в большинстве случаев нам нужно решать проблему и смены разрешения, и ориентации графики, и лучшим решением для этого является тег <span class="attention">picture</span>. Поэтому давайте посмотрим, как можно решить проблему ориентации графики с помощью тега <span class="attention">picture</span>.</p>
+					</div>
+					<hr>
+					<div class="content">
+						<h2><a id="t3_2">Ориентация графики</a></h2>
+						<p>В большинстве случаев, изображение замечательно выглядящее на больших экранах, оказывается обрезанным или очень мелким при просмотре на мобильном устройстве. Мы можем решить эту проблему, создав различные версии изображения для разных размеров экрана. Эти разные версии могут быть альбомными, портретными или любыми другими изменёнными версиями того же изображения. С помощью тега <span class="attention">picture</span> мы можем легко обеспечить смену разрешения, воспользовавшись несколькими тегами source внутри тега <span class="attention">picture</span>.</p>
+						<p>Затем можно использовать атрибут media для задания различных условий среды, в которых будут использоваться эти источники. Также можно использовать атрибуты srcset и sizes аналогично тому, о чём мы говорили в предыдущем разделе. В показанном ниже примере демонстрируется полная реализация ориентации графики и смены разрешения при помощи тега picture: eсли экран находится в альбомной ориентации, то браузер будет отображать изображения из первого набора, а если в портретной, то из второго набора.</p>
+						<div class="code_container">
+							<code>
+								&lt;picture&gt;<br>
+								&emsp;&emsp;&emsp;&emsp;&lt;source media=&quot;(orientation: landscape)&quot;<br>								             
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;srcset=&quot;land-small-car-image.jpg 200w,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;land-medium-car-image.jpg 600w,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;land-large-car-image.jpg 1000w&quot;<br>
+								             
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;sizes=&quot;(min-width: 700px) 500px,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(min-width: 600px) 400px,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;100vw&quot;&gt;<br>
+								     
+								&emsp;&emsp;&emsp;&emsp;&lt;source media=&quot;(orientation: portrait)&quot;<br>
+								             
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;srcset=&quot;port-small-car-image.jpg 700w,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;port-medium-car-image.jpg 1200w,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;port-large-car-image.jpg 1600w&quot;<br>
+								             
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;sizes=&quot;(min-width: 768px) 700px,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(min-width: 1024px) 600px,<br>
+								&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;500px&quot;&gt;<br>
+								     
+								&emsp;&emsp;&emsp;&emsp;&lt;img src=&quot;land-medium-car-image.jpg&quot; alt=&quot;Car&quot;&gt;<br>
+								&lt;/picture&gt;<br>
+							</code>
+						</div>
+					</div>
+					<hr>
+					<div class="content">
+						<h2><a id="t3_3">Использование с частично поддерживаемыми типами изображений</a></h2>
+						<p>Благодаря быстрому развитию технологий ежедневно появляется множество современных типов изображений. Некоторые из них, например webp, svg и avif, обеспечивают большее удобство для пользователей. С другой стороны, у некоторых браузеров существуют ограничения в обработке этих современных типов изображений, и если не использовать совместимые типы изображений, это может вызвать проблемы. Но мы можем с лёгкостью решить эту проблему при помощи тега <span class="attention">Picture</span>, поскольку он позволяет нам указать внутри несколько источников.</p>
+						<div class="code_container">
+							<code>
+							&lt;picture&gt;<br>
+							&emsp;&emsp;&emsp;&emsp;&lt;source srcset=&quot;test.avif&quot; type=&quot;image/avif&quot;&gt;<br>
+							&emsp;&emsp;&emsp;&emsp;&lt;source srcset=&quot;test.webp&quot; type=&quot;image/webp&quot;&gt;<br>
+							&emsp;&emsp;&emsp;&emsp;&lt;img src=&quot;test.png&quot; alt=&quot;test image&quot;&gt;<br>
+							&lt;/picture&gt;
+							</code>
+						</div>
+						<p>В показанный выше пример включены три типа изображений в форматах avif, webp и png. Сначала браузер попробует формат avif, если не получится, то попробует webp. Если браузер не поддерживает ни один из них, то использует изображение png.</p>
+					</div>
+					<hr>
+					<div class="content">
+						<h2><a id="t4">Заключение</a></h2>
+						<p>Тег img не умер и умрёт ещё не скоро, но оба эти элемента имеют свои плюсы и минусы. Поэтому нам нужно обдумывать и выбирать наиболее подходящий к нашим требованиям элемент.</p>
+						<ul class="conculusion">
+							<li>Если мы будем с умом использовать имеющиеся у тега img атрибуты srcset и size, то можем выжать из него максимум. Например, можно решить проблему смены разрешения при помощи одного только тега img.</li>
+							<li>С другой стороны, можно использовать тег picture, чтобы решить проблемы и смены разрешения, и ориентации графики с помощью запросов условий среды и других атрибутов.</li>
+							<li>Среди прочих достоинств тега picture способность работать с частично поддерживаемыми типами изображений и поддержка Chrome DevTools.</li>
+						</ul>
+					</div>	
+					<hr>
+					<div class="content">
+						<h2><a id="t5">Примеры</a></h2>
+						<p>Эта картинка будет отображаться как WebP, если браузер поддреживает такой формат но ее размер фиксирован- на мобильном устройстве изображение выходит за рамки экрана.</p>
+						<div class="ramka">
+							<picture class="test_image">
+							    <source srcset="img/building-7053263_960_720.webp" type="image/webp">
+							    <img src="img/building-7053263_960_720.jpeg" alt="test image" title="test image">
+							</picture>
+						</div>
+						<p>Далее продемонстрировано изменение размера изображения в зависимости от ширины экрана при помощи двух тегов: picture и img, но почему-то с img не выходит:(</p>
+						<div class="ramka">
+							<picture>
+	 							<source media="(min-width: 1240px)" srcset="img/mediumImg.png">
+	 							<source media="(min-width: 770px)" srcset="img/msImg.png">
+							    <img src="img/smallImg.png" alt="test image" title="test image">
+							</picture>
+						</div>
+						<div class="ramka">
+							<img srcset="img/smallImg.png 400w,
+							        img/msImg.png 600w,
+							        img/mediumImg.png 800w"
+							    sizes="(min-width: 1240px) 800px,
+							        (min-width: 770px) 600px,
+							        100vw"
+							    src="medium-car-image.jpg" alt="test image" title="test image">
+						</div>
+						<p>Изменение ориентации и размера</p>
+						<div class="ramka">
+							<picture>
+	 							<source media="(orientation: landscape) and (min-width: 1240px)"  srcset="img/mediumImg.png">
+	 							<source media="(orientation: landscape) and (min-width: 770px)"  srcset="img/msImg.png">
+	 							<source media="(orientation: portrait) and (min-width: 1240px)"  srcset="img/PortrayL.png">
+	 							<source media="(orientation: portrait) and (min-width: 770px)"  srcset="img/PortratM.png">
+							    <img src="img/smallImg.png" alt="test image" title="test image">
+							</picture>
+						</div>
+					</div>
+					<hr>
+					<div class="content resourses">
+						<h2><a id="t6">Использованные ресурсы</a></h2>
+						<img src="img/lins.svg">
+						<ul>
+							<li><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/picture" target="_blank" width="500px">developer.mozilla.org</a></li>
+							<li><a href="https://habr.com/ru/company/vdsina/blog/555736/" target="_blank">habr.com</a></li>
+						</ul>
+					</div>			
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

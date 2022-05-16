@@ -1,7 +1,7 @@
-.PrewCursesLink, .studentsWorksLink, .NextCursesLink, .LatestNewsLink{
+.PrewCursesLink, .NextCursesLink, .LatestNewsLink{
 	padding: 20px 0px 50px 0px;
 }
-.PrewCursesLink a:hover, .studentsWorksLink a:hover, .NextCursesLink a:hover{
+.PrewCursesLink a:hover, .NextCursesLink a:hover{
 	color: black;
 }
 .paralax{
@@ -65,7 +65,7 @@
 	text-transform: none;
 }
 .studentsWorksExampls{
-	margin: 40px 0px 10px 0px;
+	margin: 10px 0px 40px 0px;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
@@ -75,6 +75,34 @@
 }
 .studentsWorksExampls a > picture:hover{ 
 	opacity: 0.5;
+}
+.studentsWorksLink{
+	display: none;
+	cursor: pointer;
+	margin: 20px 0px 60px 0px;
+}
+#phrase2{
+	display: none;
+}
+.studentsWorksLink.spoiler #phrase1{
+	display: none;
+}
+.studentsWorksLink.spoiler #phrase2{
+	display: inline;
+}
+#up {
+	float: left;
+	height: 20px;
+	margin-right: 6px;
+}
+.studentsWorksLink.spoiler #up{
+	transform: rotate(180deg);
+}
+.difficult{ 
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 40px 0px 10px 0px;
 }
 .paralaxNews{
 	min-height: 700px;
@@ -236,6 +264,11 @@
 		font-size: 20px;
 	}
 }
+@media all and (max-width: 850px){
+	.studentsWorksLink{
+		display: block;
+	}
+}
 @media all and (max-width: 728px){
 	.paralax, .paralaxNews{
 		min-height: 500px;
@@ -270,6 +303,12 @@
 	.popupText{
 		font-size: 12px;
 		margin: 0px 0px 30px 0px;
+	}
+	.PrewCursesLink, .studentsWorksLink, .NextCursesLink, .LatestNewsLink{
+		padding: 10px 0px 10px 0px;
+	}
+	.PrewCursesInfo > div, .NextCursesAbout > div {
+    	margin: 10px 12px 10px 12px;
 	}
 }
 

@@ -41,3 +41,9 @@ $(window).scroll(function(){
         yl.addClass('animationTwo');
     }
 });
+$(document).ready(function() {
+    $('.studentsWorksLink').click(function(event) {
+        $(this).toggleClass('spoiler').next().toggleClass('difficult').slideToggle(300);
+    });
+    $('#studentsWorksExampls').css('display', 'flex'); /*Проблема в том, что js отображал блоком, а не flex*/
+});

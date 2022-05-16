@@ -97,7 +97,7 @@
 	background-color: #707070;
 }
 @media all and (max-width: 1077px){
-	.slick-arrow{
+	.slick-arrow, .slick-arrow.slick-prev, .slick-arrow.slick-next{
 		display: none;
 	}
 }
@@ -119,6 +119,10 @@
 	}
 	.sliderItemNewsAbout{
 		font-size: 15px;
+	}
+	.sliderItemNewsTetx{
+	    bottom: 10%;
+	    right: 20%;
 	}
 
 }

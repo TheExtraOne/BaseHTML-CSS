@@ -7,8 +7,8 @@
 .sliderItemNewsTetx{
 	text-align: left;
     position: absolute;
-    bottom: 45px;
-    right: 450px;
+    bottom: 10%;
+    right: 30%;
     color: white;
 }
 .sliderItemNewsTitle{
@@ -63,15 +63,13 @@
 }
 /* Стрелка влево */
 .slick-arrow.slick-prev{
-	left: 0;
+	left: 15%;
 	background: url('../img/logo/sl-arrow_l.svg') 0-0 / 100% no-repeat;
-	margin-left: 15%;
 }
 /* Стрелка вправо */
 .slick-arrow.slick-next{
-	right: 0;
+	right: 15%;
 	background: url('../img/logo/sl-arrow_r.svg') 0-0 / 100% no-repeat;
-	margin-right: 15%;
 }
 /* Стрелка не активная */
 .slick-arrow.slick-disabled{}
@@ -97,4 +95,30 @@
 	width: 40px;
 	border: solid 1px #707070;
 	background-color: #707070;
+}
+@media all and (max-width: 1077px){
+	.slick-arrow{
+		display: none;
+	}
+}
+@media all and (max-width: 690px){
+	.slick-arrow, .slick-arrow.slick-prev, .slick-arrow.slick-next{
+		display: none;
+	}
+	.sliderItem picture{
+		flex: 0 0 70%;
+		padding-right: 20px;
+	}
+	.sliderItem picture > img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.sliderItemNewsTitle{
+		font-size: 20px;
+	}
+	.sliderItemNewsAbout{
+		font-size: 15px;
+	}
+
 }

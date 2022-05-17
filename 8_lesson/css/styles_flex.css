@@ -1,0 +1,107 @@
+header, footer, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+header, footer{
+	font: small-caps 3em serif;
+	color: #0000FD;
+	text-align: center;
+	background-color: #ADD8E6;
+}
+h2{
+	font: small-caps bold 2em serif;
+	text-align: center;
+}
+.Wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	background: url("../img/slice_of_side_bar.jpeg") left top repeat-y;
+}
+.WrapperExt{
+	background: url("../img/ball.png") right top repeat-y;
+}
+.Special_bar{
+	width: 150px;
+	padding: 10px;
+	align-self:flex-start;
+}
+.Special_bar > span{
+	font: bold 1em serif;
+}
+.Content{
+	margin: 0px 0px 0px 35px;
+}
+.Content img{
+	float: left;
+	width: 199px;
+	margin: 0px 10px 10px 0px;
+}
+.joinClub {
+	position: fixed;
+	top: 8%;
+	left: 80%;
+	background-color: #15eb92;
+	border: solid 1px #22a16c;
+	width: 73px;
+	height: 40px; 
+	text-align: center;
+}
+.joinClub > a{
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 0 auto;
+}
+@media all and (max-width: 1000px){
+	.joinClub > a{
+		font-size: 11px;
+	}
+}
+@media only screen and (max-width: 600px){
+	.Content > img{
+		float: none;
+		margin: 0px 0px 10px 0px;
+		width: 100%;
+	}
+	.WrapperExt{
+		background: none;
+	}
+	.Special_bar li{
+		font-size: 20px;
+	}
+	.Special_bar > span{
+		font-size: 2em;
+	}
+}
+@media only screen and (max-width: 400px){
+	header, footer{
+		display: none;
+	}
+	.Wrapper{
+		background: none;
+		flex-direction:column-reverse;
+	}
+	.Content > img{
+		margin-bottom: 10px;
+	}
+	.Content{
+		margin: 0px;
+		padding-bottom: 5px; 
+		border-bottom: double 5px grey;
+	}
+	.Special_bar > span{
+		display: none;
+	}
+	.Special_bar ul{
+		list-style-type: none;
+		padding-left: 0px;
+		margin-top: 0px;
+	}
+	.Special_bar li{
+		display: inline-block;
+	    border-right: solid 5px grey;
+	    background-color: #F0E78C;
+	    padding: 3px;
+	    margin: 2px;
+	}
+}

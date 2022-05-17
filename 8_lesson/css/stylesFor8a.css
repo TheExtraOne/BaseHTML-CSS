@@ -1,0 +1,49 @@
+*{
+	margin: 0px;
+}
+.wrapper{
+	font: normal 17px sans-serif;
+	margin: 10px 20px 0px 20px;
+}
+.title{
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+ .column{
+ 	float: left;
+	width: 240px;
+	height: 77px;
+}
+.rightSide{
+	margin: 0px 10px 0px 240px;
+}
+#articleName, #articletext{
+	width: 100%;
+}
+.rightSide label,.brick{
+	margin: 0;
+	display: none;
+}
+
+@media all and (max-width: 700px){
+ 	.column{
+ 		display: none;
+ 		width: 0;
+	}
+	.rightSide{
+		margin: 0px 0px;
+	}
+	.rightSide label{
+		display: inline;
+	}
+	.brick{
+		display: block;
+	}
+	#Topic{
+		width: 100%;
+	}
+	input, select{
+		margin: 5px 0px;
+	}
+	
+}

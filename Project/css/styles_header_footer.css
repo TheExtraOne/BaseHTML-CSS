@@ -1,12 +1,26 @@
 header{
+	height: 80px;
+	width: 100%;
+	z-index: 50;
+}
+header::before{  /*Плашка делается для того, чтобы меню открывалось под ней*/
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	left: 0;
+	top: 0;
 	background-color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	z-index: 2;
 }
 .wrapperNav{
 	max-width: 1200px;
-	min-height: 6em;
+	margin: 0 auto;
+	padding: 0px 10px;
+}
+.headerBody{
+	position: relative;
+	height: 80px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -14,28 +28,33 @@ header{
 .wrapperNav, .wrapperNav a, .part a{	
 	color: white;
 }
+.leftNav{
+	position: relative;
+	z-index: 3;
+}
 .leftNav, .part a{
 	font: bold 22px 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	max-width: 167px;
-	margin-right: 20px;
 }
 .leftNav img, .part img{
 	float: left;
 	width: 65px;
 }
-.rightNav{
+.headerBurger{
+	display: none;
+}
+.rightNav {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 .rightNav > ul{
-	list-style: none;
-	margin-left: 30px;
+	position: relative;
+	z-index: 3;
 }
-.rightNav > ul > li, .rightNav a{
+.rightNav > ul > li{
+	list-style: none;
 	display: inline-block;
-	margin-right: 25px;
+	margin-right: 30px;
 	font-size: 20px;
 }
 .rightNav img{
@@ -46,13 +65,22 @@ header{
 .rightNav a:hover,.part a:hover:not(.logo), body .active, footer div a span:hover{
 	color: #E84300;
 }
+.headerBurger.knopka::before{ /*Разворачиваю линии бургера так, чтобы получился крест*/
+	transform: rotate(45deg);
+	top: 9px;
+}
+.headerBurger.knopka::after{ 
+	transform: rotate(-45deg);
+	bottom: 9px;
+}
+.headerBurger.knopka span{
+	transform: scale(0); /*Убираю среднюю линию бургера*/
+}
 .preFooterConteiner{
 	background-color: #707070;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 .preFooter{
+	margin: 0 auto;
 	max-width: 1200px;
 	display: flex;
 	justify-content: space-around;
@@ -60,7 +88,7 @@ header{
 	flex-wrap:wrap;
 }
 .part{
-	min-width: 200px;
+	min-width: 130px;
 	display: flex;
 	justify-content:space-between;
 	margin: 10px 0px;
@@ -119,8 +147,111 @@ footer div a span{
 	color: white;
 	margin: 20px 20px 20px 0px;
 }
-@media all and (max-width: 1014px){
+@media all and (max-width: 1054px){
 	.part:first-child{
 		display: none;
+	}
+}
+@media all and (max-width: 870px){
+	header{
+		height: 70px;
+	}
+	.headerBody{
+		height: 70px;
+	}
+	.leftNav{
+		font-size: 18px;
+	}
+	.leftNav img{
+		width: 50px;
+		margin-left: 10px;
+	}
+	.rightNav > ul > li{
+		margin-right: 10px;
+		font-size: 18px;
+	}
+	.rightNav img{
+		height: 20px;
+		margin-right: 10px;
+	}
+}
+@media all and (max-width: 680px){
+	body.lock{
+		overflow: hidden;   /*Для запрета скрола во время открытого меню*/
+	}
+	header{
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 50px;	
+	}
+	header::before{ 
+		height: 100%;
+	}
+	.headerBody{
+		height: 50px;
+	}
+	.mnemonic{
+		display: none;
+	}
+	.headerBurger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+		cursor: pointer;
+	}
+	.headerBurger span{				/*Средняя линия бургера*/
+		background-color: white;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		top:9px;
+		transition: all 0.3s ease 0s;
+	}
+	.headerBurger::before, .headerBurger::after{ /*Верхняя и нижняя линия бургера нарисованы с помощью псевдоэлементов*/
+		content: "";
+		background-color: white;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	.headerBurger::before{
+		top: 0;
+	}
+	.headerBurger::after{
+		bottom: 0;
+	}
+	.rightNav{
+		position: fixed;
+		top: -150%;    /*Для плавного выезжания меню сверху*/
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #707070;
+		padding: 70px 10px 20px 10px;
+		transition: all 0.3s ease 0s;
+	}
+	.rightNav.knopka{
+		top: 0;
+	}
+	.rightNav ul{
+		overflow: auto; /*Для появления полосы прокрутки на моб.устройствах в landscape*/
+		margin-left: 35%;
+		margin-top: 10%;
+		text-align: center;
+	}
+	.rightNav ul > li{
+		display: block;
+		margin: 0px 0px 18px 0px;
+		font-size: 25px;
+	}
+	.rightNav img{
+		height: 30px;
 	}
 }

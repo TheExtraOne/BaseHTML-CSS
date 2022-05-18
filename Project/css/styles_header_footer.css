@@ -191,9 +191,6 @@ footer div a span{
 	.headerBody{
 		height: 50px;
 	}
-	.mnemonic{
-		display: none;
-	}
 	.headerBurger{
 		display: block;
 		position: relative;
@@ -234,7 +231,7 @@ footer div a span{
 		width: 100%;
 		height: 100%;
 		background-color: #707070;
-		padding: 70px 10px 20px 10px;
+		padding: 15px 10px 20px 10px;
 		transition: all 0.3s ease 0s;
 	}
 	.rightNav.knopka{
@@ -248,8 +245,8 @@ footer div a span{
 	}
 	.rightNav ul > li{
 		display: block;
-		margin: 0px 0px 18px 0px;
-		font-size: 25px;
+		margin: 0px 0px 15px 0px;
+		font-size: 20px;
 	}
 	.rightNav img{
 		height: 30px;

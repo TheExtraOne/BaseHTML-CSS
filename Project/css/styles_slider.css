@@ -4,11 +4,14 @@
 .sliderItem{
 	position: relative;
 }
+.sliderItem a{
+	position: relative;
+}
 .sliderItemNewsTetx{
 	text-align: left;
     position: absolute;
-    bottom: 10%;
-    right: 30%;
+    bottom: 20px;
+    left: 20px;
     color: white;
 }
 .sliderItemNewsTitle{
@@ -98,13 +101,10 @@
 }
 @media all and (max-width: 1077px){
 	.slick-arrow, .slick-arrow.slick-prev, .slick-arrow.slick-next{
-		display: none;
+		display: none !important;
 	}
 }
 @media all and (max-width: 690px){
-	.slick-arrow, .slick-arrow.slick-prev, .slick-arrow.slick-next{
-		display: none;
-	}
 	.sliderItem picture{
 		flex: 0 0 70%;
 		padding-right: 20px;

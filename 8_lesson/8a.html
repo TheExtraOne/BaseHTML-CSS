@@ -12,39 +12,49 @@
 				Для публикации вашей статьи заполните, пожалуйста, следующую форму:
 			</div>
 			<div> 
-				<div class="column">
-					<p>Название статьи:</p>
-					<p>Рубрика:</p>
-					<p>Публикации:</p>
-					<p>Разрешить комментарии:</p>
-				</div>
-				<div>
-					<form method=post action="http://fe.it-academy.by/TestForm.php">
-						<div class="rightSide">
-							<label for="articleName">Название статьи:</label>
-							<input type='text' name='articleName' id="articleName"><br>
-							<label for="Topic">Рубрика:</label>
-							<select name='Topic' id="Topic">
-								 <option value=1 selected>программирование</option>
-								 <option value=2>математика</option>
-								 <option value=3>физика</option>
-								 <option value=4>химия</option>
-								 <option value=5>биология</option>
-								 <option value=6>история</option>
-							</select><br>
-							<label for="Publication">Публикации:</label><div class="brick"></div>
-							<input type='radio' name='Publication' value=1 class="star">на сайте<div class="brick"></div>
-							<input type='radio' name='Publication' value=2 class="star">в журнале<div class="brick"></div>
-							<input type='radio' name='Publication' value=3 class="star">на сайте и в журнале<br>
-							<label for="Comments">Разрешить комментарии:</label>
-							<input type='checkbox' name='Comments' id="Comments" checked><br>
-						</div>
-						<label class="articletext"> Текст статьи:<br>
-							<textarea name= "articletext" id="articletext"></textarea>
-						</label><br>
-						<input type='submit' value='Опубликовать'>
-					</form>
-				</div>
+				<form method=post action="http://fe.it-academy.by/TestForm.php">
+					<div class="column">
+						<label for="articleName">Название статьи:</label>
+					</div>
+					<div class="rightSide">
+						<input type='text' name='articleName' id="articleName">
+					</div>
+					<div class="column">
+						<label for="Topic">Рубрика:</label>
+					</div>
+					<div class="rightSide">
+						<select name='Topic' id="Topic">
+							<option value=1 selected>программирование</option>
+							<option value=2>математика</option>
+							<option value=3>физика</option>
+							<option value=4>химия</option>
+							<option value=5>биология</option>
+							<option value=6>история</option>
+						</select>
+					</div>
+					<div class="column">
+						<label for="Publication">Публикации:</label>
+					</div>
+					<div class="rightSide">
+						<div class="brick"></div>
+						<input type='radio' name='Publication' value=1 class="star">на сайте
+						<div class="brick"></div>
+						<input type='radio' name='Publication' value=2 class="star">в журнале
+						<div class="brick"></div>
+						<input type='radio' name='Publication' value=3 class="star">на сайте и в журнале
+					</div>
+					<div class="column">
+						<label for="Comments">Разрешить комментарии:</label>
+					</div>
+					<div class="rightSide Comments">
+						<input type='checkbox' name='Comments' id="Comments" checked>
+					</div>
+					<div class="brick"></div>
+					<label class="articletext"> Текст статьи:<br>
+						<textarea name= "articletext" id="articletext"></textarea>
+					</label><br>
+					<input type='submit' value='Опубликовать'>
+				</form>
 			</div>
 		</div>
 	</body>

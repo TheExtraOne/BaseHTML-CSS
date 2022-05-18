@@ -12,6 +12,10 @@ h2{
 	font: small-caps bold 2em serif;
 	text-align: center;
 }
+body{
+	min-width: 100%;
+	position: relative;
+}
 .Wrapper{
 	display: flex;
 	justify-content: space-between;
@@ -40,7 +44,7 @@ h2{
 .joinClub {
 	position: fixed;
 	top: 8%;
-	left: 80%;
+	right: 10%;
 	background-color: #15eb92;
 	border: solid 1px #22a16c;
 	width: 73px;

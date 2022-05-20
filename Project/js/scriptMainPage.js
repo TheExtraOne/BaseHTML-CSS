@@ -6,11 +6,11 @@ $(document).ready(function() {
 		speed: 1000,
 		easing:"ease",
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 2500,
 	});
 });
 
-var el = $('.prewCurses .PrewCursesInfo div');
+var el = $('.prewCurses .PrewCursesInfo div div.mainText, .prewCurses .PrewCursesInfo div div.Title');
 
 $(window).scroll(function(){
     if ( $(this).scrollTop() > el.offset().top - 700 ) {

@@ -113,15 +113,21 @@ header::before{  /*Плашка делается для того, чтобы м�
 .part  ul a{
 	font-size: 14px;	
 }
+.phone, .mail{
+	position: relative;
+}
+.phone img, .mail img{
+	position: absolute;
+}
 .phone img{
-	width: 20px;
-	float: left;
-	margin-right: 5px;
+	width: 24px;
+	top: 0;
+	left: -25px;
 }
 .mail img{
-	width: 15px;
-	float: left;
-	margin-right: 5px;
+	width: 17px;
+	top: 2px;
+	left: -23px;
 }
 .notImportantText a{
 	font-size: 12px;

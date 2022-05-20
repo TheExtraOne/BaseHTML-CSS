@@ -17,15 +17,6 @@ $(window).scroll(function(){
         el.addClass('animation');
     }
 });
-
-var tl = $('.prewCurses .PrewCursesLink');
-
-$(window).scroll(function(){
-    if ( $(this).scrollTop() > tl.offset().top - 900 ) {
-        tl.addClass('animationTwo');
-    }
-});
-
 var rl = $('.nextCurses .NextCursesAbout div div.mainText, .nextCurses .NextCursesAbout div div.Title ');
 
 $(window).scroll(function(){

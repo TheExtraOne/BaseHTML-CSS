@@ -26,6 +26,9 @@ body{
 	justify-content: center;
 	align-items: center;
 }
+.main a:hover{
+	color: #E84300;
+}
 .mainTitle{
 	height: 476px;
 	width: 359px;

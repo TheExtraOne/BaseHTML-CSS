@@ -115,6 +115,7 @@ header::before{  /*Плашка делается для того, чтобы м�
 }
 .phone, .mail{
 	position: relative;
+	margin-left: 30px;
 }
 .phone img, .mail img{
 	position: absolute;
@@ -122,7 +123,7 @@ header::before{  /*Плашка делается для того, чтобы м�
 .phone img{
 	width: 24px;
 	top: 0;
-	left: -25px;
+	left: -27px;
 }
 .mail img{
 	width: 17px;

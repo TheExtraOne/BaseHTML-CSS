@@ -4,9 +4,7 @@
 	background-size: cover;
 	background-attachment: fixed;
 }
-.main a:hover{
-	color: #E84300;
-}
+
 .about, .aboutDiploma{
 	margin: 40px 0px 30px 0px;
 }

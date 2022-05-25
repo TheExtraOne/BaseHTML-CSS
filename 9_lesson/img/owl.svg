@@ -1,0 +1,20 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" style="vector-effect: non-scaling-stroke;" stroke="null">
+
+ <g stroke="null">
+  <title stroke="null">Layer 1</title>
+  <path stroke="#000" id="svg_19" d="m337.28197,481.58296l30,-27.49999l30,27.49999l-30,27.49999l-30,-27.49999z" fill="#ff8b0f"/>
+  <path id="svg_18" d="m279.68697,480.148l29.5,-31l29.5,31l-29.5,31l-29.5,-31z" stroke="#000" fill="#ff8b0f"/>
+  <ellipse stroke="#000" ry="121" rx="106" id="svg_12" cy="364.4" cx="335.6" fill="#ffaa56"/>
+  <ellipse stroke="#000" ry="78" rx="123.5" id="svg_9" cy="272.4" cx="347.1" fill="#ffaa56"/>
+  <ellipse stroke="#000" ry="43" rx="49" id="svg_1" cy="265.4" cx="281.6" fill="#fff"/>
+  <ellipse stroke="#000" ry="42" rx="48.5" id="svg_2" cy="271.4" cx="414.1" fill="#fff"/>
+  <ellipse stroke="#000" ry="7.5" rx="7.5" id="svg_3" cy="267.9" cx="277.1" fill="#000000"/>
+  <ellipse stroke="#000" ry="8" rx="8.5" id="svg_4" cy="269.4" cx="402.1" fill="#000000"/>
+  <path stroke="#000" transform="rotate(-180 346.997 322.451)" id="svg_6" d="m319.99699,343.9511l26.99999,-42.99998l26.99999,42.99998l-53.99997,0z" fill="#ff8b0f"/>
+  <ellipse stroke="#000" transform="rotate(19 285.054 208.033)" ry="15" rx="68.77044" id="svg_7" cy="208.03269" cx="285.05431" fill="#7f3f00"/>
+  <ellipse stroke="#000" transform="rotate(-12 440.311 215.744)" ry="10.5" rx="77.20166" id="svg_8" cy="215.744" cx="440.31079" fill="#7f3f00"/>
+  <path id="svg_13" d="m236.6,466.4c-16.57459,0 -30,-31.54972 -30,-70.5c0,-38.95028 13.42541,-70.5 30,-70.5c16.57459,0 30,31.54972 30,70.5c0,38.95028 -13.42541,70.5 -30,70.5z" stroke="#000" fill="#7f3f00"/>
+  <ellipse stroke="#000" ry="0.5" rx="2" id="svg_15" cy="380.9" cx="487.6" fill="#fff"/>
+  <ellipse stroke="#000" ry="71.5" rx="29.5" id="svg_16" cy="397.9" cx="454.1" fill="#7f3f00"/>
+ </g>
+</svg>

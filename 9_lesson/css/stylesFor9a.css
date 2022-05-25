@@ -1,0 +1,11 @@
+.mainTextGallery{
+	font: 600 18px sans-serif;
+}
+.wrapperForGallery{
+	max-width: 580px;
+	height: 700px; 
+	overflow-y: scroll;
+}
+iframe{
+	margin: 10px 0px;
+}

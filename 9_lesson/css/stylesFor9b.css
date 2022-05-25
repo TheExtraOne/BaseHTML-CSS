@@ -1,0 +1,30 @@
+.wrapper{
+	position: relative;
+}
+img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#svg_13:hover, #svg_16:hover{
+	fill: black;
+}
+#svg_6:hover, #svg_18:hover, #svg_19:hover{
+	fill-opacity: 0.2;
+}
+#svg_12:hover, #svg_9:hover, #svg_6:hover, #svg_18:hover, #svg_19:hover, #svg_3:hover, #svg_4:hover, #svg_7:hover, #svg_8:hover{
+	stroke-width: 3;
+}
+#svg_3:hover, #svg_4:hover{
+	fill: brown;
+	stroke: #828282;
+}
+#svg_7:hover, #svg_8:hover{
+	fill: black;
+	stroke: #828282;
+}
+#svg_16:hover{
+	ry: 80.5;
+	rx: 35.5;
+}

@@ -7,6 +7,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css"> <!--для иконок-->
 		<link rel="stylesheet" type="text/css" href="css/styles_general.css"> <!--CSS общие для всех документов-->
 		<link rel="stylesheet" type="text/css" href="css/styles_header_footer.css"> <!--CSS для хэдера-->
 		<link rel="stylesheet" type="text/css" href="css/styles_main.css"> <!--CSS для данной страницы-->
@@ -35,13 +36,78 @@
 								<li><a href="FAQPage.html">FAQ</a></li>
 								<li><a href="">News</a></li>
 								<li><a href="">Contact</a></li>
-								<li><a href="" class="active"><img src="img/logo/logoOranNoBack.svg">Log in</a></li>
+								<li>
+									<button onclick="surprise('block')" class="logInButton active"><img src="img/logo/logoOranNoBack.svg"><span>Log in</span></button>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</nav>
 			</header>
 			<div class="main">
+				<div onclick="surprise('none')" id="gray"></div> <!--Задний прозрачный фон для формы авторизации-->
+				<div class="logTabs" id="window">
+					<img onclick="surprise('none')" src="img/logo/closeSvg.svg" class="close" alt="close"> <!--Картинка крестика-->
+					<input type="radio" name="log-btn" id="log-btn-1" value="" checked>
+					<label for="log-btn-1">Sign in</label>
+					<input type="radio" name="log-btn" id="log-btn-2" value="">
+					<label for="log-btn-2">Create an account</label>
+					<div id="form-1">
+						<div class="formText">Sign in to your account using email and password provided during registration.</div>
+					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignIn">
+						   	<label> Email<br>
+						   		<input type='email' name='email' id="emailLogIn" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   	</label><br>
+						   	<label> Password<br>
+						   		<input type='password' name='pass' id="passLogIn" class="input" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label>
+						   		<input type='checkbox' name='signedIn' id="signedIn" class="checkbox" checked>
+						   		Keep me signed in
+						   	</label><br>
+						   	<a href="#" class="formText">Forgot password?</a><br>
+						   	<button type="submit" class="waveBtn">
+								<span class="waveBtnText">Sign in</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+					    </form>
+					    <div class="formText last">Or sign in with:</div>
+					    <i class="fa fa-google" aria-hidden="true"></i>
+				    	<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				    	<i class="fa fa-twitter" aria-hidden="true"></i>
+				    	<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+				    	<i class="fa fa-telegram" aria-hidden="true"></i>
+				    	<i class="fa fa-instagram" aria-hidden="true"></i>
+					</div>
+					<div id="form-2">
+						<div class="formText">Registration takes less than a minute but gives you full control over your studying.</div>
+					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignUp">
+						   	<label> Name<br>
+						   		<input type='text' name='name' id="name" class="input" placeholder="Max" maxlength="15" required pattern="^[A-Za-z]{2,}">
+						   	</label><br>
+						   	<label> Surname<br>
+						   		<input type='text' name='surname' id="surname" class="input" placeholder="Velichko" maxlength="20" required pattern="^[A-Za-z]{2,}">
+						   	</label><br>
+						   	<label> Email<br>
+						   		<input type='email' name='email' id="emailLogUp" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   	</label><br>
+						   	<label> Password<br>
+						   		<input type='password' name='pass' id="passLogUp" class="input" placeholder="Use at least 6 letters and numbers" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label> Confirm your password<br>
+						   		<input type='password' name='confpass' id="confPassLogUp" class="input" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label>
+						   		<input type='checkbox' name='signedIn' id="signedUp" class="checkbox" checked>
+						   		Remember me
+						   	</label><br>
+						   	<button type="submit" class="waveBtn">
+								<span class="waveBtnText">Sign up</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+					    </form>
+					</div>
+				</div>
 				<div class="paralax container">
 					<div class="mainTitle container">
 						<div class="mainText">cre<wbr/>ativ<wbr/>ity.</div>
@@ -606,5 +672,12 @@
 		<script src="js/scriptHeader.js" type="text/javascript"></script>
 		<script src="js/slick.min.js" type="text/javascript"></script>
 		<script src="js/scriptMainPage.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			//Функция показа окна Log in//
+			function surprise(state){
+				document.getElementById('window').style.display = state;
+				document.getElementById('gray').style.display = state;
+			}
+		</script>
 	</body>
 </html>

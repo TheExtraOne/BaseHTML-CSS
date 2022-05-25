@@ -150,19 +150,6 @@
 .blockText > i{
 	margin-right: 7px;
 }
-@media all and (max-width: 728px){
-	.paralaxFaq{
-		min-height: 500px;
-	}
-	.mainTitle{
-		height: 331px;
-		width: 210px;
-	}
-	.mainText{
-		font-size:58px;
-		line-height: 1;
-	}
-}
 @media all and (max-width: 833px){
 	.contentTabs>label {
 		padding: 10px 0px;
@@ -181,6 +168,19 @@
 		padding: 10px 20px 15px 20px;
 	}
 }
+@media all and (max-width: 728px){
+	.paralaxFaq{
+		min-height: 500px;
+	}
+	.mainTitle{
+		height: 331px;
+		width: 210px;
+	}
+	.mainText{
+		font-size:58px;
+		line-height: 1;
+	}
+}
 @media all and (max-width: 677px){
 	.contentTabs>label {
 		display: block;
@@ -194,10 +194,14 @@
 		font-size: 12px;
 		padding-bottom: 10px;
 	}
+	.searchFAQ{
+		width: 300px;
+		padding: 0px 6px;
+	}
 }
 
 @media all and (max-width: 460px){
-	.searchBox:hover .searchFAQ{
+	.searchFAQ{
 		width: 240px;
 	}
 	.blockTitle{

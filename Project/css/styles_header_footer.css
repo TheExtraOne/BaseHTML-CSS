@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 header{
 	height: 80px;
 	width: 100%;
@@ -21,8 +28,13 @@ header::before{  /*Плашка делается для того, чтобы м�
 .headerBody{
 	position: relative;
 	height: 80px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-pack: distribute;
 	justify-content: space-around;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 }
 .wrapperNav, .wrapperNav a, .part a{	
@@ -45,6 +57,8 @@ header::before{  /*Плашка делается для того, чтобы м�
 	display: none;
 }
 .rightNav {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 .rightNav > ul{
@@ -77,15 +91,21 @@ header::before{  /*Плашка делается для того, чтобы м�
 	color: #E84300;
 }
 .headerBurger.knopka::before{ /*Разворачиваю линии бургера так, чтобы получился крест*/
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 	top: 9px;
 }
 .headerBurger.knopka::after{ 
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg); 
+	    -ms-transform: rotate(-45deg); 
+	        transform: rotate(-45deg);
 	bottom: 9px;
 }
 .headerBurger.knopka span{
-	transform: scale(0); /*Убираю среднюю линию бургера*/
+	-webkit-transform: scale(0);
+	    -ms-transform: scale(0);
+	        transform: scale(0); /*Убираю среднюю линию бургера*/
 }
 .preFooterConteiner{
 	background-color: #707070;
@@ -93,20 +113,32 @@ header::before{  /*Плашка делается для того, чтобы м�
 .preFooter{
 	margin: 0 auto;
 	max-width: 1200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-pack: distribute;
 	justify-content: space-around;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-ms-flex-wrap:wrap;
 	flex-wrap:wrap;
 }
 .part{
 	min-width: 130px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content:space-between;
+	-webkit-box-pack:justify;
+	    -ms-flex-pack:justify;
+	        justify-content:space-between;
 	margin: 10px 0px;
-	align-self:flex-start;
+	-ms-flex-item-align:start;
+	    align-self:flex-start;
 }
 .part:first-child, .part:last-child{
-	flex-basis:17%;
+	-ms-flex-preferred-size:17%;
+	    flex-basis:17%;
 }
 .notImportantText{
 	color: white;
@@ -128,6 +160,10 @@ header::before{  /*Плашка делается для того, чтобы м�
 	position: relative;
 	margin-left: 30px;
 }
+.phone a, .mail a{
+	color: black;
+	font: normal 13px sans-serif;
+}
 .phone img, .mail img{
 	position: absolute;
 }
@@ -147,13 +183,22 @@ header::before{  /*Плашка делается для того, чтобы м�
 }
 footer{
 	background-color: black;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content:center;
-	align-items: center;
-	flex-wrap:wrap;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-wrap:wrap;
+	    flex-wrap:wrap;
 }
 footer .notImportantText{
-	flex-grow:1;
+	-webkit-box-flex:1;
+	    -ms-flex-positive:1;
+	        flex-grow:1;
 	text-align: center;
 	margin: 20px 12px;
 }
@@ -228,6 +273,8 @@ footer div a span{
 		height: 2px;
 		left: 0;
 		top:9px;
+		-webkit-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
 		transition: all 0.3s ease 0s;
 	}
 	.headerBurger::before, .headerBurger::after{ /*Верхняя и нижняя линия бургера нарисованы с помощью псевдоэлементов*/
@@ -237,6 +284,8 @@ footer div a span{
 		width: 100%;
 		height: 2px;
 		left: 0;
+		-webkit-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
 		transition: all 0.3s ease 0s;
 	}
 	.headerBurger::before{
@@ -247,12 +296,14 @@ footer div a span{
 	}
 	.rightNav{
 		position: fixed;
-		top: -150%;    /*Для плавного выезжания меню сверху*/
+		top: -150%;    
 		left: 0;
 		width: 100%;
 		height: 100%;
 		background-color: #707070;
 		padding: 15px 10px 20px 10px;
+		-webkit-transition: all 0.3s ease 0s;
+		-o-transition: all 0.3s ease 0s;
 		transition: all 0.3s ease 0s;
 	}
 	.rightNav.knopka{
@@ -266,7 +317,7 @@ footer div a span{
 	}
 	.rightNav ul > li{
 		display: block;
-		margin: 0px 0px 15px 0px;
+		margin: 50px 0px 15px 0px;
 		font-size: 20px;
 	}
 	.logInButton span{
@@ -313,7 +364,10 @@ footer div a span{
 	margin-top: -15px;
 	text-align: center;
 	vertical-align: middle;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 	background-color: white;
 	border-bottom: 1px solid #e0e0e0;
 	padding: 12px 0px;
@@ -321,6 +375,8 @@ footer div a span{
 	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 1.5;
+	-webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+	-o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 	cursor: pointer;
 	position: relative;
@@ -397,35 +453,51 @@ footer div a span{
 #form-1> i{
 	width: 11.5%;
 	padding: 0px 5px;
+	cursor: pointer;
+}
+#form-1> i:hover{
+	color: #E84300;
+	-webkit-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: all 0.2s ease 0s;
+	-o-transition: all 0.2s ease 0s;
+	transition: all 0.2s ease 0s;
 }
 .waveBtn{
 	border: none;
 	background: none;
 	cursor: pointer;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 280px;
 	height: 60px;
 	border-radius: 0 0 10px 10px;
-	transition: all 0.8s ease 0s;
 	-webkit-transition: all 0.8s ease 0s;
 	-moz-transition: all 0.8s ease 0s;
 	-ms-transition: all 0.8s ease 0s;
 	-o-transition: all 0.8s ease 0s;
+	transition: all 0.8s ease 0s;
 	position: relative;
 	overflow: hidden;
 	margin: 20px 0px;
 }
 .waveBtn:hover{
 	border-radius: 10px;
-	transition: all 0.8s ease 0.1s;
 	-webkit-transition: all 0.8s ease 0.1s;
 	-moz-transition: all 0.8s ease 0.1s;
 	-ms-transition: all 0.8s ease 0.1s;
 	-o-transition: all 0.8s ease 0.1s;
-	box-shadow: inset 0 0 40px rgba(73, 115, 255, 0.6);
+		transition: all 0.8s ease 0.1s;
 	-webkit-box-shadow: inset 0 0 40px rgba(73, 115, 255, 0.6);
+		box-shadow: inset 0 0 40px rgba(73, 115, 255, 0.6);
 }
 .waveBtn:hover .waveBtnWaves{
 	top: -50px;
@@ -446,13 +518,13 @@ footer div a span{
 	width: 280px;
 	height: 280px;
 	background-color: #4973ff;
-	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
-	transition: all 0.3s ease 0s;
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
 	-webkit-transition: all 0.3s ease 0s;
 	-moz-transition: all 0.3s ease 0s;
 	-ms-transition: all 0.3s ease 0s;
 	-o-transition: all 0.3s ease 0s;
+		transition: all 0.3s ease 0s;
 }
 .waveBtnWaves::before, .waveBtnWaves::after{
 	content: "";
@@ -461,45 +533,61 @@ footer div a span{
 	left: 50%;
 	width: 250%;
 	height: 250%;
-	transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 	-webkit-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 	-moz-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 	-ms-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 	-o-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+		transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 }
 .waveBtnWaves::before{
 	background-color: white;
 	border-radius: 48%;
-	animation: waves 10s infinite linear;
 	-webkit-animation: waves 5s infinite linear;
 	-moz-animation: waves 5s infinite linear;
 	-ms-animation: waves 5s infinite linear;
 	-o-animation: waves 5s infinite linear;
+		animation: waves 10s infinite linear;
 }
 .waveBtnWaves::after{
 	background-color: rgba(0, 0, 0, 0.1);
 	border-radius: 44%;
-	animation: waves 15s infinite linear;
 	-webkit-animation: waves 10s infinite linear;
 	-moz-animation: waves 10s infinite linear;
 	-ms-animation: waves 10s infinite linear;
 	-o-animation: waves 10s infinite linear;
+		animation: waves 15s infinite linear;
 }
-@keyframes waves{
+@-webkit-keyframes waves{
 	0%{
-		transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 		-webkit-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 		-moz-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 		-ms-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 		-o-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+				transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 
 	}
 	100%{
-		transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
 		-webkit-transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
 		-moz-transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
 		-ms-transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
 		-o-transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+		transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
 	}
 }
+@keyframes waves{
+	0%{
+		-webkit-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+		-moz-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+		-ms-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+		-o-transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+				transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
 
+	}
+	100%{
+		-webkit-transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+		-moz-transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+		-ms-transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+		-o-transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+				transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+	}
+}

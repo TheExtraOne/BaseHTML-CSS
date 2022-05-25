@@ -1,6 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 .paralaxFaq{
 	min-height: 600px;
-	background: url(../img/fones/faqBacWeb.webp) center no-repeat;
+	background: url(../img/fones/faqBacJp.jpeg) center no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -43,6 +50,8 @@
 	padding: 0px;
 	color: white;
 	font-size: 16px;
+	-webkit-transition: 0.4s;
+	-o-transition: 0.4s;
 	transition: 0.4s;
 	line-height: 40px;
 	width: 0;
@@ -75,7 +84,10 @@
 	width: 25%;
 	text-align: center;
 	vertical-align: middle;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 	background-color: white;
 	border-bottom: 1px solid #e0e0e0;
 	padding: 12px 0px;
@@ -83,6 +95,8 @@
 	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 1.5;
+	-webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+	-o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 	cursor: pointer;
 	position: relative;
@@ -121,24 +135,34 @@
 	background-color: black;
 	position: absolute;
 	top: 10px;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 }
 .blockTitle::before{
-	transform: rotate(-40deg);
+	-webkit-transform: rotate(-40deg);
+	    -ms-transform: rotate(-40deg);
+	        transform: rotate(-40deg);
 	right: 0px;
 }
 .blockTitle::after{
-	transform: rotate(40deg);
+	-webkit-transform: rotate(40deg);
+	    -ms-transform: rotate(40deg);
+	        transform: rotate(40deg);
 	right: 8px;
 }
 .blockTitle.show::before, .blockTitle.show::after{
 	background-color: #E84300;
 }
 .blockTitle.show::before{
-	transform: rotate(40deg);
+	-webkit-transform: rotate(40deg);
+	    -ms-transform: rotate(40deg);
+	        transform: rotate(40deg);
 }
 .blockTitle.show::after{
-	transform: rotate(-40deg);
+	-webkit-transform: rotate(-40deg);
+	    -ms-transform: rotate(-40deg);
+	        transform: rotate(-40deg);
 }
 .blockText{
 	display: none;
@@ -212,10 +236,14 @@
 	}
 	.blockTitle::before{
 		right: -20px;
-		transform: rotate(40deg);
+		-webkit-transform: rotate(40deg);
+		    -ms-transform: rotate(40deg);
+		        transform: rotate(40deg);
 	}
 	.blockTitle::after{
 		right: -28px;
-		transform: rotate(-40deg);
+		-webkit-transform: rotate(-40deg);
+		    -ms-transform: rotate(-40deg);
+		        transform: rotate(-40deg);
 	}
 }

@@ -1,0 +1,185 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+.paralaxFaq{
+	min-height: 650px;
+	background: url(../img/fones/paralaxCoursesJp.jpg) center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.courses{
+	margin: 40px 0px;
+}
+.coursesChoose{
+	max-width: 80%;
+}
+.coursesChoose p{
+	margin: 10px 0px;
+}
+.wrapperForCourses{
+	max-width: 1500px;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+}
+.card{
+	margin-top: 40px;
+	border: solid #e3e3e3 1px;
+	-webkit-box-shadow: #c3c2c4 0px 0px 15px 0px;
+	        box-shadow: #c3c2c4 0px 0px 15px 0px;
+	max-width: 680px;
+	padding: 10px 10px 6px 10px;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	position: relative;
+}
+.IMG {
+	max-width: 57%;
+}
+.IMG img{
+	width: 100%;
+	height: 100%;
+	-o-object-position: cover;
+	   object-position: cover;
+}
+.cardInfo{
+	margin: 0px 11px;
+	min-width: 280px;
+}
+.new{
+	position: absolute;
+	top: -5px;
+	right: 0;
+	text-transform: uppercase;
+	color: white;
+	font: bold 20px sans-serif;
+	width: 70px;
+	height: 25px;
+	text-align: center;
+	padding: 4px;
+	border-radius: 25px;
+    border: 1px solid #E84300;
+    background-color: #E84300;
+
+}
+.cardInfo > .Title{
+	font-weight: 500;
+	margin: 20px 0px;
+	text-align: center;
+}
+.cardInfo a.button {
+	margin: 20px 0px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #E84300;
+    background-color: #E84300;
+    font: 400 20px sans-serif;
+    color: #ffffff;
+    -webkit-box-shadow: #848484 0px 0px 40px 0px;
+    box-shadow: #848484 0px 0px 40px 0px;
+}
+.cardInfo a.button:hover,.cardInfo a.button:active,.cardInfo a.button:focus{
+	opacity: 0.7;
+}
+@media all and (min-width: 1800px){
+	.wrapperForCourses{
+		max-width: 1700px;
+	}
+	.card{
+		max-width: 500px;
+	}
+}
+@media all and (min-width: 1700px){
+	.wrapperForCourses{
+		max-width: 1600px;
+	}
+	.card{
+		max-width: 700px;
+	}
+}
+@media all and (max-width: 1450px){
+	.wrapperForCourses{
+		max-width: 1300px;
+	}
+	.card{
+		max-width: 600px;
+	}
+}
+@media all and (max-width: 1300px){
+	.wrapperForCourses{
+		max-width: 1150px;
+	}
+	.card{
+		max-width: 500px;
+	}
+}
+@media all and (max-width: 1158px){
+	.wrapperForCourses{
+		max-width: 1000px;
+	}
+	.card{
+		max-width: 800px;
+	}
+}
+@media all and (max-width: 728px){
+	.paralaxFaq{
+		min-height: 500px;
+	}
+	.mainTitle{
+		height: 331px;
+		width: 210px;
+	}
+	.mainText{
+		font-size:58px;
+		line-height: 1;
+	}
+	.new{
+		font-size: 17px;
+		width: 60px;
+		height: 20px;
+	}
+}
+@media all and (max-width: 690px){
+	.coursesChoose{
+		max-width: 95%;
+		font-size: 14px;
+	}
+	.coursesChoose p{
+		margin: 3px 0px;
+	}
+	.courses {
+    	margin: 20px  0px;
+	}
+	.cardInfo > .Title{
+		font-size: 18px;
+		margin: 10px 0px;
+	}
+}
+@media all and (max-width: 625px){
+	.card{
+		-webkit-box-orient:vertical;
+		-webkit-box-direction:normal;
+		    -ms-flex-direction:column;
+		        flex-direction:column;
+	}
+	.IMG {
+    	max-width: 90%;
+	}
+	.cardInfo{
+
+	}
+}
+@media all and (max-width: 515px){
+	.Title{
+		margin-top: 5px
+	}
+}

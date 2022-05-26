@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Art school.</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css"> <!--для иконок-->
+		<link rel="stylesheet" type="text/css" href="css/styles_general.css"> <!--CSS общие для всех документов-->
+		<link rel="stylesheet" type="text/css" href="css/styles_header_footer.css"> <!--CSS для хэдера-->
+		<link rel="stylesheet" type="text/css" href="css/styles_courses.css"> <!--CSS для данной страницы-->
+		<link rel="icon" href="logo32.ico"> <!-- 32×32 лучше, чем 16-->
+		<link rel="icon" href="img/icon/logoWebP.webp" type="image/webp">
+		<link rel="icon" href="img/icon/logoSvg.svg" type="image/svg+xml"> <!--Не все поддерживают WebP-->
+		<link rel="apple-touch-icon" href="img/icon/logoPg180.png">  <!-- Для apple 180×180 -->
+		<!--<link rel="manifest" href="manifest.webmanifest">-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<nav class="wrapperNav">
+					<div class="headerBody">
+						<div class="leftNav">
+							<a href="MainPage.html" class="logo"><img src="img/logo/logo.webp" alt="Logo">art school.</a>
+						</div>
+						<div class="headerBurger">
+							<span></span>
+						</div>
+						<div class="rightNav">
+							<ul>
+								<li><a href="MainPage.html">Home</a></li>
+								<li><a href="AboutPage.html">About</a></li>
+								<li><a href="#" class="active">Courses</a></li>
+								<li><a href="FAQPage.html">FAQ</a></li>
+								<li><a href="">News</a></li>
+								<li><a href="">Contact</a></li>
+								<li>
+									<button onclick="surprise('block')" class="logInButton active"><img src="img/logo/logoOranNoBack.svg"><span>Log in</span></button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<div class="main">
+				<div onclick="surprise('none')" id="gray"></div> <!--Задний прозрачный фон для формы авторизации-->
+				<div class="logTabs" id="window">
+					<img onclick="surprise('none')" src="img/logo/closeSvg.svg" class="close" alt="close"> <!--Картинка крестика-->
+					<input type="radio" name="log-btn" id="log-btn-1" value="" checked>
+					<label for="log-btn-1">Sign in</label>
+					<input type="radio" name="log-btn" id="log-btn-2" value="">
+					<label for="log-btn-2">Create an account</label>
+					<div id="form-1">
+						<div class="formText">Sign in to your account using email and password provided during registration.</div>
+					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignIn">
+						   	<label> Email<br>
+						   		<input type='email' name='email' id="emailLogIn" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   	</label><br>
+						   	<label> Password<br>
+						   		<input type='password' name='pass' id="passLogIn" class="input" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label>
+						   		<input type='checkbox' name='signedIn' id="signedIn" class="checkbox" checked>
+						   		Keep me signed in
+						   	</label><br>
+						   	<a href="#" class="formText">Forgot password?</a><br>
+						   	<button type="submit" class="waveBtn">
+								<span class="waveBtnText">Sign in</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+					    </form>
+					    <div class="formText last">Or sign in with:</div>
+					    <i class="fa fa-google" aria-hidden="true"></i>
+				    	<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				    	<i class="fa fa-twitter" aria-hidden="true"></i>
+				    	<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+				    	<i class="fa fa-telegram" aria-hidden="true"></i>
+				    	<i class="fa fa-instagram" aria-hidden="true"></i>
+					</div>
+					<div id="form-2">
+						<div class="formText">Registration takes less than a minute but gives you full control over your studying.</div>
+					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignUp">
+						   	<label> Name<br>
+						   		<input type='text' name='name' id="name" class="input" placeholder="Max" maxlength="15" required pattern="^[A-Za-z]{2,}">
+						   	</label><br>
+						   	<label> Surname<br>
+						   		<input type='text' name='surname' id="surname" class="input" placeholder="Velichko" maxlength="20" required pattern="^[A-Za-z]{2,}">
+						   	</label><br>
+						   	<label> Email<br>
+						   		<input type='email' name='email' id="emailLogUp" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   	</label><br>
+						   	<label> Password<br>
+						   		<input type='password' name='pass' id="passLogUp" class="input" placeholder="Use at least 6 letters and numbers" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label> Confirm your password<br>
+						   		<input type='password' name='confpass' id="confPassLogUp" class="input" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label>
+						   		<input type='checkbox' name='signedIn' id="signedUp" class="checkbox" checked>
+						   		Remember me
+						   	</label><br>
+						   	<button id="waveBtn" type="submit" class="waveBtn">
+								<span class="waveBtnText">Sign up</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+					    </form>
+					</div>
+				</div>
+				<div class="paralaxFaq container">
+					<div class="mainTitle  container">
+						<div class="mainText">get star<wbr/>ted.</div>
+						<div class="mnemonic"><a href="#courses">&#10095;</a></div>
+					</div>
+				</div>
+				<div class="courses container Column">
+					<div class="Title" id="courses">Courses</div>
+					<div class="brick"></div>
+					<div class="coursesChoose">
+						<p>Education at the Art School begins with the fundamentals. Our curricula focus on the foundations necessary to compose, design, draw, paint, and sculpt. Throughout your academic journey with us, you will develop your artistic point of view as you learn about the artistic and commercial aspects of fine art and create lasting pieces for your student portfolio.</p>
+						<p>We have four main basic courses: Fine Art, Graphic Design, Graffiti and Illustration. Each of them has many sub-courses (modules) and you can choose a full-fledged basic course as well as its separated modules. What will you choose? Red or blue pill? Jedi or Sith?</p>
+					</div>
+					<div class="wrapperForCourses container">
+						<div class="card container">
+							<div class="wrapperFor IMG">
+								<picture>
+									<source srcset="img/courses/course5Web.webp" type="image/webp">
+									<img src="img/courses/course5Jp.jpg" alt="English" title="English">
+								</picture>
+							</div>
+							<div class="cardInfo container Column">
+								<div class="Title">English for Digital Designers</div>
+								<div class="new">New!</div>
+								<div class="start">Starts Jun 19, 2022</div>
+								<div class="price">&#36; 37</div>
+								<a class="button" href="">Book Now</a>
+							</div>
+						</div>
+						<div class="card container">
+							<div class="wrapperFor IMG">
+								<picture>
+									<source srcset="img/courses/course6Web.webp" type="image/webp">
+									<img src="img/courses/course6Jp.jpg" alt="Photoshop masterclass" title="Photoshop masterclass">
+								</picture>
+							</div>
+							<div class="cardInfo container Column">
+								<div class="Title">Photoshop<br>masterclass</div>
+								<div class="start">Starts Jun 24, 2022</div>
+								<div class="price">&#36; 15</div>
+								<a class="button" href="">Book Now</a>
+							</div>
+						</div>
+						<div class="card container">
+							<div class="wrapperFor IMG">
+								<picture>
+									<source srcset="img/courses/course1Web.webp" type="image/webp">
+									<img src="img/courses/course1Jp.jpg" alt="Illustration" title="Illustration">
+								</picture>
+							</div>
+							<div class="cardInfo container Column">
+								<div class="Title">Illustration</div>
+								<div class="start">Starts Jun 14, 2022</div>
+								<div class="price">&#36; 50</div>
+								<a class="button" href="">Book Now</a>
+							</div>
+						</div>
+						<div class="card container">
+							<div class="wrapperFor IMG">
+								<picture>
+									<source srcset="img/courses/course2Web.webp" type="image/webp">
+									<img src="img/courses/course2Jp.jpg" alt="Fine Art" title="Fine Art">
+								</picture>
+							</div>
+							<div class="cardInfo container Column">
+								<div class="Title">Fine Art</div>
+								<div class="start">Starts Jul 11, 2022</div>
+								<div class="price">&#36; 50</div>
+								<a class="button" href="">Book Now</a>
+							</div>
+						</div>
+						<div class="card container">
+							<div class="wrapperFor IMG">
+								<picture>
+									<source srcset="img/courses/course3Web.webp" type="image/webp">
+									<img src="img/courses/course3Jp.jpg" alt="Graphic Design" title="Graphic Design">
+								</picture>
+							</div>
+							<div class="cardInfo container Column">
+								<div class="Title">Graphic Design</div>
+								<div class="start">Starts Jul 05, 2022</div>
+								<div class="price">&#36; 50</div>
+								<a class="button" href="">Book Now</a>
+							</div>
+						</div>
+						<div class="card container">
+							<div class="wrapperFor IMG">
+								<picture>
+									<source srcset="img/courses/course4Web.webp" type="image/webp">
+									<img src="img/courses/course4Jp.jpg" alt="Graffiti" title="Graffiti">
+								</picture>
+							</div>
+							<div class="cardInfo container Column">
+								<div class="Title">Graffiti</div>
+								<div class="start">Starts Jun 29, 2022</div>
+								<div class="price">&#36; 50</div>
+								<a class="button" href="">Book Now</a>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="preFooterConteiner">
+				<div class="preFooter">
+					<div class="part Column">
+						<a href="#" class="logo"><img src="img/logo/logo.webp" alt="Logo">art school.</a>
+						<div class="notImportantText">
+							Our Art School is a leader in online studying. Founded by artist Noah Yoker, our site has been covering the art scene since 2005. Presenting a lively mix of courses,programs, news, reviews and interviews, Art School employs some of the best art teachers, journalists and critics on contemporary art.
+						</div>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">site map</div>
+						<ul>
+							<li><a href="MainPage.html">Home</a></li>
+							<li><a href="AboutPage.html">About</a></li>
+							<li><a href="#">Courses</a></li>
+							<li><a href="FAQPage.html">FAQ</a></li>
+							<li><a href="">News</a></li>
+							<li><a href="">Contact</a></li>
+						</ul>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">courses</div>
+						<ul>
+							<li><a href="">Fine Art</a></li>
+							<li><a href="">Graphic Design</a></li>
+							<li><a href="">Graffiti</a></li>
+							<li><a href="">Illustration</a></li>
+						</ul>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">contact us</div>
+						<div class="phone"><img src="img/logo/cellphone.svg"><a href="tel:+74055550128">+7 (405) 555-0128</a></div>
+						<div class="mail"><img src="img/logo/mail.svg"><a href="mailto:hiArtSchool@.com">hiArtSchool@.com</a></div>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">privacy policy</div>
+						<div class="notImportantText">
+							This Privacy Policy is meant to help you understand what information we collect and why we collect it. Additional information can be found <a href="FAQPage.html" title="Go to FAQ">HERE</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="notImportantText">
+					&copy; 2022 by <span>art school</span>. All rights reserved.
+				</div>
+				<div><a href="#courses"><span>back to top</span></a></div>
+			</footer>	
+		<script 
+		src="https://code.jquery.com/jquery-3.6.0.min.js" 
+		type="text/javascript" 
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous">	
+		</script>
+		<script src="js/scriptHeader.js" type="text/javascript"></script>
+		<script src="js/scriptFAQ.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			//Функция показа окна Log in//
+			function surprise(state){
+				document.getElementById('window').style.display = state;
+				document.getElementById('gray').style.display = state;
+			}
+		</script>
+		<script src="https://yastatic.net/share2/share.js" async></script>
+	</body>
+</html>

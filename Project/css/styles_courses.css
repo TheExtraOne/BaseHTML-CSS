@@ -28,7 +28,7 @@
 	    justify-content: space-around;
 }
 .card{
-	margin-top: 40px;
+	margin: 40px 10px 0px 10px;
 	border: solid #e3e3e3 1px;
 	-webkit-box-shadow: #c3c2c4 0px 0px 15px 0px;
 	        box-shadow: #c3c2c4 0px 0px 15px 0px;
@@ -40,7 +40,7 @@
 	position: relative;
 }
 .IMG {
-	max-width: 57%;
+	max-width: 60%;
 }
 .IMG img{
 	width: 100%;
@@ -50,11 +50,11 @@
 }
 .cardInfo{
 	margin: 0px 11px;
-	min-width: 280px;
+	min-width: 240px;
 }
 .new{
 	position: absolute;
-	top: -5px;
+	top: -15px;
 	right: 0;
 	text-transform: uppercase;
 	color: white;

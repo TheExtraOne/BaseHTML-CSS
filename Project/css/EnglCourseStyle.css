@@ -1,0 +1,92 @@
+.paralaxEngl{
+	min-height: 500px;
+	background: url(../img/fones/EnglCoursJp.jpg) center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.courseEngl{
+	margin: 40px 0px;
+}
+.courseEngl .name{
+	margin: 20px 0px;
+	font-weight: bold;
+	font-size: 23px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.coursesDescription{
+	max-width: 70%;
+	border-top: solid #E84300 2px;
+	border-bottom: solid #E84300 2px;
+	padding: 20px;
+	margin: 20px 0px;
+}
+.coursesDescription .name{
+	text-align: center;
+	font-size: 18px;
+}
+.coursesDescription p{
+	margin: 10px 0px;
+}
+.courseFrame{
+	margin: 20px 0px;
+	font-size: 18px;
+	border-collapse: collapse;
+}
+.courseFrame  td{
+	border: solid black 1px;
+	padding: 15px;
+}
+.courseEngl a.button {
+	margin: 20px 0px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: solid #E84300 1px;
+    background-color: #E84300;
+    font: 400 20px sans-serif;
+    color: #ffffff;
+    -webkit-box-shadow: #848484 0px 0px 40px 0px;
+    box-shadow: #848484 0px 0px 40px 0px;
+}
+.courseEngl a.button:hover,.courseEngl a.button:active,.courseEngl a.button:focus{
+	opacity: 0.7;
+}
+.tableWrapper{
+	border: solid #E84300 2px;
+	padding: 10px;
+	margin: 30px 0px;
+}
+.tableWrapper > table{
+	border-collapse: collapse;
+}
+.tableWrapper > table td{
+	border-bottom: solid #E84300 2px;
+	padding: 25px 50px;
+}
+.tableWrapper > table tr:last-of-type td{
+	border: none;
+}
+.Bottom{
+	border-bottom: none;
+}
+.coursesDescription a{
+	text-decoration: underline;
+	color: black;
+}
+.bread{
+	margin-top: 20px;
+	margin-left: 13%;
+}
+.prev, .current{
+	display: inline-block;
+}
+.prev{
+	text-decoration: underline;
+	color: black;
+}
+.current{
+	color: #8f8e91;
+}

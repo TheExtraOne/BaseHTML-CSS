@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Art school.</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css"> <!--для иконок-->
+		<link rel="stylesheet" type="text/css" href="../css/styles_general.css"> <!--CSS общие для всех документов-->
+		<link rel="stylesheet" type="text/css" href="../css/styles_header_footer.css"> <!--CSS для хэдера-->
+		<link rel="stylesheet" type="text/css" href="../css/EnglCourseStyle.css"> <!--CSS для данной страницы-->
+		<link rel="icon" href="logo32.ico"> <!-- 32×32 лучше, чем 16-->
+		<link rel="icon" href="../img/icon/logoWebP.webp" type="image/webp">
+		<link rel="icon" href="../img/icon/logoSvg.svg" type="image/svg+xml"> <!--Не все поддерживают WebP-->
+		<link rel="apple-touch-icon" href="../img/icon/logoPg180.png">  <!-- Для apple 180×180 -->
+		<!--<link rel="manifest" href="manifest.webmanifest">-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<nav class="wrapperNav">
+					<div class="headerBody">
+						<div class="leftNav">
+							<a href="../MainPage.html" class="logo"><img src="../img/logo/logo.webp" alt="Logo">art school.</a>
+						</div>
+						<div class="headerBurger">
+							<span></span>
+						</div>
+						<div class="rightNav">
+							<ul>
+								<li><a href="../MainPage.html">Home</a></li>
+								<li><a href="../AboutPage.html">About</a></li>
+								<li><a href="../CoursesPage.html">Courses</a></li>
+								<li><a href="../FAQPage.html">FAQ</a></li>
+								<li><a href="">News</a></li>
+								<li><a href="">Contact</a></li>
+								<li>
+									<button onclick="surprise('block')" class="logInButton active"><img src="../img/logo/logoOranNoBack.svg"><span>Log in</span></button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<div class="main">
+				<div onclick="surprise('none')" id="gray"></div> <!--Задний прозрачный фон для формы авторизации-->
+				<div class="logTabs" id="window">
+					<img onclick="surprise('none')" src="../img/logo/closeSvg.svg" class="close" alt="close"> <!--Картинка крестика-->
+					<input type="radio" name="log-btn" id="log-btn-1" value="" checked>
+					<label for="log-btn-1">Sign in</label>
+					<input type="radio" name="log-btn" id="log-btn-2" value="">
+					<label for="log-btn-2">Create an account</label>
+					<div id="form-1">
+						<div class="formText">Sign in to your account using email and password provided during registration.</div>
+					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignIn">
+						   	<label> Email<br>
+						   		<input type='email' name='email' id="emailLogIn" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   	</label><br>
+						   	<label> Password<br>
+						   		<input type='password' name='pass' id="passLogIn" class="input" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label>
+						   		<input type='checkbox' name='signedIn' id="signedIn" class="checkbox" checked>
+						   		Keep me signed in
+						   	</label><br>
+						   	<a href="#" class="formText">Forgot password?</a><br>
+						   	<button type="submit" class="waveBtn">
+								<span class="waveBtnText">Sign in</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+					    </form>
+					    <div class="formText last">Or sign in with:</div>
+					    <i class="fa fa-google" aria-hidden="true"></i>
+				    	<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				    	<i class="fa fa-twitter" aria-hidden="true"></i>
+				    	<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+				    	<i class="fa fa-telegram" aria-hidden="true"></i>
+				    	<i class="fa fa-instagram" aria-hidden="true"></i>
+					</div>
+					<div id="form-2">
+						<div class="formText">Registration takes less than a minute but gives you full control over your studying.</div>
+					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignUp">
+						   	<label> Name<br>
+						   		<input type='text' name='name' id="name" class="input" placeholder="Max" maxlength="15" required pattern="^[A-Za-z]{2,}">
+						   	</label><br>
+						   	<label> Surname<br>
+						   		<input type='text' name='surname' id="surname" class="input" placeholder="Velichko" maxlength="20" required pattern="^[A-Za-z]{2,}">
+						   	</label><br>
+						   	<label> Email<br>
+						   		<input type='email' name='email' id="emailLogUp" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   	</label><br>
+						   	<label> Password<br>
+						   		<input type='password' name='pass' id="passLogUp" class="input" placeholder="Use at least 6 letters and numbers" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label> Confirm your password<br>
+						   		<input type='password' name='confpass' id="confPassLogUp" class="input" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label>
+						   		<input type='checkbox' name='signedIn' id="signedUp" class="checkbox" checked>
+						   		Remember me
+						   	</label><br>
+						   	<button id="waveBtn" type="submit" class="waveBtn">
+								<span class="waveBtnText">Sign up</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+					    </form>
+					</div>
+				</div>
+				<div class="paralaxEngl container"></div>
+				<nav class="bread"><a href="../CoursesPage.html" class="prev">Courses</a><p class="current">&emsp;&#62;&emsp;English for Digital Designers</p></nav>
+				<div class="courseEngl container Column">
+					<div class="name" id="english">English for Digital Designers</div>
+					<table class="courseFrame">
+						<tr>
+							<td>Starts Jun 16, 2022</td>
+							<td>&#36; 37</td>
+						</tr>
+					</table>
+					<div class="coursesDescription">
+						<div class="name">Course Description</div>
+						<p>English for Digital Designers is an essential part and this course was born out of our passion for teaching and creating. English is spoken at a useful level by some 1.75 billion people worldwide &mdash; that’s one in every four! Being able to speak English is not just about being able to communicate with native English speakers &mdash; if you want to speak to someone from another country then the chances are that you will both be speaking English to do this!</p>
+						<p>English is the language of science, aviation, computers, diplomacy, and tourism. Knowing English increases your chances of getting a good job in a multinational company within your home country or of finding work abroad.</p>
+					</div>
+					<div class="name">Upcoming Sessions</div>
+					<div>Dates: Jun 16, 2022 - Aug 27, 2022</div>
+					<div>Total of 12 sessions</div>
+					<div class="tableWrapper">
+						<table>
+							<tbody>
+								<tr>
+									<td>Thursday, Jun 16</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Cornel Shvarz</td>
+								</tr>
+								<tr>
+									<td>Thursday, Jun 23</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Sam Briton</td>
+								</tr>
+								<tr>
+									<td>Thursday, Jun 30</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Cornel Shvarz</td>
+								</tr>
+								<tr>
+									<td>Thursday, Jul 07</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Cornel Shvarz</td>
+								</tr>
+								<tr>
+									<td>Thursday, Jul 14</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Cornel Shvarz</td>
+								</tr>
+								<tr>
+									<td>Thursday, Jul 21</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Sam Briton</td>
+								</tr>
+								<tr>
+									<td>Thursday, Jul 28</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Sam Briton</td>
+								</tr>
+								<tr>
+									<td>Thursday, Aug 04</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Sam Briton</td>
+								</tr>
+								<tr>
+									<td>Thursday, Aug 11</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Jassy Wildy</td>
+								</tr>
+								<tr>
+									<td>Thursday, Aug 18</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Jassy Wildy</td>
+								</tr>
+								<tr>
+									<td>Thursday, Aug 25</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Sam Briton</td>
+								</tr>
+								<tr>
+									<td>Friday, Aug 26</td>
+									<td>8:00 AM, 4 hr</td>
+									<td>Sam Briton</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div>Time Zone: Pacific Daylight Time (PDT)</div>
+					<div class="buttonSpecialWrapper">
+						<a href="CoursesPage.html" class="buttonSpecial">
+							<span class="buttonText container">
+								<span>Book now</span>
+							</span> 
+						</a>
+					</div>
+					<div class="coursesDescription Bottom">
+						<div class="name">Contact Details</div>
+						<p>If you have any questions, you can contact us <a href="tel:+74055550128">directly</a>, white on our <a href="mailto:hiArtSchool@.com">email</a> or send a message <a href="" title="Contact" target="_blank">HERE</a>.</p>
+					</div>
+				</div>	
+			</div>
+			<div class="preFooterConteiner">
+				<div class="preFooter">
+					<div class="part Column">
+						<a href="#" class="logo"><img src="../img/logo/logo.webp" alt="Logo">art school.</a>
+						<div class="notImportantText">
+							Our Art School is a leader in online studying. Founded by artist Noah Yoker, our site has been covering the art scene since 2005. Presenting a lively mix of courses,programs, news, reviews and interviews, Art School employs some of the best art teachers, journalists and critics on contemporary art.
+						</div>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">site map</div>
+						<ul>
+							<li><a href="../MainPage.html">Home</a></li>
+							<li><a href="../AboutPage.html">About</a></li>
+							<li><a href="../CoursesPage.html">Courses</a></li>
+							<li><a href="../FAQPage.html">FAQ</a></li>
+							<li><a href="">News</a></li>
+							<li><a href="">Contact</a></li>
+						</ul>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">courses</div>
+						<ul>
+							<li><a href="">Fine Art</a></li>
+							<li><a href="">Graphic Design</a></li>
+							<li><a href="">Graffiti</a></li>
+							<li><a href="">Illustration</a></li>
+						</ul>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">contact us</div>
+						<div class="phone"><img src="../img/logo/cellphone.svg"><a href="tel:+74055550128">+7 (405) 555-0128</a></div>
+						<div class="mail"><img src="../img/logo/mail.svg"><a href="mailto:hiArtSchool@.com">hiArtSchool@.com</a></div>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">privacy policy</div>
+						<div class="notImportantText">
+							This Privacy Policy is meant to help you understand what information we collect and why we collect it. Additional information can be found <a href="../FAQPage.html" title="Go to FAQ">HERE</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="notImportantText">
+					&copy; 2022 by <span>art school</span>. All rights reserved.
+				</div>
+				<div><a href="#english"><span>back to top</span></a></div>
+			</footer>	
+		<script 
+		src="https://code.jquery.com/jquery-3.6.0.min.js" 
+		type="text/javascript" 
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous">	
+		</script>
+		<script src="js/scriptHeader.js" type="text/javascript"></script>
+		<script src="js/scriptFAQ.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			//Функция показа окна Log in//
+			function surprise(state){
+				document.getElementById('window').style.display = state;
+				document.getElementById('gray').style.display = state;
+			}
+		</script>
+		<script src="https://yastatic.net/share2/share.js" async></script>
+	</body>
+</html>

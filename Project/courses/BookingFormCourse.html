@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css"> <!--для иконок-->
 		<link rel="stylesheet" type="text/css" href="../css/styles_general.css"> <!--CSS общие для всех документов-->
 		<link rel="stylesheet" type="text/css" href="../css/styles_header_footer.css"> <!--CSS для хэдера-->
-		<link rel="stylesheet" type="text/css" href="../css/CourseStyle.css"> <!--CSS для данной страницы-->
+		<link rel="stylesheet" type="text/css" href="../css/BookingFormCourseStyle.css"> <!--CSS для данной страницы-->
 		<link rel="icon" href="logo32.ico"> <!-- 32×32 лучше, чем 16-->
 		<link rel="icon" href="../img/icon/logoWebP.webp" type="image/webp">
 		<link rel="icon" href="../img/icon/logoSvg.svg" type="image/svg+xml"> <!--Не все поддерживают WebP-->
@@ -108,103 +108,52 @@
 					    </form>
 					</div>
 				</div>
-				<div class="paralaxCourse Engl container"></div>
-				<nav class="bread"><a href="../CoursesPage.html" class="prev">Courses</a><p class="current">&emsp;&#62;&emsp;English for Digital Designers</p></nav>
-				<div class="courseAbout container Column">
-					<div class="name" id="english">English for Digital Designers</div>
-					<table class="courseFrame">
-						<tr>
-							<td>Starts Jun 16, 2022</td>
-							<td>&#36; 50</td>
-						</tr>
-					</table>
-					<div class="coursesDescription">
-						<div class="name">Course Description</div>
-						<p>English for Digital Designers is an essential part and this course was born out of our passion for teaching and creating. English is spoken at a useful level by some 1.75 billion people worldwide &mdash; that’s one in every four! Being able to speak English is not just about being able to communicate with native English speakers &mdash; if you want to speak to someone from another country then the chances are that you will both be speaking English to do this!</p>
-						<p>English is the language of science, aviation, computers, diplomacy, and tourism. Knowing English increases your chances of getting a good job in a multinational company within your home country or of finding work abroad.</p>
-					</div>
-					<div class="name">Upcoming Sessions</div>
-					<div>Dates: Jun 16, 2022 &mdash; Aug 27, 2022</div>
-					<div>Total of 12 sessions</div>
-					<div class="tableWrapper">
-						<table>
-							<tbody>
-								<tr>
-									<td>Thursday, Jun 16</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Cornel Shvarz</td>
-								</tr>
-								<tr>
-									<td>Thursday, Jun 23</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Sam Briton</td>
-								</tr>
-								<tr>
-									<td>Thursday, Jun 30</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Cornel Shvarz</td>
-								</tr>
-								<tr>
-									<td>Thursday, Jul 07</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Cornel Shvarz</td>
-								</tr>
-								<tr>
-									<td>Thursday, Jul 14</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Cornel Shvarz</td>
-								</tr>
-								<tr>
-									<td>Thursday, Jul 21</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Sam Briton</td>
-								</tr>
-								<tr>
-									<td>Thursday, Jul 28</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Sam Briton</td>
-								</tr>
-								<tr>
-									<td>Thursday, Aug 04</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Sam Briton</td>
-								</tr>
-								<tr>
-									<td>Thursday, Aug 11</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Jassy Wildy</td>
-								</tr>
-								<tr>
-									<td>Thursday, Aug 18</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Jassy Wildy</td>
-								</tr>
-								<tr>
-									<td>Thursday, Aug 25</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Sam Briton</td>
-								</tr>
-								<tr>
-									<td>Friday, Aug 26</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Sam Briton</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>Time Zone: Pacific Daylight Time (PDT)</div>
-					<div class="buttonSpecialWrapper">
-						<a href="BookingFormCourse.html" class="buttonSpecial">
-							<span class="buttonText container">
-								<span>Book now</span>
-							</span> 
-						</a>
-					</div>
-					<div class="coursesDescription Bottom">
-						<div class="name">Contact Details</div>
-						<p>If you have any questions, you can contact us <a href="tel:+74055550128">directly</a>, write on our <a href="mailto:hiArtSchool@.com">email</a> or send a message <a href="" title="Contact" target="_blank">HERE</a>.</p>
-					</div>
-				</div>	
+				<nav class="bread">&emsp;&#60;&emsp;<a href="../CoursesPage.html" class="prev">Back to Courses Page</a></nav>
+				<div class="wrapperForBookingForm">
+					<form method=post action="http://fe.it-academy.by/TestForm.php" name="bookcourse" class="ForBookingForm container">
+						<div class="leftPartOfForm">
+							<div class="importantTextBookimg">Fill out your details</div>
+							<div class="notImportantTextBookimg">Tell us a bit about yourself</div>
+							<div class="notImportantTextBookimg  selection">Already have an account? <button onclick="surprise('block')"> Log In</button> for faster booking.</div>
+								<div class="fields container">
+								   	<label> Name<br>
+								   		<input type='text' name='name' id="nameBooking" class="inputBook" placeholder="Max" maxlength="15" required pattern="^[A-Za-z]{2,}">
+								   	</label>
+								   	<label> Surname<br>
+								   		<input type='text' name='surname' id="surnameBooking" class="inputBook" placeholder="Velichko" maxlength="20" required pattern="^[A-Za-z]{2,}">
+								   	</label>
+								   	<label> Email<br>
+								   		<input type='email' name='email' id="email"Booking class="inputBook" placeholder="Extravaganza07@gmail.com" required>
+								   	</label>
+								   	<label> Phone Number<br>
+								   		<input type=text name='tel' id="telBooking" class="inputBook" placeholder="+7(405)555-0128" required maxlength=15>
+								   	</label>
+							   	</div>
+							   	<label>Add Your Message<br>
+							   		<textarea id="messageBooking" name="messageBooking" class="messageBooking" lang="eng"></textarea>
+							   	</label><br>
+						</div>
+						<div class="rightPartOfForm">
+							<div class="importantTextBookimg">Booking Summary</div>
+							<select name="courseBooking" id="courseBooking" class="courseBooking">
+								<option value="0" selected>Fine Art</option>
+								<option value="1">Photoshop masterclass</option>
+								<option value="2">Illustration</option>
+								<option value="3">English for Digital Designers</option>
+								<option value="4">Graphic Design</option>
+								<option value="5">Graffiti</option>	
+							</select>
+							<div class="notImportantTextBookimg">We will contact you as fast as possible</div>
+							<div class="notImportantTextBookimg">12 sessions in total</div>
+							<div class="importantTextBookimg">Payment Details</div>
+							<div class="notImportantTextBookimg"><span class="left">Total</span><span class="right">&#36;50</span></div>
+							<button id="waveBtn" type="submit" class="waveBtn">
+								<span class="waveBtnText">Book Now</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+						</div>   	
+					</form>
+				</div>
 			</div>
 			<div class="preFooterConteiner">
 				<div class="preFooter">

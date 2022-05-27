@@ -1,0 +1,189 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+.bread{
+	margin: 20px 0px;
+	margin-left: 13%;
+}
+.prev{
+	text-decoration: underline;
+	color: black;
+}
+.wrapperForBookingForm{
+	margin: 40px 0px;
+}
+.ForBookingForm{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 10px;
+	-webkit-box-shadow: #c3c2c4 0px 0px 15px 0px;
+	        box-shadow: #c3c2c4 0px 0px 15px 0px;
+	position: relative;
+}
+.ForBookingForm .messageBooking{
+	width: 620px;
+	height: 100px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.ForBookingForm .inputBook{
+	width: 250px;
+	height: 25px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.leftPartOfForm{
+	width: 650px;
+}
+.rightPartOfForm{
+	width: 300px;	
+}
+.courseBooking{
+	width: 250px;
+	height: 40px;
+	padding: 5px;
+	margin: 10px;
+}
+.leftPartOfForm, .rightPartOfForm{
+	-ms-flex-item-align:start;
+	    align-self:flex-start;
+	padding: 10px;
+	margin: 5px;
+}
+.fields{
+	max-width: 620px;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.importantTextBookimg{
+	max-width: 620px;
+	text-align: center;
+	padding: 10px 5px;
+	margin: 10px 0px;
+	font-size: 23px;
+	font-weight: 700;
+	border-bottom: solid 3px #E84300;
+}
+.notImportantTextBookimg{
+	margin: 5px 0px;
+	padding: 5px;
+	max-width: 620px;
+}
+.notImportantTextBookimg > span.left{
+	float: left;
+}
+.notImportantTextBookimg > span.right{
+	float: right;
+}
+.selection{
+	background-color: #ededed;
+	color: #E84300;
+}
+.selection > button{
+	border: none;
+	cursor: pointer;
+	background-color: #ededed;
+	color: #E84300;
+	text-decoration: underline;
+	font-size: 16px;
+}
+.ForBookingForm label{
+	font-size: 20px;
+	margin: 10px 0px;
+}
+.rightPartOfForm .waveBtn{
+	position: absolute;
+	bottom: 50px;
+	right: 27px;
+}
+.rightPartOfForm .waveBtn .waveBtnWaves{
+	background-color: rgba(232, 67, 0, 0.7);
+}
+@media all and (max-width: 1050px){
+	.ForBookingForm{
+		max-width: 800px;
+	}
+	.ForBookingForm .messageBooking, .leftPartOfForm{
+		width: 500px;
+	}
+	.ForBookingForm .inputBook, .rightPartOfForm, .rightPartOfForm .waveBtn{
+		width: 200px;
+	}
+	.courseBooking{
+		width: 150px;
+	}
+}
+@media all and (max-width: 850px){
+	.ForBookingForm{
+		max-width: 80%;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+	.ForBookingForm .inputBook{
+		width: 250px;
+	}
+	.leftPartOfForm, .rightPartOfForm, .ForBookingForm .messageBooking, .courseBooking{
+		width: 95%;
+	}
+	.rightPartOfForm{
+		min-height: 405px;
+	}
+	.rightPartOfForm .waveBtn{
+		width: 280px;
+		bottom: 20px;
+		left: calc(50% - 140px);
+	}
+}
+@media all and (max-width: 714px){
+	.fields{
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+	.ForBookingForm .inputBook{
+		width: 450px;
+	}
+}
+@media all and (max-width: 650px){
+	.rightPartOfForm .waveBtn{
+		width: 250px;
+		bottom: 20px;
+		left: calc(50% - 125px);
+	}
+}
+@media all and (max-width: 600px){
+	.ForBookingForm .inputBook{
+		width: 300px;
+	}
+	.importantTextBookimg{
+		padding: 5px;
+		margin: 5px 0px;
+		font-size: 20px;
+	}
+	.leftPartOfForm, .rightPartOfForm{
+		padding: 5px;
+		margin: 0px;
+	}
+	.rightPartOfForm{
+		min-height: 365px;
+	}
+}
+@media all and (max-width: 470px){
+	.rightPartOfForm .waveBtn{
+		width: 200px;
+		bottom: 10px;
+		left: calc(50% - 100px);
+	}
+}
+@media all and (max-width: 415px){
+	.ForBookingForm .inputBook{
+		width: 220px;
+	}
+}

@@ -1,0 +1,132 @@
+.paralaxCourse{
+	min-height: 500px;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.Engl{
+	background: url(../img/fones/EnglCoursJp.jpg) center no-repeat;
+}
+.Phot{
+	background: url(../img/fones/PhotoshopCourseJp.jpg) center no-repeat;
+}
+.Ill{
+	background: url(../img/fones/IllCourseJp.jpg) 50% 70% no-repeat;
+}
+.Fine{
+	background: url(../img/fones/fineArtCourseJp.jpg) 12% 70% no-repeat;
+}
+.Graph{
+	background: url(../img/fones/graphCpurseJp.jpg) 80% 80% no-repeat;
+}
+.Graf{
+	background: url(../img/fones/grafCourseJp.jpg) 50% 70% no-repeat;
+}
+.courseAbout {
+	margin: 40px 0px;
+}
+.courseAbout  .name{
+	margin: 20px 0px;
+	font-weight: bold;
+	font-size: 23px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.coursesDescription{
+	max-width: 70%;
+	border-top: solid #E84300 2px;
+	border-bottom: solid #E84300 2px;
+	padding: 20px;
+	margin: 20px 0px;
+}
+.coursesDescription .name{
+	text-align: center;
+	font-size: 18px;
+}
+.coursesDescription p{
+	margin: 10px 0px;
+}
+.courseFrame{
+	margin: 20px 0px;
+	font-size: 18px;
+	border-collapse: collapse;
+}
+.courseFrame  td{
+	border: solid black 1px;
+	padding: 15px;
+}
+.tableWrapper{
+	border: solid #E84300 2px;
+	padding: 10px;
+	margin: 30px 5px;
+}
+.tableWrapper > table{
+	border-collapse: collapse;
+}
+.tableWrapper > table td{
+	border-bottom: solid #E84300 2px;
+	padding: 25px 50px;
+}
+.tableWrapper > table tr:last-of-type td{
+	border: none;
+}
+.Bottom{
+	border-bottom: none;
+}
+.coursesDescription a{
+	text-decoration: underline;
+	color: black;
+}
+.bread{
+	margin-top: 20px;
+	margin-left: 13%;
+}
+.prev, .current{
+	display: inline-block;
+}
+.prev{
+	text-decoration: underline;
+	color: black;
+}
+.current{
+	color: #8f8e91;
+}
+@media all and (max-width: 728px){
+	.paralaxCourse{
+		min-height: 300px;
+	}
+}
+@media all and (max-width: 690px){
+	.coursesDescription{
+		max-width: 95%;
+		font-size: 14px;
+	}
+	.coursesDescription p{
+		margin: 3px 0px;
+	}
+	.courseAbout  .name, .coursesDescription .name, .name{
+		font-size: 14px;
+		margin: 10px 0px;
+	}
+	.courseAbout  {
+    	margin: 20px 0px;
+	}
+	.buttonSpecialWrapper {
+    	margin: 40px 0px;
+	}
+	.courseFrame {
+	    margin: 10px 0px;
+	    font-size: 15px;
+	}
+}
+@media all and (max-width: 495px){
+	.paralaxCourse{
+		display: none;
+	}
+	.tableWrapper > table td{
+		padding: 5px 20px;
+	}
+	.bread {
+    	margin-left: 7%;
+    	margin-top: 75px;
+	}
+}

@@ -1,0 +1,130 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+*, body{
+	margin: 0;
+	padding: 0;
+	font: normal 17px sans-serif;
+	  -webkit-text-size-adjust: none;
+}
+.container{
+	margin: 0px 5px;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 200px 1fr;
+	grid-template-columns: 200px 1fr;
+	-ms-grid-rows: 45px 1fr 45px;
+	grid-template-rows: 45px 1fr 45px;
+	    grid-template-areas:
+		 'header header'
+		 'nav cont'
+		 'footer footer';
+}
+header{
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 2;
+	grid-area: header; 
+}
+footer{
+	-ms-grid-row: 3;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 2;
+	grid-area: footer;
+}
+header, footer{
+	background-color: #ADD8E6;
+	text-align: center;
+}
+header > h1, footer > h1{
+	text-transform: uppercase;
+	color:  #0000FF;
+	font: 500 25px sans-serif;
+	padding: 10px 0px;
+}
+nav{
+	-ms-grid-row: 2;
+	-ms-grid-column: 1;
+	padding: 30px 0px 10px 30px;
+	margin-right: 10px;
+	background-color: #F0E68C;
+	grid-area: nav;
+}
+nav > p{
+	margin: 0px 0px 20px -10px;
+	font-weight: bold; 
+}
+nav > ul li{
+	margin: 5px 0px;
+}
+.content{
+	-ms-grid-row: 2;
+	-ms-grid-column: 2;
+	grid-area: cont;
+	background: url(../img/ball.png) top right repeat-Y;
+}
+.content > h2{
+	margin: 20px 0px;
+	text-align: center;
+	text-transform: uppercase;
+	font: 700 22px sans-serif;
+}
+.content > img{
+	width: 199px;
+	height: 132px;
+	float: left;
+	margin: 0px 10px 10px 0px;
+}
+.content > p{
+	margin-bottom: 10px;
+}
+@media all and (max-width: 650px){
+	.container{
+		    grid-template-areas:
+			 'cont cont'
+			 'cont cont'
+			 'nav nav';
+	}
+	header, footer{
+		display: none;
+	}
+	nav{
+		margin-right: 0px;
+		padding: 30px 0px 10px 10px;
+		background: none;
+	}
+	nav > p{
+		margin: 0px 0px 20px 0px;
+	}
+	nav > ul{
+		list-style: none;
+	}
+	nav > ul li{
+		display: inline-block;
+		margin: 5px 10px;
+	}
+	.content{
+		background: none;
+	}
+	.content > img{
+		float: none;
+		width: 100%;
+		height: auto;
+		margin: 0px 0px 10px 0px;
+	}
+	nav{
+		-ms-grid-row: 3;
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 2;
+	}
+	.content{
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 2;
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 2;
+	}
+}

@@ -1,0 +1,181 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+body{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	min-height: 100vh;
+	background-color: black;
+}
+.container{
+	position: relative;
+	-webkit-transform: translateY(-100px);
+	    -ms-transform: translateY(-100px);
+	        transform: translateY(-100px);
+	border: solid red 3px;
+	-webkit-transform: rotate(0deg) scale(1);
+	    -ms-transform: rotate(0deg) scale(1);
+	        transform: rotate(0deg) scale(1);
+	-webkit-transition: -webkit-transform 2.7s ease 0s;
+	transition: -webkit-transform 2.7s ease 0s;
+	-o-transition: transform 2.7s ease 0s;
+	transition: transform 2.7s ease 0s;
+	transition: transform 2.7s ease 0s, -webkit-transform 2.7s ease 0s;
+}
+.container:hover{
+	-webkit-transform: rotate(360deg) scale(1.5);
+	    -ms-transform: rotate(360deg) scale(1.5);
+	        transform: rotate(360deg) scale(1.5);
+
+}
+.container::before{
+	content: '';
+	position: absolute;
+	top: 197px;
+	right: -50px;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: white;
+	-webkit-animation: circl 4s ease-in-out infinite;
+	        animation: circl 4s ease-in-out infinite;
+}
+@-webkit-keyframes circl{
+	0%{
+		-webkit-transform: translateX(15px);
+		        transform: translateX(15px);
+	}
+	50%{
+		-webkit-transform: translateX(-15px);
+		        transform: translateX(-15px);
+	}
+	100%{
+		-webkit-transform: translateX(15px);
+		        transform: translateX(15px);
+	}
+}
+@keyframes circl{
+	0%{
+		-webkit-transform: translateX(15px);
+		        transform: translateX(15px);
+	}
+	50%{
+		-webkit-transform: translateX(-15px);
+		        transform: translateX(-15px);
+	}
+	100%{
+		-webkit-transform: translateX(15px);
+		        transform: translateX(15px);
+	}
+}
+.shapes{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	-webkit-animation: bowl 4s ease-in-out infinite;
+	        animation: bowl 4s ease-in-out infinite;
+	/*background-color: #ff523b;*/
+}
+@-webkit-keyframes bowl{
+	0%{
+		-webkit-transform: rotate(50deg);
+		        transform: rotate(50deg);
+	}
+	50%{
+		-webkit-transform: rotate(-50deg);
+		        transform: rotate(-50deg);
+	}
+	100%{
+		-webkit-transform: rotate(50deg);
+		        transform: rotate(50deg);
+	}
+}
+@keyframes bowl{
+	0%{
+		-webkit-transform: rotate(50deg);
+		        transform: rotate(50deg);
+	}
+	50%{
+		-webkit-transform: rotate(-50deg);
+		        transform: rotate(-50deg);
+	}
+	100%{
+		-webkit-transform: rotate(50deg);
+		        transform: rotate(50deg);
+	}
+}
+.shapes::before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 200px;
+	height: 100px;
+	background-color: #35dae5;
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+}
+.ball{
+	position: absolute;
+	top: 50%;  /*Опустила в чашу под  срезанный верх*/
+	left: -15px;
+	-webkit-transform: translateY(-100%);
+	    -ms-transform: translateY(-100%);
+	        transform: translateY(-100%);  /*Отзеркалила так, чтобы шар был над срезанной частью*/
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: white;
+	-webkit-animation: animationBall 4s ease-in-out infinite;
+	        animation: animationBall 4s ease-in-out infinite;
+	-webkit-transition: background-color 0.7s ease-out 0s;
+	-o-transition: background-color 0.7s ease-out 0s;
+	transition: background-color 0.7s ease-out 0s;
+}
+.container:hover .ball{
+	background-color: #c458c1;
+}
+@-webkit-keyframes animationBall{
+	0%{
+		-webkit-transform: translateY(-100%) translateX(-30px);
+		        transform: translateY(-100%) translateX(-30px);
+	}
+	50%{
+		-webkit-transform: translateY(-100%) translateX(220px);
+		        transform: translateY(-100%) translateX(220px);
+	}
+	100%{
+		-webkit-transform: translateY(-100%) translateX(-30px);
+		        transform: translateY(-100%) translateX(-30px);
+	}
+}
+@keyframes animationBall{
+	0%{
+		-webkit-transform: translateY(-100%) translateX(-30px);
+		        transform: translateY(-100%) translateX(-30px);
+	}
+	50%{
+		-webkit-transform: translateY(-100%) translateX(220px);
+		        transform: translateY(-100%) translateX(220px);
+	}
+	100%{
+		-webkit-transform: translateY(-100%) translateX(-30px);
+		        transform: translateY(-100%) translateX(-30px);
+	}
+}

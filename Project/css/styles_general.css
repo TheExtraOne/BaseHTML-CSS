@@ -4,7 +4,10 @@
 * Autoprefixer: v10.4.4
 * Browsers: last 4 version
 */
-
+ *, body
+    {
+        -webkit-text-size-adjust: none; /*Для отключения автоматическиого изменения размеров шрифтов при изменении ориентации устройства*/
+    }
 *{
 	margin: 0px;
 	padding: 0px;

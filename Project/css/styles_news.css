@@ -71,6 +71,10 @@
 	margin: 20px 0px 20px 5px;
 	padding: 10px 10px 6px 10px;
 }
+.newsCard:hover{
+	transform: scale(1.03);
+	transition: all 0.7s ease 0s;
+}
 .wrapperForIMG{
 	max-width: 40%;
 }
@@ -159,7 +163,7 @@
 	list-style: none;
 	position: absolute;
 	bottom: 5px;
-	right: 0;
+	right: 10px;
 }
 .pagination > ul li a{
 	color: black;
@@ -176,14 +180,14 @@
 .pagination > ul li:hover{
 	background-color: #ededed;
 }
-@media all and (max-width: 1220px){
+@media all and (max-width: 1240px){
 	.wrapperForNews{
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
 		        justify-content: center;
 	}
 	.newsCard {
-    	max-width: 960px;
+    	max-width: 950px;
     	height: 255px;
 	}
 	.newsTitle > a{
@@ -210,7 +214,7 @@
     	margin: 10px auto;
 	}
 }
-@media all and (max-width: 1015px){
+@media all and (max-width: 1020px){
 	.newsCard {
     	max-width: 80%;
     	height: 100%;

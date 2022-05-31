@@ -14,48 +14,7 @@
 .faq{
 	margin: 40px 0px;
 }
-.searchBox{
-	margin: 30px 0px;
-	background-color: black;
-	height: 44px;
-	border-radius: 44px;
-	padding: 10px;
-}
-.searchBox:hover .searchFAQ{
-	width: 300px;
-	padding: 0px 6px;
-}
-.searchBox:hover .searchBtn{
-	background-color:white;
-	color: black;
-}
-.searchBox:hover .searchBtn:hover{
-	background-color: #eeeeee;
-}
-.searchBtn{
-	border: none;
-	background-color: black;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	color: white;
-}
-.searchBtn:hover{
-	cursor: pointer;
-}
-.searchFAQ{
-	border: none;
-	outline: none;
-	background: none;
-	padding: 0px;
-	color: white;
-	font-size: 16px;
-	-webkit-transition: 0.4s;
-	-o-transition: 0.4s;
-	transition: 0.4s;
-	line-height: 40px;
-	width: 0;
-}
+
 .contentTabs {
 	font-size: 0;
 	max-width: 1200px;
@@ -218,16 +177,9 @@
 		font-size: 12px;
 		padding-bottom: 10px;
 	}
-	.searchFAQ{
-		width: 300px;
-		padding: 0px 6px;
-	}
 }
 
 @media all and (max-width: 460px){
-	.searchFAQ{
-		width: 240px;
-	}
 	.blockTitle{
 		max-width: 80%;
 	}

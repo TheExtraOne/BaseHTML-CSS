@@ -150,6 +150,10 @@
 	.ForBookingForm .inputBook{
 		width: 450px;
 	}
+	.bread{
+		margin: 75px 0px 5px 0px;
+		margin-left: 13%;
+	}
 }
 @media all and (max-width: 650px){
 	.rightPartOfForm .waveBtn{

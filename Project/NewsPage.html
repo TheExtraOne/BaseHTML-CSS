@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Art school.</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css"> <!--для иконок-->
+		<link rel="stylesheet" type="text/css" href="css/styles_general.css"> <!--CSS общие для всех документов-->
+		<link rel="stylesheet" type="text/css" href="css/styles_header_footer.css"> <!--CSS для хэдера-->
+		<link rel="stylesheet" type="text/css" href="css/styles_news.css"> <!--CSS для данной страницы-->
+		<link rel="icon" href="logo32.ico"> <!-- 32×32 лучше, чем 16-->
+		<link rel="icon" href="img/icon/logoWebP.webp" type="image/webp">
+		<link rel="icon" href="img/icon/logoSvg.svg" type="image/svg+xml"> <!--Не все поддерживают WebP-->
+		<link rel="apple-touch-icon" href="img/icon/logoPg180.png">  <!-- Для apple 180×180 -->
+		<!--<link rel="manifest" href="manifest.webmanifest">-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<nav class="wrapperNav">
+					<div class="headerBody">
+						<div class="leftNav">
+							<a href="MainPage.html" class="logo"><img src="img/logo/logo.webp" alt="Logo">art school.</a>
+						</div>
+						<div class="headerBurger">
+							<span></span>
+						</div>
+						<div class="rightNav">
+							<ul>
+								<li><a href="MainPage.html">Home</a></li>
+								<li><a href="AboutPage.html">About</a></li>
+								<li><a href="CoursesPage.html">Courses</a></li>
+								<li><a href="FAQPage.html">FAQ</a></li>
+								<li><a href="#" class="active">News</a></li>
+								<li><a href="ContactsPage.html">Contact</a></li>
+								<li>
+									<button onclick="surprise('block')" class="logInButton active"><img src="img/logo/logoOranNoBack.svg"><span>Log in</span></button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<div class="main">
+				<div onclick="surprise('none')" id="gray"></div> <!--Задний прозрачный фон для формы авторизации-->
+				<div class="logTabs" id="window">
+					<img onclick="surprise('none')" src="img/logo/closeSvg.svg" class="close" alt="close"> <!--Картинка крестика-->
+					<input type="radio" name="log-btn" id="log-btn-1" value="" checked>
+					<label for="log-btn-1">Sign in</label>
+					<input type="radio" name="log-btn" id="log-btn-2" value="">
+					<label for="log-btn-2">Create an account</label>
+					<div id="form-1">
+						<div class="formText">Sign in to your account using email and password provided during registration.</div>
+					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignIn">
+						   	<label> Email<br>
+						   		<input type='email' name='email' id="emailLogIn" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   	</label><br>
+						   	<label> Password<br>
+						   		<input type='password' name='pass' id="passLogIn" class="input" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label>
+						   		<input type='checkbox' name='signedIn' id="signedIn" class="checkbox" checked>
+						   		Keep me signed in
+						   	</label><br>
+						   	<a href="#" class="formText">Forgot password?</a><br>
+						   	<button type="submit" class="waveBtn">
+								<span class="waveBtnText">Sign in</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+					    </form>
+					    <div class="formText last">Or sign in with:</div>
+					    <i class="fa fa-google" aria-hidden="true"></i>
+				    	<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				    	<i class="fa fa-twitter" aria-hidden="true"></i>
+				    	<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+				    	<i class="fa fa-telegram" aria-hidden="true"></i>
+				    	<i class="fa fa-instagram" aria-hidden="true"></i>
+					</div>
+					<div id="form-2">
+						<div class="formText">Registration takes less than a minute but gives you full control over your studying.</div>
+					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignUp">
+						   	<label> Name<br>
+						   		<input type='text' name='name' id="name" class="input" placeholder="Max" maxlength="15" required pattern="^[A-Za-z]{2,}">
+						   	</label><br>
+						   	<label> Surname<br>
+						   		<input type='text' name='surname' id="surname" class="input" placeholder="Velichko" maxlength="20" required pattern="^[A-Za-z]{2,}">
+						   	</label><br>
+						   	<label> Email<br>
+						   		<input type='email' name='email' id="emailLogUp" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   	</label><br>
+						   	<label> Password<br>
+						   		<input type='password' name='pass' id="passLogUp" class="input" placeholder="Use at least 6 letters and numbers" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label> Confirm your password<br>
+						   		<input type='password' name='confpass' id="confPassLogUp" class="input" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label>
+						   		<input type='checkbox' name='signedIn' id="signedUp" class="checkbox" checked>
+						   		Remember me
+						   	</label><br>
+						   	<button id="waveBtn" type="submit" class="waveBtn">
+								<span class="waveBtnText">Sign up</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+					    </form>
+					</div>
+				</div>
+				<div class="paralaxNews container">
+					<div class="mainTitle  container">
+						<div class="mainText">hot<br>news.</div>
+						<div class="mnemonic"><a href="#news">&#10095;</a></div>
+					</div>
+				</div>
+				<div class="wrapperForFilters">
+					<div class="filtersBar container">
+						<div class="Filters" id="news">
+							<ul>
+								<li data-f="all">All</li>
+								<li data-f="school">School news</li>
+								<li data-f="exp">Experts say</li>
+								<li data-f="travelling">Travelling</li>
+								<li data-f="events">Events</li>
+								<li data-f="biogr">Biography</li>
+							</ul>
+						</div>
+						<div class="searchBox">
+							<form method=post action="http://fe.it-academy.by/TestForm.php"> 
+							 	<input type="text" name="searchFAQ" class="searchFAQ" placeholder="Search here!"  autofocus>
+							 	<button type='submit' class="searchBtn">
+									<i class="fa fa-search" aria-hidden="true"></i>
+	 							</button>
+							</form>
+						</div>
+					</div>
+				</div>	
+				<div class="wrapperForNews container">
+					<div class="newsCard container exp">
+						<div class="wrapperForIMG">
+							<picture>
+									<source srcset="img/news/option7web.webp" type="image/webp">
+									<img src="img/news/option7.jpg" loading="lazy" alt="News about architecture" title="beast, god<br> and line">
+							</picture>
+						</div>
+						<article class="newsCardInfo container Column">
+							<div class="newsTitle"><a href="">beast, god and line</a></div>
+							<div class="auth">Alan Smith | May 29, 2022 </div>
+							<div class="shortPrev">One aspect of diversification of project activities with the emergence of two types of professionals architects and designers.</div>
+							<div class="time">20 min to read</div>
+						</article>
+					</div>
+					<div class="newsCard container travelling">
+						<div class="wrapperForIMG">
+							<picture>
+									<source srcset="img/news/option16web.webp" type="image/webp">
+									<img loading="lazy" src="img/news/option16.jpg" alt="Swamp mirror" title="Swamp mirror">
+							</picture>
+						</div>
+						<article class="newsCardInfo container Column">
+							<div class="newsTitle"><a href="">swamp mirror</a></div>
+							<div class="auth">Kate Mihasjova | May 13, 2022</div>
+							<div class="shortPrev">Bogs occupy vast territories and amaze with their spectacular landscapes, sounds, smells, fauna and flora.</div>
+							<div class="time">10 min to read</div>
+						</article>
+					</div>
+					<div class="newsCard container exp">
+						<div class="wrapperForIMG">
+							<picture>
+									<source srcset="img/news/option10web.webp" type="image/webp">
+									<img loading="lazy" src="img/news/option10.jpg" alt="Inspiration">
+							</picture>
+						</div>
+						<article class="newsCardInfo container Column">
+							<div class="newsTitle"><a href="">where did the inspiration go?</a></div>
+							<div class="auth">Vlad Evtuhov | May 07, 2022</div>
+							<div class="shortPrev">Every creative person is subject to the whims of a fickle muse that doesn't always show up when we need it to.</div>
+							<div class="time">15 min to read</div>
+						</article>
+					</div>
+					<div class="newsCard container biogr">
+						<div class="wrapperForIMG">
+							<picture>
+									<source srcset="img/news/option11Web.webp" type="image/webp">
+									<img loading="lazy" src="img/news/option11.jpg" alt="Inspiration">
+							</picture>
+						</div>
+						<article class="newsCardInfo container Column">
+							<div class="newsTitle"><a href="">what was Michelangelo like as a person?</a></div>
+							<div class="auth">Creighton E. Gilbert | May 01, 2022</div>
+							<div class="shortPrev">Many writers have described Michelangelo as the archetype of a brooding and difficult artist.</div>
+							<div class="time">10 min to read</div>
+						</article>
+					</div>
+					<div class="newsCard container exp">
+						<div class="wrapperForIMG">
+							<picture>
+									<source srcset="img/news/option1Web.webp" type="image/webp">
+									<img loading="lazy" src="img/news/option1.jpg" alt="Inspiration">
+							</picture>
+						</div>
+						<article class="newsCardInfo container Column">
+							<div class="newsTitle"><a href="">excavating Ancient Expressions of Gender</a></div>
+							<div class="auth">Roko Rumora | April 25, 2022</div>
+							<div class="shortPrev">An exhibition of Pompeian frescoes provides a window into how ancient Roman painters understood and represented gender.</div>
+							<div class="time">13 min to read</div>
+						</article>
+					</div>
+					<div class="newsCard container events">
+						<div class="wrapperForIMG">
+							<picture>
+									<source srcset="img/news/option5Web.webp" type="image/webp">
+									<img loading="lazy" src="img/news/option5.jpg" alt="Inspiration">
+							</picture>
+						</div>
+						<article class="newsCardInfo container Column">
+							<div class="newsTitle"><a href="">A Former Center</a></div>
+							<div class="auth">Xyo Jaison | April 17, 2022</div>
+							<div class="shortPrev">How a Former KKK Headquarters in Texas Is Being Transformed into a Center for Arts and Healing.</div>
+							<div class="time">7 min to read</div>
+						</article>
+					</div>
+					<div class="newsCard container exp">
+						<div class="wrapperForIMG">
+							<picture>
+									<source srcset="img/news/option9Web.webp" type="image/webp">
+									<img loading="lazy" src="img/news/option9.jpg" alt="Inspiration">
+							</picture>
+						</div>
+						<article class="newsCardInfo container Column">
+							<div class="newsTitle"><a href="">The Oldest Prehistoric Mine was used for extracting pigments</a></div>
+							<div class="auth">Shanti Escalante | April 03, 2022</div>
+							<div class="shortPrev">Indigenous peoples began quarrying for ochre nearly 3,000 years ago.</div>
+							<div class="time">17 min to read</div>
+						</article>
+					</div>
+					<div class="newsCard container school">
+						<div class="wrapperForIMG">
+							<picture>
+									<source srcset="img/news/option3Web.webp" type="image/webp">
+									<img loading="lazy" src="img/news/option3.jpg" alt="Inspiration">
+							</picture>
+						</div>
+						<article class="newsCardInfo container Column">
+							<div class="newsTitle"><a href="">Special price for courses: only &#36;39.99!</a></div>
+							<div class="auth">Cornel Shvarz | March 23, 2022</div>
+							<div class="shortPrev">Special price for courses: only &#36;39.99! Hurry up now!</div>
+							<div class="time">5 min to read</div>
+						</article>
+					</div>
+					<div class="newsCard container exp">
+						<div class="wrapperForIMG">
+							<picture>
+									<source srcset="img/news/option17Web.webp" type="image/webp">
+									<img loading="lazy" src="img/news/option17.jpg" alt="Inspiration">
+							</picture>
+						</div>
+						<article class="newsCardInfo container Column">
+							<div class="newsTitle"><a href="">&quot;I am NOT Banksy&quot;: Politician Resigns Over Strange Theory</a></div>
+							<div class="auth">Shanti Escalante | March 20, 2022</div>
+							<div class="shortPrev">Not even Banksy, a renowned prankster, could have predicted this weird turn of events.</div>
+							<div class="time">9 min to read</div>
+						</article>
+					</div>
+					<div class="newsCard container school">
+						<div class="wrapperForIMG">
+							<picture>
+									<source srcset="img/news/option4Web.webp" type="image/webp">
+									<img loading="lazy" src="img/news/option4.jpg" alt="Inspiration">
+							</picture>
+						</div>
+						<article class="newsCardInfo container Column">
+							<div class="newsTitle"><a href="">Special price for new studentes: get 40% sale!</a></div>
+							<div class="auth">Cornel Shvarz | March 03, 2022</div>
+							<div class="shortPrev">Special price for new studentes: get 40% sale! Hurry up now!</div>
+							<div class="time">5 min to read</div>
+						</article>
+					</div>
+				</div>
+				<div class="wrapperForPagination">
+					<div class="pagination">
+						<ul>
+							<li>&laquo;</li>
+							<li><a href="#">1</a></li>
+							<li>2</li>
+							<li>3</li>
+							<li>&raquo;</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="preFooterConteiner">
+				<div class="preFooter">
+					<div class="part Column">
+						<a href="#" class="logo"><img src="img/logo/logo.webp" alt="Logo">art school.</a>
+						<div class="notImportantText">
+							Our Art School is a leader in online studying. Founded by artist Noah Yoker, our site has been covering the art scene since 2005. Presenting a lively mix of courses,programs, news, reviews and interviews, Art School employs some of the best art teachers, journalists and critics on contemporary art.
+						</div>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">site map</div>
+						<ul>
+							<li><a href="MainPage.html">Home</a></li>
+							<li><a href="AboutPage.html">About</a></li>
+							<li><a href="CoursesPage.html">Courses</a></li>
+							<li><a href="FAQPage.html">FAQ</a></li>
+							<li><a href="#">News</a></li>
+							<li><a href="ContactsPage.html">Contact</a></li>
+						</ul>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">courses</div>
+						<ul>
+							<li><a href="courses/FineArtCourse.html">Fine Art</a></li>
+							<li><a href="courses/GraphCourse.html">Graphic Design</a></li>
+							<li><a href="courses/GrafCourses.html">Graffiti</a></li>
+							<li><a href="courses/IllCourse.html">Illustration</a></li>
+						</ul>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">contact us</div>
+						<div class="phone"><img src="img/logo/cellphone.svg"><a href="tel:+74055550128">+7 (405) 555-0128</a></div>
+						<div class="mail"><img src="img/logo/mail.svg"><a href="mailto:hiArtSchool@.com">hiArtSchool@.com</a></div>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">privacy policy</div>
+						<div class="notImportantText">
+							This Privacy Policy is meant to help you understand what information we collect and why we collect it. Additional information can be found <a href="FAQPage.html" title="Go to FAQ">HERE</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="notImportantText">
+					&copy; 2022 by <span>art school</span>. All rights reserved.
+				</div>
+				<div><a href="#news"><span>back to top</span></a></div>
+			</footer>	
+		<script 
+		src="https://code.jquery.com/jquery-3.6.0.min.js" 
+		type="text/javascript" 
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous">	
+		</script>
+		<script src="js/scriptHeader.js" type="text/javascript"></script>
+		<script src="js/scriptFAQ.js" type="text/javascript"></script>
+		<script src="js/scriptNews.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			//Функция показа окна Log in//
+			function surprise(state){
+				document.getElementById('window').style.display = state;
+				document.getElementById('gray').style.display = state;
+			}
+		</script>
+	</body>
+</html>

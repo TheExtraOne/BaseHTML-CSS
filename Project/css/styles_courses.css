@@ -54,7 +54,8 @@
 }
 .cardInfo{
 	margin: 0px 11px;
-	min-width: 240px;
+	/*min-width: 240px;*/
+	flex: 1 1 auto;
 }
 .new{
 	position: absolute;
@@ -183,10 +184,7 @@
 		        flex-direction:column;
 	}
 	.IMG {
-    	max-width: 90%;
-	}
-	.cardInfo{
-
+    	max-width: 100%;
 	}
 }
 @media all and (max-width: 515px){

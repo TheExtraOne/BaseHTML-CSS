@@ -7,7 +7,7 @@
 
 .bread{
 	margin: 20px 0px;
-	margin-left: 13%;
+	margin-left: 4%;
 }
 .prev{
 	text-decoration: underline;
@@ -151,8 +151,12 @@
 		width: 450px;
 	}
 	.bread{
-		margin: 75px 0px 5px 0px;
-		margin-left: 13%;
+		margin: 50px 0px 5px 0px;
+	}
+}
+@media all and (max-width: 680px){
+	.bread{
+		margin: 85px 0px 5px 0px;
 	}
 }
 @media all and (max-width: 650px){

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Art school.</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta name="HandheldFriendly" content="True"/> <!--В некоторых случаях смартфоны автоматически изменяют масштаб страницы, лучше эту возможность отключать-->
+		<!-- saved from url=(0014)about:internet -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!--Для включения сглаживания шрифтов -->
+		<meta http-equiv="cleartype" content="on"/> <!--Чтобы переключить Internet Explorer в режим последней версии -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css"> <!--для иконок-->
+		<link rel="stylesheet" type="text/css" href="../css/styles_general.css"> <!--CSS общие для всех документов-->
+		<link rel="stylesheet" type="text/css" href="../css/styles_header_footer.css"> <!--CSS для хэдера-->
+		<link rel="stylesheet" type="text/css" href="../css/NewsStyle.css"> <!--CSS для данной страницы-->
+		<link rel="icon" href="../logo32.ico"> <!-- 32×32 лучше, чем 16-->
+		<link rel="icon" href="../img/icon/logoWebP.webp" type="image/webp">
+		<link rel="icon" href="../img/icon/logoSvg.svg" type="image/svg+xml"> <!--Не все поддерживают WebP-->
+		<link rel="apple-touch-icon" href="../img/icon/logoPg180.png">  <!-- Для apple 180×180 -->
+		<!--<link rel="manifest" href="manifest.webmanifest">-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<nav class="wrapperNav">
+					<div class="headerBody">
+						<div class="leftNav">
+							<a href="MainPage.html" class="logo"><img src="../img/logo/logo.webp" alt="Logo">art school.</a>
+						</div>
+						<div class="headerBurger">
+							<span></span>
+						</div>
+						<div class="rightNav">
+							<ul>
+								<li><a href="../MainPage.html">Home</a></li>
+								<li><a href="../AboutPage.html">About</a></li>
+								<li><a href="../CoursesPage.html">Courses</a></li>
+								<li><a href="../FAQPage.html">FAQ</a></li>
+								<li><a href="../NewsPage.html" class="active">News</a></li>
+								<li><a href="../ContactsPage.html">Contact</a></li>
+								<li>
+									<button onclick="surprise('block')" class="logInButton active"><img src="../img/logo/logoOranNoBack.svg"><span>Log in</span></button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<div class="main">
+				<div onclick="surprise('none')" id="gray"></div> <!--Задний прозрачный фон для формы авторизации-->
+				<div class="logTabs" id="window">
+					<img onclick="surprise('none')" src="../img/logo/closeSvg.svg" class="close" alt="close"> <!--Картинка крестика-->
+					<input type="radio" name="log-btn" id="log-btn-1" value="" checked>
+					<label for="log-btn-1">Sign in</label>
+					<input type="radio" name="log-btn" id="log-btn-2" value="">
+					<label for="log-btn-2">Create an account</label>
+					<div id="form-1">
+						<div class="formText">Sign in to your account using email and password provided during registration.</div>
+					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignIn">
+						   	<label> Email<br>
+						   		<input type='email' name='email' id="emailLogIn" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   	</label><br>
+						   	<label> Password<br>
+						   		<input type='password' name='pass' id="passLogIn" class="input" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label>
+						   		<input type='checkbox' name='signedIn' id="signedIn" class="checkbox" checked>
+						   		Keep me signed in
+						   	</label><br>
+						   	<a href="#" class="formText">Forgot password?</a><br>
+						   	<button type="submit" class="waveBtn">
+								<span class="waveBtnText">Sign in</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+					    </form>
+					    <div class="formText last">Or sign in with:</div>
+					    <i class="fa fa-google" aria-hidden="true"></i>
+				    	<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				    	<i class="fa fa-twitter" aria-hidden="true"></i>
+				    	<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+				    	<i class="fa fa-telegram" aria-hidden="true"></i>
+				    	<i class="fa fa-instagram" aria-hidden="true"></i>
+					</div>
+					<div id="form-2">
+						<div class="formText">Registration takes less than a minute but gives you full control over your studying.</div>
+					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignUp">
+						   	<label> Name<br>
+						   		<input type='text' name='name' id="name" class="input" placeholder="Max" maxlength="15" required pattern="^[A-Za-z]{2,}">
+						   	</label><br>
+						   	<label> Surname<br>
+						   		<input type='text' name='surname' id="surname" class="input" placeholder="Velichko" maxlength="20" required pattern="^[A-Za-z]{2,}">
+						   	</label><br>
+						   	<label> Email<br>
+						   		<input type='email' name='email' id="emailLogUp" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   	</label><br>
+						   	<label> Password<br>
+						   		<input type='password' name='pass' id="passLogUp" class="input" placeholder="Use at least 6 letters and numbers" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label> Confirm your password<br>
+						   		<input type='password' name='confpass' id="confPassLogUp" class="input" required pattern="^[0-9A-Za-z]{6,}">
+						   	</label><br>
+						   	<label>
+						   		<input type='checkbox' name='signedIn' id="signedUp" class="checkbox" checked>
+						   		Remember me
+						   	</label><br>
+						   	<button id="waveBtn" type="submit" class="waveBtn">
+								<span class="waveBtnText">Sign up</span>
+								<span class="waveBtnWaves"></span>
+						   	</button>
+					    </form>
+					</div>
+				</div>
+				<div class="wrapperForNews">
+					<div class="containerForNews">
+						<nav class="bread">&#60;&emsp;<a href="../NewsPage.html" class="prev">Back to News Page</a></nav>
+						<div class="headerNews">
+							<div class="headerNewsTitle" id="NewsName7">
+								EXCAVATING ANCIENT EXPRESSIONS OF GENDER
+							</div>
+							<div class="headerNewsBottom container">
+								<div class="headerNewsBottomLeft">
+									<p>By Roko Rumora | April 25, 2022 | 17 min to read</p>
+								</div>
+								<div class="headerNewsBottomRight">
+									<div class="ya-share2" data-curtain data-shape="round" data-lang="en" data-limit="3" data-services="facebook,telegram,twitter,linkedin"></div>
+								</div>
+							</div>
+						</div>
+						<div class="containerForContent container">
+							<div class="content">
+									<picture>
+											<source srcset="../img/news/option1Web.webp" type="image/webp">
+											<img  src="../img/news/option1.jpg" alt="Expressions of Gender" title="Expressions of Gender">
+									</picture>
+								<article>
+									<p class="keywords">Keywords: Experts say, History, Romans</p>
+									<p>In the past decade alone, a bewildering assortment of institutions in the United States has hosted blockbuster exhibitions about Pompeii, the ancient Roman town buried by the eruption of Mt. Vesuvius in 79 CE. These have included the California Science Center (2015), the Kansas City Union Station (2016), and even the Ronald Reagan Presidential Library and Museum (2018). The range of venues reflects the sheer variety of material preserved by the volcanic eruption, from mundane household goods and precious art objects to human remains. However, to appreciate Pompeii's most celebrated heritage &mdash; the richly colored frescoes that covered the walls of its town houses and villas &mdash; Americans have typically had to save up for a visit to Italy. For this reason alone, &quot;Pompeii in Color: The Life of Roman Painting,&quot; an exhibition of thirty-five detached wall paintings from Pompeii and neighboring towns, currently on view at the Institute for the Study of the Ancient World at New York University, is well worth a visit. Loaned by the National Archaeological Museum of Naples, the fragile frescoes seldom travel for exhibitions outside Italy.<p>
+
+									<p>&quot;Pompeii in Color&quot; stands out from the above exhibitions in its deliberate orientation away from the daily lives of the frescoes' patrons and toward ancient artistic practices, even including rare examples of painters' tools preserved by the eruption, such as cups overflowing with vibrant pigments. The show's tight focus on process also provides a starting point for a deeper engagement with the material remains of Roman antiquity. The exhibition asks us to examine these paintings not as household decor reflecting the tastes of the city's homeowners, but as the individual works of Pompeian wall painters. However, it does not argue why this exercise is relevant to a modern audience. This is a missed opportunity, as producing these frescoes required their makers to consider broader social issues as part of their process. Some of these issues &mdash; such as gender and how it is visually expressed—remain as relevant to modern viewers as they were to ancient painters.</p>
+
+									<p>The opinions and attitudes of the wall painters themselves did not survive, owing largely to these artists' low standing in Roman society. Literary evidence from Pliny the Elder indicates that educated Romans considered contemporary wall painters inferior to the famed painters of Ancient Greece (whose perishable works from the 5th to 4th century BCE are today lost). Whereas the latter were thought to serve the public good by exhibiting their works in civic spaces, wall painters served only the private patron whose home they decorated. This made them socially anonymous laborers, their work more akin to that of slaves or freedmen. Still, even if their socioeconomic power was minimal, Roman wall painters had virtuosic control over their pigments and a keen awareness of how to manipulate viewers' expectations.</p>
+
+									<p>This power radiates from one of the exhibition's highlights, a fresco from a house known to scholars as the House of the Surgeon, which takes up the theme of painting as such. The fresco depicts an elegant woman putting finishing touches on a picture. To her left, her subject, at which she gazes intently, is a richly painted statue of the god Dionysus. What is interesting here is not so much the statue's polychromy &mdash; a recent public awareness campaign regarding the ancient sculptures' original vibrant colors has been remarkably successful &mdash; as the woman's choice to depict a painted statue in a painting of her own. On closer scrutiny, the unfinished picture does not seem to include the figure's pedestal; will her Dionysus therefore look more lifelike than the (already lifelike) sculpted and painted Dionysus? By making the viewer intuitively compare the two renderings, the wall painter makes a subtle claim about their own ability to render degrees of lifelikeness. The result is a meta-painting: it renders, in paint, a painter painting a painting of a painted statue. </p>
+
+									<p>The fresco from the House of the Surgeon is one of only a handful of surviving Roman representations of painters at work. Curiously, in these rare depictions, the subject is often an idealized female artist. Although we lack epigraphic evidence for the existence of female Roman painters, these representations help us undo some of the default gendering of all ancient painting as men's work. Such gendering is omnipresent in Pompeian scholarship. The house from which this painting was taken the so-called House of the Surgeon &mdash; was given its scholarly moniker because it contained a large cache of medical instruments, including bone levers, spatulas, speculums, and surgical shears. Based on these finds, the excavators assumed the house was owned by a wealthy (male) surgeon. This male &mdash; centered interpretation reflects some of archaeology's long-standing biases: in the words of pioneering archaeologist Penelope Allison, &quot;investigations of the Roman world have been dominated by concern for the representation of masculine power.&quot; As a result, &quot;unlike domestic space in many other societies, there has never really been an understanding that Roman domestic space was women's space.&quot; This perspective has shifted in recent decades, as scholars such as Allison have helped reevaluate interpretations of ancient material culture. Many of the tools found, for instance, have multiple uses &mdash; shears were used to cut hair, and spatulas served as makeup applicators &mdash; and may easily have been used by women living in the house. In similar fashion, while the painter who produced this fresco was in all likelihood male, the object's subtle claim about the remarkable talents of painters does not limit that ability to men.</p>
+
+									<p>Several frescoes in the exhibition depict popular myths in which the visual representation of gender constitutes an integral part of the narrative, including a pair of unrelated frescoes representing the Greek hero Achilles wearing women's clothes. In the depicted myth, Achilles's mother, Thetis, tries to prevent her son from joining the Trojan War by dressing him as a girl and hiding him on the island of Skyros among the daughters of King Lycomedes. When Odysseus and Diomedes come to fetch him, they trick Achilles into revealing himself by sounding a war trumpet that makes him inadvertently reach for weapons like the warrior he is. The two large frescoes &mdash; one from the so-called House of the Dioscuri, the other from the so-called House of Achilles &mdash; depict this moment of Achilles's exposure, with all the principal actors arranged in a busy composition.</p>
+
+									<p>In picturing this particular myth, the wall painters had to think through issues of gender representation as problems of visual storytelling. Side by side, the frescoes show contrasting approaches to a difficult painterly challenge: visualizing the seemingly straightforward moment of exposure hinges on depicting Achilles as both convincingly female in his appearance and convincingly male in his intuitive reaction. The painting from the House of the Dioscuri achieves this ambiguity primarily by feminizing Achilles's features and clothing, lengthening his dark eyelashes and adding highlights that suggest precious fabrics. In the fresco from the House of Achilles, by contrast, the hero appears more typically masculine in anatomy and dress. To hint at the implied gender difference, this painter relied on the ancient norms of rendering skin tones darker for men and brighter for women: flanked by the tan Odysseus and Diomedes, the skin of Achilles appears visibly brighter. In the process of painting, a clear binary of male versus female momentarily disappears.</p> 
+
+									<p>What at first appears to be a pretty straightforward brief &mdash; to depict a well-known myth &mdash; required the painters to reflect on gender and the range of its expressions, as well as the way viewers might regard gendered imagery. This is not to say that the painters, or anyone else in Roman society, conceived of gender in a way that we would today call progressive. To put it more bluntly, even if some lower &mdash; status painters in Pompeii, in the process of fulfilling a patron's commission, had to think through what it might mean to look like a boy trying to look like a girl, it would be unwarranted to suggest that this represents some conscious rejection of the gender binary.</p> 
+
+									<p>At the same time, these observations about the visual construction of gender in painting do not stand in isolation from an ever-growing body of scholarship about the visual scrutiny of gender in Roman life. Connections can be made, for instance, to the groundbreaking work of Amy Richlin on the physical aspects of Roman rhetorical education, through which boys were trained to constrict their appearance while speaking on stage and to adopt only those poses and gestures that were thought to constitute ideal manhood. Similarly, Kelly Olson's scholarship on Roman women's clothing reveals how minute differences in the dress of Roman women helped construct hierarchies among different ideals of the female body. Reaching beyond the tropes of masculinity and femininity, the 2020 volume Exploring Gender Diversity in the Ancient World, edited by Allison Surtees and Jennifer Dyer, brings together a slew of innovative approaches to ancient gender diversity, explicitly informed by queer and transgender studies. Much of this exciting scholarship being out of the general public's reach, an exhibition such as &quot;Pompeii in Color&quot; might have provided an excellent means to introduce audiences to how a society's approach to image-making reflects complex social concepts. Instead, it focuses more narrowly on the narratives behind these frescoes and the technical details of their production &mdash; facts that, while interesting, do not encourage viewers to consider these larger implications.</p>
+
+									<p>While ancient Roman wall painters may have tackled such concepts purely from the standpoint of their own trade, keeping their agency and decisions in mind helps dispel a number of myths about the ancient world, including the essentialist claims of today's reactionaries about classical antiquity having been a time when, supposedly, &quot;men were men&quot; and &quot;women were women.&quot; Ancient images of men and women, even the most stereotypical ones, are nevertheless images: they indicate how gender was created, whether through clothing and body movements or through pigments and brushstrokes. The material culture left behind by Roman wall painters suggests not only that they thought carefully about their work, but also that they were aware of the power of their illusionistic abilities. As in the image of the anonymous lady painting a statue of Dionysus, with a single decision, they could make dead matter come to life.</p> 
+
+								</article>
+								<div class="more">
+									Read more about:<br>
+									<a href="https://en.wikivoyage.org/wiki/Pompeii" title="read more on Wiki" target="_blank">Pompei</a>
+								</div>
+								<div class="nextNews">
+									<p>Read next news:</p>
+									<div class="continerForNesCards container">
+										<div class="card">
+											<picture>
+													<source srcset="../img/news/option5Web.webp" type="image/webp">
+													<img loading="lazy" src="../img/news/option5.jpg" alt="A Former Center" title="A Former Center">
+											</picture>
+											<div class="cardTitle"><a href="news5.html">A Former Center</a></div>
+											<div class="auth">Xyo Jaison | April 17, 2022</div>
+											<div class="shortPrev">How a Former KKK Headquarters in Texas Is Being Transformed into a Center for Arts and Healing.</div>
+											<div class="time">15 min to read</div>
+										</div>
+										<div class="card">
+										<picture>
+												<source srcset="../img/news/option9Web.webp" type="image/webp">
+												<img loading="lazy" src="../img/news/option9.jpg" alt="Prehistoric Mine" title="Prehistoric Mine">
+										</picture>
+											<div class="cardTitle"><a href="news4.html">The Oldest Prehistoric Mine</a></div>
+											<div class="auth">Shanti Escalante | April 03, 2022</div>
+											<div class="shortPrev">Indigenous peoples began quarrying for ochre nearly 3,000 years ago.</div>
+											<div class="time">8 min to read</div>
+										</div>
+										<div class="card">
+											<picture>
+													<source srcset="../img/news/option3Web.webp" type="image/webp">
+													<img loading="lazy" src="../img/news/option3.jpg" alt="Special price" title="Special price">
+											</picture>
+											<div class="cardTitle"><a href="news3.html">Only &#36;39.99!</a></div>
+											<div class="auth">Cornel Shvarz | March 23, 2022</div>
+											<div class="shortPrev">Special price for courses: only &#36;39.99! Hurry up now!</div>
+											<div class="time">5 min to read</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class='rightSideBar'>
+								<div class="advertisment">
+									<p>Advertisment</p>
+									<a href="#" target="_blank" title="Read more">
+										<picture>
+											<source srcset="../img/advertisment/adv6Web.webp" type="image/webp">
+											<img src="../img/advertisment/adv6Jp.jpg" alt="Advertisment" title="Read more">
+										</picture>
+									</a>
+								</div>
+								<div class="mostReadStories">
+									<p>Most-Read news:</p>
+									<div class="miniCard container">
+										<picture>
+											<source srcset="../img/news/option16web.webp" type="image/webp">
+											<img src="../img/news/option16.jpg" alt="Swamp mirror" title="Swamp mirror">
+										</picture>
+										<div class="miniCardText"><a href="news9.html">swamp mirror</a></div>
+										<div class="number">1</div>
+									</div>
+									<div class="miniCard container">
+										<picture>
+												<source srcset="../img/news/option7web.webp" type="image/webp">
+												<img src="../img/news/option7.jpg" alt="News about architecture" title="beast, god<br> and line">
+										</picture>
+										<div class="miniCardText"><a href="news10.html">beast, god and line</a></div>
+										<div class="number">2</div>
+									</div>
+									<div class="miniCard container last">
+										<picture>
+												<source srcset="../img/news/option5Web.webp" type="image/webp">
+												<img src="../img/news/option5.jpg" alt="A Former Center" title="A Former Center">
+										</picture>
+										<div class="miniCardText"><a href="news5.html">A Former Center</a></div>
+										<div class="number">3</div>
+									</div>
+								</div>
+								<div class="wrapperForSubscribe container Column">
+									<div class="subTitle">Subscribe to our newsletter!</div>
+									<form method=post action="http://fe.it-academy.by/TestForm.php" name="subscribeNewsletter">
+										<label> Your Name<br>
+											<span><i class="fa fa-user" aria-hidden="true"></i></span>
+									   		<input type='text' name='subscribeName' id="subscribeName" class="subscribeName" placeholder="Max" maxlength="15" required pattern="^[A-Za-z]{2,}">
+									   	</label><br>
+									   	<label> Your Email<br>
+									   		<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+									   		<input type='email' name='subscribeEmail' id="subscribeEmail" class="subscribeEmail" placeholder="Extravaganza07@gmail.com" required>
+									   	</label><br>
+									   	<label>
+									   		<input type='checkbox' name='subscribeLow' id="subscribeLow" class="checkbox" checked>
+									   		I agree to receive communications from Createx Online School
+									   	</label><br>
+									   	<button id="waveBtn" type="submit" class="waveBtn">
+											<span class="waveBtnText">Sign up</span>
+											<span class="waveBtnWaves"></span>
+									   	</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="preFooterConteiner">
+				<div class="preFooter">
+					<div class="part Column">
+						<a href="#" class="logo"><img src="../img/logo/logo.webp" alt="Logo">art school.</a>
+						<div class="notImportantText">
+							Our Art School is a leader in online studying. Founded by artist Noah Yoker, our site has been covering the art scene since 2005. Presenting a lively mix of courses,programs, news, reviews and interviews, Art School employs some of the best art teachers, journalists and critics on contemporary art.
+						</div>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">site map</div>
+						<ul>
+							<li><a href="../MainPage.html">Home</a></li>
+							<li><a href="../AboutPage.html">About</a></li>
+							<li><a href="../CoursesPage.html">Courses</a></li>
+							<li><a href="../FAQPage.html">FAQ</a></li>
+							<li><a href="../NewsPage.html">News</a></li>
+							<li><a href="../ContactsPage.html">Contact</a></li>
+						</ul>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">courses</div>
+						<ul>
+							<li><a href="../courses/FineArtCourse.html">Fine Art</a></li>
+							<li><a href="../courses/GraphCourse.html">Graphic Design</a></li>
+							<li><a href="../courses/GrafCourses.html">Graffiti</a></li>
+							<li><a href="../courses/IllCourse.html">Illustration</a></li>
+						</ul>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">contact us</div>
+						<div class="phone"><img src="../img/logo/cellphone.svg"><a href="tel:+74055550128">+7 (405) 555-0128</a></div>
+						<div class="mail"><img src="../img/logo/mail.svg"><a href="mailto:hiArtSchool@.com">hiArtSchool@.com</a></div>
+					</div>
+					<div class="part Column">
+						<div class="preFooterTitle">privacy policy</div>
+						<div class="notImportantText">
+							This Privacy Policy is meant to help you understand what information we collect and why we collect it. Additional information can be found <a href="../FAQPage.html" title="Go to FAQ">HERE</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="notImportantText">
+					&copy; 2022 by <span>art school</span>. All rights reserved.
+				</div>
+				<div><a href="#NewsName7"><span>back to top</span></a></div>
+			</footer>	
+		<script 
+		src="https://code.jquery.com/jquery-3.6.0.min.js" 
+		type="text/javascript" 
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous">	
+		</script>
+		<script src="../js/scriptHeader.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			//Функция показа окна Log in//
+			function surprise(state){
+				document.getElementById('window').style.display = state;
+				document.getElementById('gray').style.display = state;
+			}
+		</script>
+		<script src="https://yastatic.net/share2/share.js" async></script>
+	</body>
+</html>

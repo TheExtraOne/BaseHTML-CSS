@@ -14,8 +14,8 @@
 		<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css"> <!--для иконок-->
 		<link rel="stylesheet" type="text/css" href="../css/styles_general.css"> <!--CSS общие для всех документов-->
 		<link rel="stylesheet" type="text/css" href="../css/styles_header_footer.css"> <!--CSS для хэдера-->
-		<link rel="stylesheet" type="text/css" href="../css/CourseStyle.css"> <!--CSS для данной страницы-->
-		<link rel="icon" href="logo32.ico"> <!-- 32×32 лучше, чем 16-->
+		<link rel="stylesheet" type="text/css" href="../css/NewsStyle.css"> <!--CSS для данной страницы-->
+		<link rel="icon" href="../logo32.ico"> <!-- 32×32 лучше, чем 16-->
 		<link rel="icon" href="../img/icon/logoWebP.webp" type="image/webp">
 		<link rel="icon" href="../img/icon/logoSvg.svg" type="image/svg+xml"> <!--Не все поддерживают WebP-->
 		<link rel="apple-touch-icon" href="../img/icon/logoPg180.png">  <!-- Для apple 180×180 -->
@@ -27,7 +27,7 @@
 				<nav class="wrapperNav">
 					<div class="headerBody">
 						<div class="leftNav">
-							<a href="../MainPage.html" class="logo"><img src="../img/logo/logo.webp" alt="Logo">art school.</a>
+							<a href="MainPage.html" class="logo"><img src="../img/logo/logo.webp" alt="Logo">art school.</a>
 						</div>
 						<div class="headerBurger">
 							<span></span>
@@ -38,7 +38,7 @@
 								<li><a href="../AboutPage.html">About</a></li>
 								<li><a href="../CoursesPage.html">Courses</a></li>
 								<li><a href="../FAQPage.html">FAQ</a></li>
-								<li><a href="../NewsPage.html">News</a></li>
+								<li><a href="../NewsPage.html" class="active">News</a></li>
 								<li><a href="../ContactsPage.html">Contact</a></li>
 								<li>
 									<button onclick="surprise('block')" class="logInButton active"><img src="../img/logo/logoOranNoBack.svg"><span>Log in</span></button>
@@ -112,103 +112,136 @@
 					    </form>
 					</div>
 				</div>
-				<div class="paralaxCourse Phot container"></div>
-				<nav class="bread"><a href="../CoursesPage.html" class="prev">Courses</a><p class="current">&emsp;&#62;&emsp;Photoshop Masterclass</p></nav>
-				<div class="courseAbout container Column">
-					<div class="name" id="Phot">Photoshop Masterclass</div>
-					<table class="courseFrame">
-						<tr>
-							<td>Starts Jun 24, 2022</td>
-							<td>&#36; 50</td>
-						</tr>
-					</table>
-					<div class="coursesDescription">
-						<div class="name">Course Description</div>
-						<p>Adobe Photoshop is a critical tool for designers, web developers, graphic artists, photographers, and creative professionals. It is widely used for image editing, retouching, creating image compositions, website mockups, and adding affects. Digital or scanned images can be edited for use online or in-print. Website layouts can be created within Photoshop; their designs can be finalized before developers move on to the coding stage. Stand-alone graphics can be created and exported for use within other programs.</p>
-						<p>Our Photoshop masterclass is now availbale onlain! Enhance your photo editing skills in this short meeting.</p>
+				<div class="wrapperForNews">
+					<div class="containerForNews">
+						<nav class="bread">&#60;&emsp;<a href="../NewsPage.html" class="prev">Back to News Page</a></nav>
+						<div class="headerNews">
+							<div class="headerNewsTitle" id="NewsName1">
+								Special price for new students: get 40% sale!
+							</div>
+							<div class="headerNewsBottom container">
+								<div class="headerNewsBottomLeft">
+									<p>By Cornel Shvarz | March 03, 2022 | 5 min to read</p>
+								</div>
+								<div class="headerNewsBottomRight">
+									<div class="ya-share2" data-curtain data-shape="round" data-lang="en" data-limit="3" data-services="facebook,telegram,twitter,linkedin"></div>
+								</div>
+							</div>
+						</div>
+						<div class="containerForContent container">
+							<div class="content">
+								<picture>
+									<source srcset="../img/news/option4Web.webp" type="image/webp">
+									<img loading="lazy" src="../img/news/option4.jpg" alt="Special price" title="Special price">
+								</picture>
+								<article>
+									<p class="keywords">Keywords: School news, Events</p>
+									<p>New at Art School? Lucky you.
+									Courses start with special price for new students: get 40% sale! Get your new-student offer before it expires. Take drawing courses on Art School from real-world experts. Learn about light, shadow, and perspective, learn to break down a form into basic shapes, learn how to draw the eye to focal points in your drawings, and so much more. Start <a href="../CoursesPage.html" title="read more on Courses Page" target="_blank">a course</a> and get into a flow state.</p>
+									<p>Also, we recommend you The Ultimate List of Student Discounts and Deals &mdash; Summer 2022</p>
+								</article>
+								<div class="more">
+									Read more about:<br>
+									<a href="https://collegeinfogeek.com/student-discounts/" title="read more on College Info Geek" target="_blank">The Ultimate List of Student Discounts and Deals &mdash; Summer 2022</a>
+								</div>
+								<div class="nextNews">
+									<p>Read next news:</p>
+									<div class="continerForNesCards container">
+										<div class="card">
+											<picture>
+												<source srcset="../img/news/option7web.webp" type="image/webp">
+												<img src="../img/news/option7.jpg" loading="lazy" alt="News about architecture" title="beast, god<br> and line">
+											</picture>
+											<div class="cardTitle"><a href="news10.html">beast, god and line</a></div>
+											<div class="auth">Alan Smith | May 29, 2022</div>
+											<div class="shortPrev"><p>One aspect of diversification of project activities with the emergence of two types of professionals architects and designers.</p></div>
+											<div class="time">20 min to read</div>
+										</div>
+										<div class="card">
+											<picture>
+												<source srcset="../img/news/option16web.webp" type="image/webp">
+												<img loading="lazy" src="../img/news/option16.jpg" alt="Swamp mirror" title="Swamp mirror">
+											</picture>
+											<div class="cardTitle"><a href="news9.html">swamp mirror</a></div>
+											<div class="auth">Kate Mihasjova | May 13, 2022</div>
+											<div class="shortPrev">Bogs occupy vast territories and amaze with their spectacular landscapes, sounds, smells, fauna and flora.</div>
+											<div class="time">10 min to read</div>
+										</div>
+										<div class="card">
+											<picture>
+												<source srcset="../img/news/option10web.webp" type="image/webp">
+												<img loading="lazy" src="../img/news/option10.jpg" alt="Inspiration" title="Inspiration">
+											</picture>
+											<div class="cardTitle"><a href="news8.html">where did the inspiration go?</a></div>
+											<div class="auth">Vlad Evtuhov | May 07, 2022</div>
+											<div class="shortPrev">Every creative person is subject to the whims of a fickle muse that doesn't always show up when we need it to.</div>
+											<div class="time">15 min to read</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class='rightSideBar'>
+								<div class="advertisment">
+									<p>Advertisment</p>
+									<a href="#" target="_blank" title="Read more">
+										<picture>
+											<source srcset="../img/advertisment/adv3Web.webp" type="image/webp">
+											<img src="../img/advertisment/adv3Jp.jpg" alt="Advertisment" title="Read more">
+										</picture>
+									</a>
+								</div>
+								<div class="mostReadStories">
+									<p>Most-Read news:</p>
+									<div class="miniCard container">
+										<picture>
+											<source srcset="../img/news/option16web.webp" type="image/webp">
+											<img src="../img/news/option16.jpg" alt="Swamp mirror" title="Swamp mirror">
+										</picture>
+										<div class="miniCardText"><a href="news9.html">swamp mirror</a></div>
+										<div class="number">1</div>
+									</div>
+									<div class="miniCard container">
+										<picture>
+												<source srcset="../img/news/option7web.webp" type="image/webp">
+												<img src="../img/news/option7.jpg" alt="News about architecture" title="beast, god<br> and line">
+										</picture>
+										<div class="miniCardText"><a href="news10.html">beast, god and line</a></div>
+										<div class="number">2</div>
+									</div>
+									<div class="miniCard container last">
+										<picture>
+												<source srcset="../img/news/option5Web.webp" type="image/webp">
+												<img src="../img/news/option5.jpg" alt="A Former Center" title="A Former Center">
+										</picture>
+										<div class="miniCardText"><a href="news5.html">A Former Center</a></div>
+										<div class="number">3</div>
+									</div>
+								</div>
+								<div class="wrapperForSubscribe container Column">
+									<div class="subTitle">Subscribe to our newsletter!</div>
+									<form method=post action="http://fe.it-academy.by/TestForm.php" name="subscribeNewsletter">
+										<label> Your Name<br>
+											<span><i class="fa fa-user" aria-hidden="true"></i></span>
+									   		<input type='text' name='subscribeName' id="subscribeName" class="subscribeName" placeholder="Max" maxlength="15" required pattern="^[A-Za-z]{2,}">
+									   	</label><br>
+									   	<label> Your Email<br>
+									   		<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+									   		<input type='email' name='subscribeEmail' id="subscribeEmail" class="subscribeEmail" placeholder="Extravaganza07@gmail.com" required>
+									   	</label><br>
+									   	<label>
+									   		<input type='checkbox' name='subscribeLow' id="subscribeLow" class="checkbox" checked>
+									   		I agree to receive communications from Createx Online School
+									   	</label><br>
+									   	<button id="waveBtn" type="submit" class="waveBtn">
+											<span class="waveBtnText">Sign up</span>
+											<span class="waveBtnWaves"></span>
+									   	</button>
+									</form>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="name">Upcoming Sessions</div>
-					<div>Dates: Jun 24, 2022 &mdash; Jul 25, 2022</div>
-					<div>Total of 12 sessions</div>
-					<div class="tableWrapper">
-						<table>
-							<tbody>
-								<tr>
-									<td>Friday, Jun 24</td>
-									<td>9:00 AM, 3 hr</td>
-									<td>Samanta Lo</td>
-								</tr>
-								<tr>
-									<td>Tuesday , Jun 28</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Samanta Lo</td>
-								</tr>
-								<tr>
-									<td>Thursday, Jun 30</td>
-									<td>10:00 AM, 2 hr</td>
-									<td>Samanta Lo</td>
-								</tr>
-								<tr>
-									<td>Monday, Jul 04</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Cornel Shvarz</td>
-								</tr>
-								<tr>
-									<td>Thursday, Jul 07</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Samanta Lo</td>
-								</tr>
-								<tr>
-									<td>Friday, Jul 08</td>
-									<td>9:00 AM, 2 hr</td>
-									<td>Sam Briton</td>
-								</tr>
-								<tr>
-									<td>Monday, Jul 11</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Sam Briton</td>
-								</tr>
-								<tr>
-									<td>Thursday, Jul 14</td>
-									<td>10:00 AM, 1 hr</td>
-									<td>Sam Briton</td>
-								</tr>
-								<tr>
-									<td>Friday, Jul 15</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Jassy Wildy</td>
-								</tr>
-								<tr>
-									<td>Wednesday, Jul 20</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Samanta Lo</td>
-								</tr>
-								<tr>
-									<td>Thursday,Jul 21</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Sam Briton</td>
-								</tr>
-								<tr>
-									<td>Monday, Jul 25</td>
-									<td>8:00 AM, 4 hr</td>
-									<td>Samanta Lo</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div>Time Zone: Pacific Daylight Time (PDT)</div>
-					<div class="buttonSpecialWrapper">
-						<a href="BookingFormCourse.html" class="buttonSpecial">
-							<span class="buttonText container">
-								<span>Book now</span>
-							</span> 
-						</a>
-					</div>
-					<div class="coursesDescription Bottom">
-						<div class="name">Contact Details</div>
-						<p>If you have any questions, you can contact us <a href="tel:+74055550128">directly</a>, write on our <a href="mailto:hiArtSchool@.com">email</a> or send a message <a href="" title="Contact" target="_blank">HERE</a>.</p>
-					</div>
-				</div>	
+				</div>
 			</div>
 			<div class="preFooterConteiner">
 				<div class="preFooter">
@@ -232,10 +265,10 @@
 					<div class="part Column">
 						<div class="preFooterTitle">courses</div>
 						<ul>
-							<li><a href="FineArtCourse.html">Fine Art</a></li>
-							<li><a href="GraphCourse.html">Graphic Design</a></li>
-							<li><a href="GrafCourses.html">Graffiti</a></li>
-							<li><a href="IllCourse.html">Illustration</a></li>
+							<li><a href="../courses/FineArtCourse.html">Fine Art</a></li>
+							<li><a href="../courses/GraphCourse.html">Graphic Design</a></li>
+							<li><a href="../courses/GrafCourses.html">Graffiti</a></li>
+							<li><a href="../courses/IllCourse.html">Illustration</a></li>
 						</ul>
 					</div>
 					<div class="part Column">
@@ -255,7 +288,7 @@
 				<div class="notImportantText">
 					&copy; 2022 by <span>art school</span>. All rights reserved.
 				</div>
-				<div><a href="#Phot"><span>back to top</span></a></div>
+				<div><a href="#NewsName1"><span>back to top</span></a></div>
 			</footer>	
 		<script 
 		src="https://code.jquery.com/jquery-3.6.0.min.js" 

@@ -60,20 +60,25 @@
 	        justify-content: space-between;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
-	margin: 0 auto;
+	margin: 0px auto 60px auto;
 }
+
 .newsCard{
 	max-width: 570px;
 	height: 170px;
 	border: solid #e3e3e3 1px;
 	-webkit-box-shadow: #c3c2c4 0px 0px 15px 0px;
 	        box-shadow: #c3c2c4 0px 0px 15px 0px;
-	margin: 20px 0px 20px 5px;
+	margin: 20px auto;
 	padding: 10px 10px 6px 10px;
+	transition: all 0.5s ease 0s;
 }
 .newsCard:hover{
-	transform: scale(1.03);
+	transform: scale(1.02);
 	transition: all 0.7s ease 0s;
+}
+.newsCard:hover .newsTitle{
+	color: #E84300;
 }
 .wrapperForIMG{
 	max-width: 40%;
@@ -92,7 +97,7 @@
 	        align-items:flex-start;
 	min-height: 96%;
 }
-.newsTitle > a{
+.newsTitle{
 	font: bold 22px sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -101,11 +106,13 @@
 .auth{
 	margin: 5px 0px;
 	font-size: 15px;
+	color: black;
 }
 .time{
 	font-size: 15px;
 	margin-bottom: 5px;
 	margin-top: 5px;
+	color: black;
 }
 .shortPrev{
 	font-size: 13px;
@@ -121,8 +128,8 @@
 .hide{
 	-webkit-animation-name: a1;
 	        animation-name: a1;
-	-webkit-animation-duration: 1s;
-	        animation-duration: 1s;
+	-webkit-animation-duration: 0.3s;
+	        animation-duration: 0.3s;
 	-webkit-animation-fill-mode: forwards;
 	        animation-fill-mode: forwards;
 }
@@ -162,7 +169,7 @@
 .pagination > ul{
 	list-style: none;
 	position: absolute;
-	bottom: 5px;
+	bottom: 17px;
 	right: 10px;
 }
 .pagination > ul li a{

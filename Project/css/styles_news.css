@@ -55,9 +55,9 @@
 }
 .wrapperForNews{
 	max-width: 1200px;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	-webkit-box-pack: center;
+	   -ms-flex-pack: center;
+	 justify-content: center;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 	margin: 0px auto 60px auto;
@@ -69,7 +69,7 @@
 	border: solid #e3e3e3 1px;
 	-webkit-box-shadow: #c3c2c4 0px 0px 15px 0px;
 	        box-shadow: #c3c2c4 0px 0px 15px 0px;
-	margin: 20px auto;
+	margin: 20px 0px 20px 8px;
 	padding: 10px 10px 6px 10px;
 	transition: all 0.5s ease 0s;
 }
@@ -126,36 +126,7 @@
 	   text-overflow: ellipsis;
 }
 .hide{
-	-webkit-animation-name: a1;
-	        animation-name: a1;
-	-webkit-animation-duration: 0.3s;
-	        animation-duration: 0.3s;
-	-webkit-animation-fill-mode: forwards;
-	        animation-fill-mode: forwards;
-}
-@-webkit-keyframes a1{
-	0% {}
-	100% {
-		opacity: 0;
-		max-height: 0;
-		max-width: 0;
-		padding: 0;
-		margin: 0;
-		border: 0;
-		overflow: hidden;
-	}
-}
-@keyframes a1{
-	0% {}
-	100% {
-		opacity: 0;
-		max-height: 0;
-		max-width: 0;
-		padding: 0;
-		margin: 0;
-		border: 0;
-		overflow: hidden;
-	}
+	display: none;
 }
 .wrapperForPagination{
 	min-width: 100%;

@@ -1,4 +1,4 @@
-const filterBox = document.querySelectorAll('.newsCard, .linkNewCard');
+const filterBox = document.querySelectorAll('.newsCard');
 
 document.querySelector('.Filters').addEventListener('click', event => {
 	if(event.target.tagName !== 'LI') return false;

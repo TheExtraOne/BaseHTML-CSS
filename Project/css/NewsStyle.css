@@ -236,8 +236,7 @@ form.subscribeNewsletter > label #subscribeName{
 	padding: 2px;
 }
 
-#waveBtn{
-	width: 90%;
+.waveBtn{
 	margin: 20px auto 10px auto;
 }
 .last{

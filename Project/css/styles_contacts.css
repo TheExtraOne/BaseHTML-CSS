@@ -1,14 +1,23 @@
-.main{
-	background-color: #ededed;
-}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
 .wrapperForContacts{
 	width: 100%;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 	margin: 42px 0px;
-	align-items:flex-start;
+	-webkit-box-align:start;
+	    -ms-flex-align:start;
+	        align-items:flex-start;
 }
 .containerContact{
-	flex: 0 1 350px;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 350px;
+	        flex: 0 1 350px;
 	margin: 0px 20px 10px 5px;
 	padding: 5px 5px 5px 15px;
 }
@@ -53,17 +62,28 @@
 }
 .ContactInfoFollow > i{
 	margin-top: 10px;
-	margin-left: 5px;
+	margin-left: 10px;
 	cursor: pointer;
 }
 .ContactInfoFollow > i:hover{
 	color: #E84300;
-	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	        transform: scale(1.2);
 }
 .containerMap{
-	flex: 0 1 auto;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 auto;
+	        flex: 0 1 auto;
 }
+iframe{
+    width: 600px;
+    height: 450px;
+}
+/*Часы*/
 #time{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	gap: 40px;
 }
@@ -71,15 +91,23 @@
 	position: relative;
 	width: 90px;
 	height: 90px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 #time .circle svg{
 	position: relative;
 	width: 90px;
 	height: 90px;
-	transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	    -ms-transform: rotate(270deg);
+	        transform: rotate(270deg);
 }
 #time .circle svg circle{
 	width: 100%;
@@ -87,7 +115,9 @@
 	fill: transparent;
 	stroke: black;
 	stroke-width: 4;
-	transform: translate(3px, 3px);
+	-webkit-transform: translate(3px, 3px);
+	    -ms-transform: translate(3px, 3px);
+	        transform: translate(3px, 3px);
 }
 #time .circle svg circle:nth-child(2){
 	stroke: var(--clr);
@@ -101,7 +131,9 @@
 }
 #time .ap{
 	position: relative;
-	transform: translate(-20px);
+	-webkit-transform: translate(-20px);
+	    -ms-transform: translate(-20px);
+	        transform: translate(-20px);
 }
 #time .ap #ampm{
 	font-size: 15px;
@@ -111,8 +143,12 @@
 	width: 100%;
 	height: 100%;
 	z-index: 10;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 .dots::before{
 	content: '';
@@ -122,5 +158,279 @@
 	height: 10px;
 	border-radius: 50%;
 	background: var(--clr);
-	box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+	-webkit-box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+	        box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+/*Лампочка*/
+.bulbContainer{
+	min-width: 100%;
+	background-color: #333;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+.wrapperForBulb{
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:center;
+	    -ms-flex-pack:center;
+	        justify-content:center;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: start;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	min-height: 516px;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 348px;
+	        flex: 0 1 348px;
+}
+.wrapperForBulb label{
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: relative;
+	top: 35px;
+	width: 150px;
+	height: 75px;
+	background: #212121;
+	border-radius: 10px;
+}
+.question{
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 400px;
+	        flex: 0 1 400px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font: 600 30px sans-serif;
+	text-align: center;
+	margin-left: -60px;
+	padding: 10px;
+}
+.wrapperForBulb label input{
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+}
+.wrapperForBulb label input:checked ~ span{
+	left: 75px;
+}
+.wrapperForBulb label span{
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 75px;
+	height: 75px;
+	background-color: #333;
+	border: solid #212121 6px;
+	border-radius: 14px;
+	cursor: pointer;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.wrapperForBulb label span ion-icon{
+	color: rgba(255, 255, 255, 0.25);
+	font-size: 30px;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+.wrapperForBulb label input:checked ~ span ion-icon{
+	color: rgba(255, 255, 255, 1);
+	-webkit-filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+	        filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
+.bulb{
+	position: absolute;
+	top: 76px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	width: 348px;
+	height: 405px;
+	pointer-events: none;
+	background: url(../img/bulb_off.jpg);
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+.wrapperForBulb label input:checked ~ .bulb{
+	background: url(../img/bulb_on.jpg);
+}
+/*Формы*/
+.wrapperForQcontainer{
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 300px;
+	        flex: 0 1 300px;
+	padding: 20px 10px;
+	background-color: #333;
+	/*border: solid #212121 6px;*/
+	border-radius: 14px;
+}
+.subTitle{
+	text-align: center;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font: 700 18px sans-serif;
+	color: #fff;
+}
+.wrapperForQcontainer  span > i{
+	width: 10%;
+}
+.wrapperForQcontainer label{
+	color: #fff;
+}
+.askName, .askSurname, .askEmail, .askMessage{
+	width: 100%;
+	margin: 10px 0px;
+	padding: 2px;
+}
+.askMessage{
+	height: 100px;
+}
+.wrapperForQcontainer .waveBtn{
+	margin: 20px auto 10px auto;
+}
+.wrapperForQcontainer .waveBtnWaves {
+	background-color: rgba(232, 67, 0, 0.7);
+}
+@media all and (max-width: 1049px){
+	iframe{
+	    width: 800px;
+	    height: 600px;
+	}
+	.containerContact{
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+	}
+	.containerContactInfo{
+		margin-bottom: 0px;
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 350px;
+		        flex: 0 0 350px;
+	}
+	.ContactInfoTitle{
+		text-align: center;
+	}
+	#time{
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 400px;
+		        flex: 0 0 400px;
+	}
+	.wrapperForQcontainer{
+		-webkit-box-flex: 1;
+		    -ms-flex: 1 1 300px;
+		        flex: 1 1 300px;
+	}
+	#askForm{
+		max-width: 68%;
+		margin: 0 auto;
+	}
+	.askMessage {
+    	height: 200px;
+	}
+	.askName, .askSurname, .askEmail{
+    	width: 77%;
+	}
+}
+@media all and (max-width: 840px){
+	iframe{
+	    width: 600px;
+	    height: 450px;
+	}
+}
+@media all and (max-width: 790px){
+	.containerContact{
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+	.containerContactInfo {
+    	margin-bottom: 40px;
+	}
+	.wrapperForQcontainer {
+   	 	-webkit-box-flex: 0;
+   	 	    -ms-flex: 0 0 300px;
+   	 	        flex: 0 0 300px;
+	}
+	#askForm{
+		max-width: 100%;
+	}
+	.askMessage {
+    	height: 200px;
+	}
+	.askName, .askSurname, .askEmail{
+    	width: 100%;
+    	height: 30px;
+	}
+	.question{
+		margin-left: 0px;
+	}
+	.ContactInfoFollow > i{
+		font-size: 30px;
+		margin-top: 16px;
+	}
+
+}
+@media all and (max-width: 755px){
+	.question{
+		margin-bottom: 10px;
+	}
+}
+@media all and (max-width: 635px){
+	iframe{
+	    width: 400px;
+	    height: 300px;
+	}
+	#time{
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+}
+@media all and (max-width: 433px){
+	iframe{
+	    width: 320px;
+	}
+	#time {
+    	-webkit-box-flex: 0;
+    	    -ms-flex: 0 1 300px;
+    	        flex: 0 1 300px;
+    	-webkit-box-pack: center;
+    	    -ms-flex-pack: center;
+    	        justify-content: center;
+	}
+	.containerContactInfo {
+    	-webkit-box-flex: 0;
+    	    -ms-flex: 0 1 320px;
+    	        flex: 0 1 320px;
+	}
+	.bulb {
+		width: 330px;
+	}
 }

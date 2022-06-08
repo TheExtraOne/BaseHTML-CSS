@@ -6,8 +6,9 @@
 */
 
 .bread{
-	margin: 20px 0px;
-	margin-left: 4%;
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 10px;
 }
 .prev{
 	text-decoration: underline;
@@ -150,13 +151,10 @@
 	.ForBookingForm .inputBook{
 		width: 450px;
 	}
-	.bread{
-		margin: 50px 0px 5px 0px;
-	}
 }
 @media all and (max-width: 680px){
 	.bread{
-		margin: 85px 0px 5px 0px;
+		margin: 67px 0px 5px 0px;
 	}
 }
 @media all and (max-width: 650px){

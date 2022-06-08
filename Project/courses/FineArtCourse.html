@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Art school.</title>
+		<title>Fine Art Course.</title>
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 		<meta name="HandheldFriendly" content="True"/> <!--В некоторых случаях смартфоны автоматически изменяют масштаб страницы, лучше эту возможность отключать-->
 		<!-- saved from url=(0014)about:internet -->
@@ -36,7 +36,7 @@
 							<ul>
 								<li><a href="../MainPage.html">Home</a></li>
 								<li><a href="../AboutPage.html">About</a></li>
-								<li><a href="../CoursesPage.html">Courses</a></li>
+								<li><a href="../CoursesPage.html" class="active">Courses</a></li>
 								<li><a href="../FAQPage.html">FAQ</a></li>
 								<li><a href="../NewsPage.html">News</a></li>
 								<li><a href="../ContactsPage.html">Contact</a></li>
@@ -105,14 +105,19 @@
 						   		<input type='checkbox' name='signedIn' id="signedUp" class="checkbox" checked>
 						   		Remember me
 						   	</label><br>
-						   	<button id="waveBtn" type="submit" class="waveBtn">
+						   	<button type="submit" class="waveBtn">
 								<span class="waveBtnText">Sign up</span>
 								<span class="waveBtnWaves"></span>
 						   	</button>
 					    </form>
 					</div>
 				</div>
-				<div class="paralaxCourse Fine container"></div>
+				<div class="imgCourse">
+					<picture>
+						<source srcset="../img/courses/course2Web.webp" type="image/webp">
+						<img src="../img/courses/course2Jp.jpg" alt="Fine Art Course" title="Fine Art">
+					</picture>
+				</div>
 				<nav class="bread"><a href="../CoursesPage.html" class="prev">Courses</a><p class="current">&emsp;&#62;&emsp;Fine Art</p></nav>
 				<div class="courseAbout container Column">
 					<div class="name" id="Fine">Fine Art</div>
@@ -206,14 +211,14 @@
 					</div>
 					<div class="coursesDescription Bottom">
 						<div class="name">Contact Details</div>
-						<p>If you have any questions, you can contact us <a href="tel:+74055550128">directly</a>, write on our <a href="mailto:hiArtSchool@.com">email</a> or send a message <a href="" title="Contact" target="_blank">HERE</a>.</p>
+						<p>If you have any questions, you can contact us <a href="tel:+74055550128">directly</a>, write on our <a href="mailto:hiArtSchool@.com">email</a> or send a message <a href="../ContactsPage.html" title="Contact" target="_blank">HERE</a>.</p>
 					</div>
 				</div>	
 			</div>
 			<div class="preFooterConteiner">
 				<div class="preFooter">
 					<div class="part Column">
-						<a href="#" class="logo"><img src="../img/logo/logo.webp" alt="Logo">art school.</a>
+						<a href="../MainPage.html" class="logo"><img src="../img/logo/logo.webp" alt="Logo">art school.</a>
 						<div class="notImportantText">
 							Our Art School is a leader in online studying. Founded by artist Noah Yoker, our site has been covering the art scene since 2005. Presenting a lively mix of courses,programs, news, reviews and interviews, Art School employs some of the best art teachers, journalists and critics on contemporary art.
 						</div>
@@ -264,13 +269,6 @@
 		crossorigin="anonymous">	
 		</script>
 		<script src="../js/scriptHeader.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			//Функция показа окна Log in//
-			function surprise(state){
-				document.getElementById('window').style.display = state;
-				document.getElementById('gray').style.display = state;
-			}
-		</script>
 		<script src="https://yastatic.net/share2/share.js" async></script>
 	</body>
 </html>

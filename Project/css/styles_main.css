@@ -4,6 +4,7 @@
 	background-size: cover;
 	background-attachment: fixed;
 }
+/*редупреждение*/
 .warningInf{
 	background-color: #ededed;
 }
@@ -23,6 +24,7 @@
 	text-decoration: underline;
 	color: #080808;
 }
+/*Столбцы*/
  .NextCursesLink, .LatestNewsLink{
 	padding: 20px 0px 50px 0px;
 }
@@ -42,6 +44,7 @@
 .PrewCursesInfo .Title, .NextCursesAbout .Title{
 	text-transform: none;
 }
+/*Работы студентов*/
 .studentsWorksExampls{
 	max-width: 1500px;
 	display: flex;
@@ -95,6 +98,7 @@
  .NextCursesLink a:hover{
 	color: black;
 }
+/*Новости*/
 .paralaxNews{
 	min-height: 600px;
 	background: url(../img/fones/option8Jp.jpg) center no-repeat;
@@ -160,6 +164,7 @@
 	border-color: #E84300;
     background-color:  #E84300;
 }
+/*Попапы*/
 .popup{
 	position: fixed;
 	width: 100%;

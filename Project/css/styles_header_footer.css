@@ -107,8 +107,12 @@ header::before{  /*Плашка делается для того, чтобы м�
 	    -ms-transform: scale(0);
 	        transform: scale(0); /*Убираю среднюю линию бургера*/
 }
+/*Префутер*/
 .preFooterConteiner{
 	background-color: #707070;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	  flex: 0 0 auto;
 }
 .preFooter{
 	margin: 0 auto;
@@ -181,7 +185,11 @@ header::before{  /*Плашка делается для того, чтобы м�
 	font-size: 12px;
 	text-decoration: underline;
 }
+/*Футер*/
 footer{
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	  flex: 0 0 auto;
 	background-color: black;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -464,6 +472,7 @@ footer div a span{
 	-o-transition: all 0.2s ease 0s;
 	transition: all 0.2s ease 0s;
 }
+/*Кнопка с волной*/
 .waveBtn{
 	border: none;
 	background: none;

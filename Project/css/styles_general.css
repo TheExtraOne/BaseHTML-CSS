@@ -17,7 +17,7 @@
 html{
 	scroll-behavior: smooth;
 }
-body{
+body, html{
 	height: 100%;
 }
 .wrapper{
@@ -32,8 +32,8 @@ body{
 }
 .main{
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 1 auto;
-	        flex: 1 1 auto;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
 }
  .Column{
 	-webkit-box-orient: vertical;
@@ -103,6 +103,7 @@ body .active, .Title > a:hover{
 	background-color: black;
 	text-align: center;
 }
+/*Слайдер*/
 .slider img{
 	width: 650px;
 }
@@ -123,7 +124,6 @@ body .active, .Title > a:hover{
 .slider{
 	margin: 50px 0px;
 }
-/* Слайдер */
 .slick-slider{
 	min-width: 0;
 	position: relative;
@@ -239,8 +239,8 @@ body .active, .Title > a:hover{
 	    bottom: 10%;
 	    right: 20%;
 	}
-
 }
+/*Кнопка с орнаментом*/
 .buttonSpecialWrapper{
 	margin: 60px 0px 80px 0px;
 	z-index: 0;
@@ -354,6 +354,7 @@ body .active, .Title > a:hover{
 		        transform: rotate(360deg);
 	}
 }
+/*Поисковая строка*/
 .searchBox{
 	margin: 30px 0px;
 	background-color: black;

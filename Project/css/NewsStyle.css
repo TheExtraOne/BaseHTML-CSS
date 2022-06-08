@@ -160,6 +160,7 @@ article > p > span{
 	font-size: 15px;
 	margin-bottom: 5px;
 }
+/*Правая колонка*/
 .rightSideBar{
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 0 25%;

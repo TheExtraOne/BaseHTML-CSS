@@ -16,7 +16,9 @@
 	margin: 40px 0px 30px 0px;
 }
 .textAbout{
-	max-width: 80%;
+	max-width: 1200px;
+	margin: 5px;
+	padding: 5px;
 }
 .textAbout p{
 	margin: 10px 0px;
@@ -93,6 +95,7 @@
 .organization img{
 	width: 100px;
 }
+/*Слайдер с учителями*/
 .teachers{
 	background-color: #ededed;
 	text-align: center;
@@ -219,7 +222,6 @@
 		font-size: 15px;
 	}
 	.textAbout{
-		max-width: 95%;
 		font-size: 14px;
 	}
 	.textAbout p{

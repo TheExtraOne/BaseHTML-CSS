@@ -11,6 +11,7 @@
 	background-size: cover;
 	background-attachment: fixed;
 }
+/*Фильтр*/
 .wrapperForFilters{
 	min-width: 100%;
 	background-color: #ededed;
@@ -53,6 +54,7 @@
 .Filters > ul li:hover, .pagination > ul li:hover{
 	color: #E84300;
 }
+
 .wrapperForNews{
 	max-width: 1200px;
 	-webkit-box-pack: center;
@@ -62,7 +64,7 @@
 	    flex-wrap: wrap;
 	margin: 0px auto 60px auto;
 }
-
+/*Карты новостей*/
 .newsCard{
 	max-width: 570px;
 	height: 170px;
@@ -128,6 +130,7 @@
 .hide{
 	display: none;
 }
+/*Пагинация*/
 .wrapperForPagination{
 	min-width: 100%;
 	margin: 35px 0px;

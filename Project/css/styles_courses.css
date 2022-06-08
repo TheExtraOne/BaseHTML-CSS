@@ -15,7 +15,9 @@
 	margin: 40px 0px;
 }
 .coursesChoose{
-	max-width: 80%;
+	max-width: 1200px;
+	margin: 5px;
+	padding: 5px;
 }
 .coursesChoose p{
 	margin: 10px 0px;
@@ -163,7 +165,6 @@
 }
 @media all and (max-width: 690px){
 	.coursesChoose{
-		max-width: 95%;
 		font-size: 14px;
 	}
 	.coursesChoose p{

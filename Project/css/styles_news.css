@@ -6,7 +6,7 @@
 */
 
 .paralaxNews{
-	min-height: 650px;
+	min-height: 1000px;
 	background: url(../img/fones/newsJp.jpg) center no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -162,6 +162,9 @@
 	background-color: #ededed;
 }
 @media all and (max-width: 1240px){
+	.paralaxNews{
+		min-height: 700px;
+	}
 	.wrapperForNews{
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
@@ -196,6 +199,9 @@
 	}
 }
 @media all and (max-width: 1020px){
+	.paralaxNews{
+		min-height: 600px;
+	}
 	.newsCard {
     	max-width: 80%;
     	height: 100%;

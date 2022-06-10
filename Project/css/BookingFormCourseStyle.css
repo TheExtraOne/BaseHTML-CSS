@@ -13,9 +13,10 @@
 .prev{
 	text-decoration: underline;
 	color: black;
+	cursor: pointer;
 }
 .wrapperForBookingForm{
-	margin: 40px 0px;
+	margin: 40px auto;
 }
 .ForBookingForm{
 	max-width: 1000px;
@@ -86,6 +87,9 @@
 .selection{
 	background-color: #ededed;
 	color: #E84300;
+	max-width: 1000px;
+	margin: 20px auto;
+	padding: 10px;
 }
 .selection > button{
 	border: none;
@@ -102,13 +106,13 @@
 .rightPartOfForm .waveBtn{
 	position: absolute;
 	bottom: 50px;
-	right: 27px;
+	right: 37px;
 }
 .rightPartOfForm .waveBtn .waveBtnWaves{
 	background-color: rgba(232, 67, 0, 0.7);
 }
 @media all and (max-width: 1050px){
-	.ForBookingForm{
+	.ForBookingForm, .selection{
 		max-width: 800px;
 	}
 	.ForBookingForm .messageBooking, .leftPartOfForm{
@@ -126,6 +130,9 @@
 		max-width: 80%;
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
+	}
+	.selection{
+		max-width: 80%;
 	}
 	.ForBookingForm .inputBook{
 		width: 250px;

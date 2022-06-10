@@ -1,5 +1,5 @@
 .paralax{
-	min-height: 900px;
+	min-height: 1000px;
 	background: url(../img/fones/mainTitleFoneJp.jpg) center no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -259,6 +259,11 @@
 		width: 400px;
 	}
 }
+@media all and (max-width: 1240px){
+	.paralax{
+		min-height: 700px;
+	}
+}
 @media all and (max-width: 1215px){
 	.studentsWorksExampls a > picture > img{
 		width: 560px;
@@ -283,8 +288,13 @@
 		margin-bottom: 5px;
 	}
 }
+@media all and (max-width: 1020px){
+	.paralax{
+		min-height: 600px;
+	}
+}
 @media all and (max-width: 955px){
-	.paralax, .paralaxNews{
+	.paralaxNews{
 		min-height: 700px;
 	}
 	.popupInfo{

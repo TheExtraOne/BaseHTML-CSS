@@ -97,6 +97,9 @@ article > p > span{
 .nextNews{
 	margin: 10px 0px;
 }
+.nextNews > p{
+	padding-left: 5px;
+}
 .nextNews > p, .mostReadStories > p{
 	font: 800 18px sans-serif;
 	text-transform: uppercase;
@@ -181,6 +184,9 @@ article > p > span{
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
 	max-height: 100px;
 	position: relative;
 	margin: 5px 0px;
@@ -204,8 +210,11 @@ article > p > span{
 	margin-left: 5px;
 	padding: 3px;
 	font-size: 14px;
-	color: gray;
+	
 	text-transform: uppercase;	
+}
+.miniCardText a{
+	color: gray;
 }
 .number{
 	text-align: center;

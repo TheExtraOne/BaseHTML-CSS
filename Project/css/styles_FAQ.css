@@ -6,7 +6,7 @@
 */
 
 .paralaxFaq{
-	min-height: 650px;
+	min-height: 1000px;
 	background: url(../img/fones/faqBacJp.jpeg) center no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -132,6 +132,16 @@
 }
 .blockText > i{
 	margin-right: 7px;
+}
+@media all and (max-width: 1240px){
+	.paralaxFaq{
+		min-height: 700px;
+	}
+}
+@media all and (max-width: 1020px){
+	.paralaxFaq{
+		min-height: 600px;
+	}
 }
 @media all and (max-width: 833px){
 	.contentTabs>label {

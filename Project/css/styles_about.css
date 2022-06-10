@@ -6,7 +6,7 @@
 */
 
 .paralaxAbout{
-	min-height: 650px;
+	min-height: 1000px;
 	background: url(../img/fones/paralaxAboutJp.jpg) center no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -124,6 +124,11 @@
 	text-transform: uppercase;
 	font: 800 20px sans-serif;
 }
+@media all and (max-width: 1240px){
+	.paralaxAbout{
+		min-height: 700px;
+	}
+}
 @media all and (max-width: 1230px){
 	.sliderTeacherItemNewsTitle{
 		font-size: 17px;
@@ -154,6 +159,11 @@
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
 		        justify-content: center;
+	}
+}
+@media all and (max-width: 1020px){
+	.paralaxAbout{
+		min-height: 600px;
 	}
 }
 @media all and (max-width: 820px){

@@ -36,7 +36,7 @@
 							<ul>
 								<li><a href="../MainPage.html">Home</a></li>
 								<li><a href="../AboutPage.html">About</a></li>
-								<li><a href="../CoursesPage.html" class="active">Courses</a></li>
+								<li><a href="../CoursesPage.html">Courses</a></li>
 								<li><a href="../FAQPage.html">FAQ</a></li>
 								<li><a href="../NewsPage.html">News</a></li>
 								<li><a href="../ContactsPage.html">Contact</a></li>
@@ -60,7 +60,7 @@
 						<div class="formText">Sign in to your account using email and password provided during registration.</div>
 					    <form method=post action="http://fe.it-academy.by/TestForm.php" name="formForSignIn">
 						   	<label> Email<br>
-						   		<input type='email' name='email' id="emailLogIn" class="input" placeholder="Extravaganza07@gmail.com" required>
+						   		<input type='email' name='email' id="emailLogIn" class="input" placeholder="Extravaganza07@gmail.com" required autofocus>
 						   	</label><br>
 						   	<label> Password<br>
 						   		<input type='password' name='pass' id="passLogIn" class="input" required pattern="^[0-9A-Za-z]{6,}">
@@ -112,30 +112,31 @@
 					    </form>
 					</div>
 				</div>
-				<nav class="bread">&emsp;&#60;&emsp;<a href="../CoursesPage.html" class="prev">Back to Courses Page</a></nav>
+				<nav class="bread">&emsp;&#60;&emsp;<a onclick="javascript:history.back(); return false;" class="prev">Back to Courses Page</a></nav>
 				<div class="wrapperForBookingForm">
+					<div class="notImportantTextBookimg  selection">Already have an account? <button onclick="surprise('block')"> Log In</button> for faster booking.</div>
 					<form method=post action="http://fe.it-academy.by/TestForm.php" name="bookcourse" class="ForBookingForm container">
 						<div class="leftPartOfForm">
 							<div class="importantTextBookimg" id="start1">Fill out your details</div>
 							<div class="notImportantTextBookimg">Tell us a bit about yourself</div>
-							<div class="notImportantTextBookimg  selection">Already have an account? <button onclick="surprise('block')"> Log In</button> for faster booking.</div>
-								<div class="fields container">
-								   	<label> Name<br>
-								   		<input type='text' name='name' id="nameBooking" class="inputBook" placeholder="Max" maxlength="15" required pattern="^[A-Za-z]{2,}">
-								   	</label>
-								   	<label> Surname<br>
-								   		<input type='text' name='surname' id="surnameBooking" class="inputBook" placeholder="Velichko" maxlength="20" required pattern="^[A-Za-z]{2,}">
-								   	</label>
-								   	<label> Email<br>
-								   		<input type='email' name='email' id="email"Booking class="inputBook" placeholder="Extravaganza07@gmail.com" required>
-								   	</label>
-								   	<label> Phone Number<br>
-								   		<input type=text name='tel' id="telBooking" class="inputBook" placeholder="+7(405)555-0128" required maxlength=15>
-								   	</label>
-							   	</div>
-							   	<label>Add Your Message<br>
-							   		<textarea id="messageBooking" name="messageBooking" class="messageBooking" lang="eng"></textarea>
-							   	</label><br>
+							
+							<div class="fields container">
+							   	<label> Name<br>
+							   		<input type='text' name='name' id="nameBooking" class="inputBook" placeholder="Max" maxlength="15" required pattern="^[A-Za-z]{2,}">
+							   	</label>
+							   	<label> Surname<br>
+							   		<input type='text' name='surname' id="surnameBooking" class="inputBook" placeholder="Velichko" maxlength="20" required pattern="^[A-Za-z]{2,}">
+							   	</label>
+							   	<label> Email<br>
+							   		<input type='email' name='email' id="email"Booking class="inputBook" placeholder="Extravaganza07@gmail.com" required>
+							   	</label>
+							   	<label> Phone Number<br>
+							   		<input type=text name='tel' id="telBooking" class="inputBook" placeholder="+7(405)555-0128" required maxlength=15>
+							   	</label>
+						   	</div>
+						   	<label>Add Your Message<br>
+						   		<textarea id="messageBooking" name="messageBooking" class="messageBooking" lang="eng"></textarea>
+						   	</label><br>
 						</div>
 						<div class="rightPartOfForm">
 							<div class="importantTextBookimg">Booking Summary</div>

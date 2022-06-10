@@ -6,7 +6,7 @@
 */
 
 .paralaxFaq{
-	min-height: 650px;
+	min-height: 1000px;
 	background: url(../img/fones/paralaxCoursesJp.jpg) center no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -128,6 +128,16 @@
 	}
 	.card{
 		max-width: 500px;
+	}
+}
+@media all and (max-width: 1240px){
+	.paralaxFaq{
+		min-height: 700px;
+	}
+}
+@media all and (max-width: 1020px){
+	.paralaxFaq{
+		min-height: 600px;
 	}
 }
 @media all and (max-width: 1158px){

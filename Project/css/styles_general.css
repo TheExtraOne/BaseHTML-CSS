@@ -289,7 +289,7 @@ body .active, .Title > a:hover{
 .buttonText::before, .buttonText::after{ /*Псевдоэлементы необходимы для создания светло-серого фона кнопки*/
 	content: "";
 	position: absolute;
-	width: 50%;
+	width: 51%;
 	height: 100%;
 	background-color: #ededed;
 	-webkit-transition: all 0.8s ease 0s;

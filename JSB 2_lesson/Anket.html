@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Countries</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta name="HandheldFriendly" content="True"/> <!--В некоторых случаях смартфоны автоматически изменяют масштаб страницы, лучше эту возможность отключать-->
+		<!-- saved from url=(0014)about:internet -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!--Для включения сглаживания шрифтов -->
+		<meta http-equiv="cleartype" content="on"/> <!--Чтобы переключить Internet Explorer в режим последней версии -->
+		<link rel="stylesheet" type="text/css" href="styles_countries.css">
+		
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="name">
+				<h1>Атлас Мира</h1>
+			</div>
+			<div class="buttonsGroup">
+				<input type="button" class="btn1" name="enterInformation" value="Ввод информации о стране" onclick="userAddCounryInfo()"><br>
+				<input type="button" class="btn2" name="getInformation" value="Получение информации о стране" onclick="userGetCountryInfo()"><br>
+				<input type="button" class="btn3" name="allCountriesList" value="Перечень всех стран" onclick="showAllCountriesList()"><br>
+				<input type="button" class="btn4" name="delateInformation" value="Удаление информации о стране" onclick="userDelateInformation()">
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/script_library_countries.js"></script>
+		<script>
+		    let countrysH = {};
+		    userAddCounryInfo = function(){
+		    	let countryName = prompt('Введите название страны');
+		    	let capitalName = prompt('Введите название столицы страны');
+		    	if(countryName !== '' && typeof capitalName !== ''){
+		    		addCountry(countryName, capitalName);
+		    	}
+		    	else{
+		    		alert('Вы не ввели название');
+		    	}
+		    }
+
+		    userGetCountryInfo = function(){
+		    	let countryName = prompt('Введите название страны');
+		    	getCountryInfo(countryName);
+		    	alert(getCountryInfo(countryName));
+		    }
+
+		    showAllCountriesList = function(){
+		    	console.log( "список стран:" + listCountrys() );
+		    	//alert(listCountrys());  Если захотим вывести пользователю на экран, а не в консоль
+		    }
+
+		    userDelateInformation = function(){
+		    	let countryName = prompt('Введите название страны');
+		    	deleteCountry(countryName);
+		    }
+
+		    addCountry('Германия','Берлин');
+		    addCountry('Венгрия','Будапешт');
+		    addCountry('Франция','Париж');
+
+		    //console.log( "список стран:" + listCountrys() );		
+		</script>
+
+	</body>
+</html>

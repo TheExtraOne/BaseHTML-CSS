@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Простые числа</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+		<meta name="HandheldFriendly" content="True"/> <!--В некоторых случаях смартфоны автоматически изменяют масштаб страницы, лучше эту возможность отключать-->
+		<!-- saved from url=(0014)about:internet -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!--Для включения сглаживания шрифтов -->
+		<meta http-equiv="cleartype" content="on"/> <!--Чтобы переключить Internet Explorer в режим последней версии -->
+	</head>
+	<body>
+		<script type="text/javascript">
+			let maxNumber = 1000;
+
+			nextPrime: for (let number = 2; number <= maxNumber; number++) { 
+				for (let i = 2; i < number; i++) {     //Проверяю предыдущие числа              
+			    	if (number % i === 0) {
+			    		continue nextPrime; // Если проверяемое число делится на какое-либо из предыдущих без остатка- то оно не подходит, перехожу по метке
+					}
+				}
+			console.log(number); 
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+*, body{
+	padding: 0px;
+	margin: 0px;
+	-webkit-box-sizing: border-box;
+	    	box-sizing: border-box;
+	font: normal 15px sans-serif;
+}
+header, footer{
+	text-transform: uppercase;	
+	text-align: center;
+	background-color: #ADD8E6;
+	min-height: 45px;
+}
+header p, footer p{
+	font: 500 25px sans-serif;
+	color: #0000FD;
+	padding: 10px 5px;
+}
+.Wrapper_ext{
+	background: url("../img/slice_of_side_bar.jpeg") left top repeat-y;
+}
+.Wrapper_int{
+	background: url("../img/ball.png") right top repeat-y;
+}
+.Left_Side_bar{
+	float: left;
+	width: 150px;
+	margin: 10px 5px 10px 15px;
+	padding: 10px;
+}
+.Left_Side_bar > span{
+	font-weight: 800;
+	margin-left: -15px;
+}
+.Left_Side_bar ul{
+	margin: 15px 0px 5px 0px;
+}
+.Left_Side_bar ul li{
+	margin-top: 3px;
+}
+.Content{
+	margin-left: 200px;
+}
+.Content h2{
+	text-transform: uppercase;
+	font: 800 19px sans-serif;
+	text-align: center;
+	padding: 15px 5px;
+}
+.Content > img{
+	float: left;
+	width: 199px;
+	height: 132px;
+	margin: 0px 20px 10px 0px;
+}
+.Content p{
+	margin-bottom: 10px;
+}
+.Spacer{
+	clear: both;
+}
+@media all and (max-width: 600px){
+	.Wrapper_ext{
+		background: none;
+	}
+	.Wrapper_int{
+		background: none;
+	}
+	.Left_Side_bar{
+		float: none;
+		width: 100%;
+		background-color: #F0E78C;
+		margin: 0px;
+		padding: 10px 30px;
+	}
+	.Content{
+		margin: 0px;
+		padding: 0px 10px;
+	}
+	.Content > img{
+		float: none;
+		margin: 0px;
+		width: 100%;
+		height: auto;
+	}
+	.wrapperForContentText{
+		background: url("../img/ball.png") right top repeat-y;
+	}
+	.Content p{
+		margin: 5px 5px 10px 5px;
+	}
+	.Spacer{
+		display: none;
+	}
+	footer{
+		margin-top: -10px;
+	}
+}
+@media all and (max-width: 420px){
+	header p, footer p{
+		font-size: 20px;
+	}
+	.Content h2{
+		font-size: 16px;
+	}
+}

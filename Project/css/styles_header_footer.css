@@ -47,7 +47,7 @@ header::before{  /*Плашка делается для того, чтобы м�
 .leftNav, .part a{
 	font: bold 22px 'Open Sans', sans-serif;
 	text-transform: uppercase;
-	max-width: 167px;
+	max-width: 165px;
 }
 .leftNav img, .part img{
 	float: left;
